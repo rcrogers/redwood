@@ -1,38 +1,33 @@
 /* eslint-env node, es2022 */
 
-import boxen from 'boxen'
-import { $, fs, question, chalk } from 'zx'
+import { fileURLToPath } from 'url'
 
-export function setupCache(file) {
-  let cache
+import { faker } from '@faker-js/faker'
+import boxen from 'boxen'
+import { $, fs, question, chalk, path } from 'zx'
+
+export function setupData(path) {
+  let dataFile
 
   try {
-    cache = JSON.parse(fs.readFileSync(file, 'utf-8'))
-    cache = new Map(Object.entries(cache))
+    dataFile = JSON.parse(fs.readFileSync(path, 'utf-8'))
+    dataFile = new Map(Object.entries(dataFile))
   } catch {
-    cache = new Map()
+    dataFile = new Map()
   }
 
   process.on('exit', () => {
-    fs.writeFileSync(file, JSON.stringify(Object.fromEntries(cache), null, 2))
+    fs.writeFileSync(
+      path,
+      JSON.stringify(Object.fromEntries(dataFile), null, 2)
+    )
   })
 
-  return cache
+  return dataFile
 }
 
-export const GIT_LOG_OPTIONS = [
-  '--graph',
-  '--oneline',
-  '--boundary',
-  '--cherry-pick',
-  '--left-only',
-]
-
-export const HASH = /\w{9}/
-export const PR = /#(?<pr>\d*)/
-
 export function parseCommit(commit) {
-  const match = commit.match(HASH)
+  const match = commit.match(/\w{9}/)
   const [hash] = match
 
   const message = commit.slice(match.index + 10)
@@ -47,21 +42,38 @@ export function parseCommit(commit) {
   }
 }
 
-export async function isCommitInBranch(branch, message) {
-  const { stdout } = await $`git log ${branch} --oneline --grep ${message}`
-  return Boolean(stdout)
+/**
+ * Uses a commit's message to determine if a commit is in a given ref.
+ *
+ * ```js
+ * await isCommitInRef('main', 'fix(setup-auth): notes formatting')
+ * true
+ *
+ * await isCommitInRef('next', 'fix(setup-auth): notes formatting')
+ * true
+ *
+ * await isCommitInRef('v3.5.0', 'fix(setup-auth): notes formatting')
+ * false
+ * ```
+ *
+ * This depends on the commit's message being left alone when cherry picking.
+ *
+ * @param {string} branch
+ * @param {string} message
+ */
+export async function isCommitInRef(ref, message) {
+  return !!(await $`git log ${ref} --oneline --grep ${message}`).stdout.trim()
 }
 
 export function reportNewCommits(commits) {
   console.log(
     [
-      `There's ${commits.length} commits in the main branch that aren't in the next branch:`,
+      `There's ${chalk.magenta(commits.length)} commits in the ${chalk.magenta(
+        this.from
+      )} branch that aren't in the ${chalk.magenta(this.to)} branch:`,
       '',
       commits
-        .map((commit) => {
-          const { hash, message } = parseCommit(commit)
-          return `${chalk.bold(chalk.yellow(hash))} ${message}`
-        })
+        .map(({ hash, message }) => `${chalk.dim(hash)} ${message}`)
         .join('\n'),
       '',
     ].join('\n')
@@ -70,26 +82,31 @@ export function reportNewCommits(commits) {
 
 export async function triageCommits(commits) {
   for (let commit of commits) {
-    const { hash, message, pr } = parseCommit(commit)
+    const { hash, message, pr } = commit
 
     // eslint-disable-next-line no-constant-condition
     while (true) {
       const answer = await question(
-        `Does ${chalk.bold(chalk.yellow(hash))} ${chalk.cyan(
+        `Does ${chalk.dim(hash)} ${chalk.cyan(
           message
-        )} need to be cherry picked into ${this.branch}? [Y/n/o(pen)] > `
+        )} need to be cherry picked into ${chalk.magenta(
+          this.branch
+        )}? [Y/n/o(pen)] > `
       )
 
-      commit = this.cache.get(hash)
+      if (['open', 'o'].includes(answer)) {
+        if (pr) {
+          await $`open https://github.com/redwoodjs/redwood/pull/${pr}`
+        } else {
+          console.log("There's no PR found for this commit.")
+        }
 
-      if (answer === 'o' || answer === 'open') {
-        await $`open https://github.com/redwoodjs/redwood/pull/${pr}`
         continue
       }
 
-      this.cache.set(hash, {
+      this.data.set(hash, {
         message: message,
-        needsCherryPick: answer === '' || answer === 'y' || answer === 'Y',
+        needsCherryPick: [null, 'Y', 'y'].includes(answer),
       })
 
       break
@@ -97,66 +114,395 @@ export async function triageCommits(commits) {
   }
 }
 
-export const GIT_LOG_UI = ['o', ' /', '|\\', '| o']
-
+/**
+ * Gets the release branch if it exists and there's not more than one. Otherwise, it throws.
+ *
+ * ```js
+ * await getReleaseBranch()
+ * 'release/minor/v3.6.0'
+ * ```
+ */
 export async function getReleaseBranch() {
-  const { stdout: gitBranchStdout } = await $`git branch --list release/*`
-
-  if (gitBranchStdout.trim().split('\n').length > 1) {
-    console.log()
-    console.log("There's more than one release branch")
-    process.exit(1)
-  }
-
-  return gitBranchStdout.trim()
+  return (await $`git branch --list release/*`).stdout.trim()
 }
 
-export async function purgeCache(cache, commits, branch) {
-  const commitHashes = commits.map((commit) => parseCommit(commit).hash)
+export async function purgeData(data, commits, branch) {
+  const commitHashes = commits.map((commit) => commit.hash)
 
-  for (const cachedHash of cache.keys()) {
-    if (!commitHashes.includes(cachedHash)) {
-      cache.delete(cachedHash)
+  for (const dataHash of data.keys()) {
+    if (!commitHashes.includes(dataHash)) {
+      data.delete(dataHash)
     }
   }
 
-  const needsCherryPick = [...cache.entries()].filter(
+  const needsCherryPick = [...data.entries()].filter(
     ([, { needsCherryPick }]) => needsCherryPick
   )
 
-  for (const [hash, { message }] of needsCherryPick) {
-    if (await isCommitInBranch(branch, message)) {
-      cache.delete(hash)
+  for (const [hash] of needsCherryPick) {
+    const commit = commits.find((commit) => commit.hash === hash)
+
+    if (commit.ref === branch) {
+      data.delete(hash)
     }
   }
 }
 
+/**
+ * Usually used with `isCommitInRef`:
+ *
+ * ```js
+ * await isCommitInRef('main', sanitizeMessage('fix(setup-auth): notes formatting [skip ci]'))
+ * ```
+ *
+ * @param {string} message
+ */
+export function sanitizeMessage(message) {
+  message = message.replace('[', '\\[')
+  message = message.replace(']', '\\]')
+  return message
+}
+
+/**
+ * Updates remotes
+ */
 export async function updateRemotes() {
   await $`git remote update`
   console.log()
 
-  const { stdout: main } = await $`git rev-list main...origin/main --count`
-  console.log()
-
-  if (parseInt(main.trim())) {
-    await $`git fetch origin main:main`
+  for (const ref of ['main', 'next']) {
+    const shouldFetch = await originHasCommits(ref)
     console.log()
-  }
 
-  const { stdout: next } = await $`git rev-list next...origin/next --count`
-  console.log()
-
-  if (parseInt(next.trim())) {
-    await $`git fetch origin next:next`
-    console.log()
+    if (shouldFetch) {
+      await $`git fetch origin ${ref}:${ref}`
+      console.log()
+    }
   }
+}
+
+/**
+ * Find out if the a local branch has commits on the remote.
+ *
+ * ```js
+ * await originHasCommits('main')
+ * true
+ * ```
+ *
+ * @param {string} ref
+ */
+async function originHasCommits(ref) {
+  return parseInt(
+    (await $`git rev-list ${ref}...origin/${ref} --count`).stdout.trim()
+  )
+}
+
+const boxenStyles = {
+  padding: 1,
+  margin: 1,
+  borderStyle: 'round',
+  dimBorder: true,
 }
 
 export function colorKeyBox(colorKey) {
   return boxen(colorKey, {
     title: 'Key',
-    padding: 1,
-    margin: 1,
-    borderStyle: 'round',
+    ...boxenStyles,
   })
+}
+
+// ------------------------------------------------
+
+export async function getReleaseCommits({ useCache } = { useCache: true }) {
+  const cachePath = path.join(
+    path.dirname(fileURLToPath(import.meta.url)),
+    'data',
+    'releaseCommits.json'
+  )
+
+  const cacheExists = fs.existsSync(cachePath)
+
+  if (useCache && cacheExists) {
+    return fs.readJSONSync(cachePath)
+  }
+
+  logSection('Get the release branch and the last release\n')
+  const releaseBranch = await getReleaseBranch()
+  const latestRelease = await getLatestRelease()
+
+  logSection(
+    `Get the symmetric difference between ${releaseBranch} and ${latestRelease}\n`
+  )
+
+  const stdout = await getSymmetricDifference(releaseBranch, latestRelease, {
+    options: [
+      ...sharedGitLogOptions,
+      // See https://stackoverflow.com/questions/11459040/is-there-a-way-to-check-if-two-different-git-commits-are-equal-in-content
+      '--cherry-mark',
+    ],
+  })
+
+  logSection(
+    `Check if any of the commits in ${releaseBranch} were in a patch release\n`
+  )
+  const commits = stdout.map((line) => {
+    const commit = {
+      line,
+      ref: releaseBranch,
+      type: 'commit',
+      pretty: line,
+    }
+
+    if (isLineUI(line)) {
+      return {
+        ...commit,
+        type: 'ui',
+        pretty: chalk.dim(line),
+      }
+    }
+
+    commit.hash = line.match(HASH).groups.hash
+
+    if (isCommitChore(line)) {
+      return {
+        ...commit,
+        type: 'chore',
+        pretty: chalk.dim(line),
+      }
+    }
+
+    return commit
+  })
+
+  const [vMajor, minor] = releaseBranch.split('/').pop().split('.')
+
+  faker.seed(+minor)
+
+  let patches = (await $`git tag -l ${vMajor}.${minor - 2}.[!0]`).stdout.trim()
+  console.log()
+
+  patches &&= patches.split('\n')
+
+  const tags = [...patches, latestRelease]
+
+  const tagsToColors = tags.reduce((colors, tag) => {
+    colors[tag] = faker.color.rgb()
+    return colors
+  }, {})
+
+  let releaseCommits = commits.filter((commit) => commit.type === 'commit')
+
+  for (const commit of releaseCommits) {
+    commit.message = await getCommitMessage(commit.hash)
+    console.log()
+
+    if (ANNOTATED_TAG_MESSAGE.test(commit.message)) {
+      commit.type = 'tag'
+      commit.ref = commit.message
+      commit.pretty = chalk.dim(commit.line)
+      continue
+    }
+
+    for (const tag of tags) {
+      if (await isCommitInRef(tag, commit.message)) {
+        commit.ref = tag
+        commit.pretty = chalk.hex(tagsToColors[tag]).dim(commit.line)
+        break
+      }
+    }
+    console.log()
+  }
+
+  releaseCommits = commits.filter((commit) => {
+    return commit.ref === releaseBranch && commit.type === 'commit'
+  })
+
+  const data = {
+    commits,
+    tagsToColors,
+    releaseCommits,
+    noReleaseCommits: releaseCommits.length,
+  }
+  fs.writeJSONSync(cachePath, data, { spaces: 2 })
+  return data
+}
+
+export const sharedGitLogOptions = [
+  '--oneline',
+  '--no-abbrev-commit',
+  '--left-right',
+  '--graph',
+]
+
+/**
+ * Logs a section, like:
+ *
+ * ```bash
+ * --------------------
+ * # Get the release branch and the last release
+ * ```
+ *
+ * If you want to add a new line, add it at the end of the string (\n):
+ *
+ * ```js
+ * logSection('Get the release branch and the last release\n')
+ * ```
+ *
+ * @param {string} title
+ */
+export function logSection(title) {
+  console.log([separator, chalk.dim(`# ${title}`)].join('\n'))
+}
+
+export const separator = chalk.dim('-'.repeat(process.stdout.columns))
+
+/**
+ * Gets the latest release.
+ *
+ * ```js
+ * await getLatestRelease()
+ * 'v3.5.0'
+ * ```
+ *
+ * Uses the "-" prefix of `git tag`'s `--sort` option.
+ * See https://git-scm.com/docs/git-tag#Documentation/git-tag.txt---sortltkeygt
+ *
+ */
+async function getLatestRelease() {
+  return (
+    await $`git tag --sort="-version:refname" --list "v?.?.?" | head -n 1`
+  ).stdout.trim()
+}
+
+/**
+ * Get the symmetric difference between two refs. (Basically, what's different about them.)
+ *
+ * Usually used to compare the release branch to the latest release:
+ *
+ * ```js
+ * const releaseBranch = await getSymmetricDifference()
+ * const latestRelease = await getSymmetricDifference()
+ * await getSymmetricDifference(releaseBranch, latestRelease)
+ * ```
+ *
+ * It doesn't really matter which ref is left and which is right.
+ * The commits in the left ref will be prefixed with "<",
+ * while the commits in the right ref will be prefixed with ">".
+ *
+ * For a quick reference on the `...` syntax, see
+ * https://stackoverflow.com/questions/462974/what-are-the-differences-between-double-dot-and-triple-dot-in-git-com
+ *
+ * @param {string} leftRef
+ * @param {string} rightRef
+ */
+export async function getSymmetricDifference(leftRef, rightRef, { options }) {
+  return (await $`git log ${options} ${leftRef}...${rightRef}`).stdout
+    .trim()
+    .split('\n')
+}
+
+/**
+ * Find out if a line from `git log --graph` is just UI:
+ *
+ * ```bash
+ * * 1b0b9a9 | chore: update dependencies
+ * |\  # This is just UI
+ * | * 3a4b5c6 (HEAD -> release/3.6, origin/release/3.6) chore: update dependencies
+ * ```
+ *
+ * @param {string} line
+ * @returns
+ */
+export function isLineUI(line) {
+  return MARKS.some((mark) => line.startsWith(mark))
+}
+
+/**
+ * Marks used in `git log --graph` that are just UI.
+ */
+export const MARKS = ['o', ' /', '|\\', '| o', '|\\|']
+
+export const HASH = /\s(?<hash>\w{40})\s/
+export const PR = /#(?<pr>\d+)/
+
+/**
+ * See if a commit is a chore via it's message.
+ *
+ * ```js
+ * await isCommitChore('chore: update yarn.lock')
+ * true
+ * ```
+ *
+ * @param {string} line
+ */
+export function isCommitChore(line) {
+  return (
+    /Merge branch (?<branch>.*) into next/.test(line) ||
+    line.includes('chore: update yarn.lock') ||
+    line.includes('Version docs') ||
+    line.includes('chore: update all contributors')
+  )
+}
+
+export const ANNOTATED_TAG_MESSAGE = /^v\d.\d.\d$/
+
+/**
+ * Given a commit's hash, get it's message.
+ *
+ * ```js
+ * await getCommitMessage('0bb0f8ce075ea1e0f6a7851d80df2bc7d303e756')
+ * 'chore(deps): update babel monorepo (#6779)'
+ * ```
+ *
+ * @param {string} hash
+ */
+export async function getCommitMessage(hash) {
+  return (await $`git log --format=%s -n 1 ${hash}`).stdout.trim()
+}
+
+export async function mungeCommits(stdout) {
+  const commits = []
+
+  for (const line of stdout) {
+    const commit = {
+      line,
+      ref: this.from,
+      type: 'commit',
+      pretty: line,
+    }
+
+    commits.push(commit)
+
+    if (isLineUI(line)) {
+      commit.type = 'ui'
+      commit.pretty = chalk.dim(line)
+      continue
+    }
+
+    commit.hash = line.match(HASH).groups.hash
+    commit.message = await getCommitMessage(commit.hash)
+    commit.pr = commit.message.match(PR)?.groups.pr
+
+    if (isCommitChore(line)) {
+      commit.type = 'chore'
+      commit.pretty = chalk.dim(line)
+      continue
+    }
+
+    if (ANNOTATED_TAG_MESSAGE.test(commit.message)) {
+      commit.ref = commit.message
+      commit.type = 'tag'
+      commit.pretty = chalk.dim(commit.line)
+      continue
+    }
+
+    if (await isCommitInRef(this.to, sanitizeMessage(commit.message))) {
+      commit.ref = this.to
+      commit.pretty = chalk.dim.blue(commit.line)
+    }
+
+    console.log()
+  }
+
+  return commits
 }

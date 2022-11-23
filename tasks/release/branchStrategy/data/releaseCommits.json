@@ -1,0 +1,911 @@
+{
+  "commits": [
+    {
+      "line": "< c808eb08a8706725fa0626b903be68003fc8c848 fix(deps): update dependency systeminformation to v5.16.3 (#7043)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< c808eb08a8706725fa0626b903be68003fc8c848 fix(deps): update dependency systeminformation to v5.16.3 (#7043)",
+      "hash": "c808eb08a8706725fa0626b903be68003fc8c848",
+      "message": "fix(deps): update dependency systeminformation to v5.16.3 (#7043)"
+    },
+    {
+      "line": "< 9c2e353743ea6ed4e0f2a523cf03cf2cedcd1240 Revert \"Revert \"Change to use @iarna/toml instead of toml (#6839)\"\"",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< 9c2e353743ea6ed4e0f2a523cf03cf2cedcd1240 Revert \"Revert \"Change to use @iarna/toml instead of toml (#6839)\"\"",
+      "hash": "9c2e353743ea6ed4e0f2a523cf03cf2cedcd1240",
+      "message": "Revert \"Revert \"Change to use @iarna/toml instead of toml (#6839)\"\""
+    },
+    {
+      "line": "< 00307e9645ed93ad368ef26fae147290e73a23ca fix(deps): update typescript-eslint monorepo to v5.45.1 (#7047)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< 00307e9645ed93ad368ef26fae147290e73a23ca fix(deps): update typescript-eslint monorepo to v5.45.1 (#7047)",
+      "hash": "00307e9645ed93ad368ef26fae147290e73a23ca",
+      "message": "fix(deps): update typescript-eslint monorepo to v5.45.1 (#7047)"
+    },
+    {
+      "line": "< 860e4b7436ed14a301eda4471bf11516a76c0520 fix(deps): update dependency ci-info to v3.7.0 (#7046)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< 860e4b7436ed14a301eda4471bf11516a76c0520 fix(deps): update dependency ci-info to v3.7.0 (#7046)",
+      "hash": "860e4b7436ed14a301eda4471bf11516a76c0520",
+      "message": "fix(deps): update dependency ci-info to v3.7.0 (#7046)"
+    },
+    {
+      "line": "< fea1e24d5dd77232e3605d2063b7163fcaa903ad fix(deps): update dependency @types/node to v16.18.6 (#7045)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< fea1e24d5dd77232e3605d2063b7163fcaa903ad fix(deps): update dependency @types/node to v16.18.6 (#7045)",
+      "hash": "fea1e24d5dd77232e3605d2063b7163fcaa903ad",
+      "message": "fix(deps): update dependency @types/node to v16.18.6 (#7045)"
+    },
+    {
+      "line": "< 03129ab74bef387679db4b4530434eb77281d5a5 chore(deps): update dependency esbuild to v0.16.1 (#7044)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< 03129ab74bef387679db4b4530434eb77281d5a5 chore(deps): update dependency esbuild to v0.16.1 (#7044)",
+      "hash": "03129ab74bef387679db4b4530434eb77281d5a5",
+      "message": "chore(deps): update dependency esbuild to v0.16.1 (#7044)"
+    },
+    {
+      "line": "< 76b2c281adf1585ad17fa1bb0223843a754cf42e fix(deps): update dependency @apollo/client to v3.7.2 (#7042)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< 76b2c281adf1585ad17fa1bb0223843a754cf42e fix(deps): update dependency @apollo/client to v3.7.2 (#7042)",
+      "hash": "76b2c281adf1585ad17fa1bb0223843a754cf42e",
+      "message": "fix(deps): update dependency @apollo/client to v3.7.2 (#7042)"
+    },
+    {
+      "line": "< dd739f156eacb09d1d3f2949a50bb78247b3e1a1 fix(deps): update dependency @fastify/static to v6.6.0 (#7029)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< dd739f156eacb09d1d3f2949a50bb78247b3e1a1 fix(deps): update dependency @fastify/static to v6.6.0 (#7029)",
+      "hash": "dd739f156eacb09d1d3f2949a50bb78247b3e1a1",
+      "message": "fix(deps): update dependency @fastify/static to v6.6.0 (#7029)"
+    },
+    {
+      "line": "< 55045a59dd7cf07709a51984e4098f8d5d350528 chore(deps): update dependency nx to v15.3.0 (#7037)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< 55045a59dd7cf07709a51984e4098f8d5d350528 chore(deps): update dependency nx to v15.3.0 (#7037)",
+      "hash": "55045a59dd7cf07709a51984e4098f8d5d350528",
+      "message": "chore(deps): update dependency nx to v15.3.0 (#7037)"
+    },
+    {
+      "line": "< 7c7dd01e449fc5cbb988e69d104c02d3acd7ab59 fix(deps): update dependency @fastify/url-data to v5.2.0 (#7030)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< 7c7dd01e449fc5cbb988e69d104c02d3acd7ab59 fix(deps): update dependency @fastify/url-data to v5.2.0 (#7030)",
+      "hash": "7c7dd01e449fc5cbb988e69d104c02d3acd7ab59",
+      "message": "fix(deps): update dependency @fastify/url-data to v5.2.0 (#7030)"
+    },
+    {
+      "line": "< cb13518e25a03d039a1ee96f4503b594f2595267 fix(deps): update dependency eslint to v8.29.0 (#7031)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< cb13518e25a03d039a1ee96f4503b594f2595267 fix(deps): update dependency eslint to v8.29.0 (#7031)",
+      "hash": "cb13518e25a03d039a1ee96f4503b594f2595267",
+      "message": "fix(deps): update dependency eslint to v8.29.0 (#7031)"
+    },
+    {
+      "line": "< 39b794ee2cf29acf305a5d953e5332eb839741ec fix(deps): update prisma monorepo to v4.7.1 (#7027)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< 39b794ee2cf29acf305a5d953e5332eb839741ec fix(deps): update prisma monorepo to v4.7.1 (#7027)",
+      "hash": "39b794ee2cf29acf305a5d953e5332eb839741ec",
+      "message": "fix(deps): update prisma monorepo to v4.7.1 (#7027)"
+    },
+    {
+      "line": "< 8559efc8ac92e41aac098db6938e74f8c77f3e0d fix(deps): update storybook monorepo to v6.5.14 (#7028)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< 8559efc8ac92e41aac098db6938e74f8c77f3e0d fix(deps): update storybook monorepo to v6.5.14 (#7028)",
+      "hash": "8559efc8ac92e41aac098db6938e74f8c77f3e0d",
+      "message": "fix(deps): update storybook monorepo to v6.5.14 (#7028)"
+    },
+    {
+      "line": "< e3439df43f2deace037f7528e1186a47c2a50b9c chore(deps): update dependency @replayio/playwright to v0.3.10 (#7026)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< e3439df43f2deace037f7528e1186a47c2a50b9c chore(deps): update dependency @replayio/playwright to v0.3.10 (#7026)",
+      "hash": "e3439df43f2deace037f7528e1186a47c2a50b9c",
+      "message": "chore(deps): update dependency @replayio/playwright to v0.3.10 (#7026)"
+    },
+    {
+      "line": "< 8146d4b6ab3c693479c215ad1a7a2b57828b1198 Ch4: Deployment - Updating Environment variable section (#6970)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< 8146d4b6ab3c693479c215ad1a7a2b57828b1198 Ch4: Deployment - Updating Environment variable section (#6970)",
+      "hash": "8146d4b6ab3c693479c215ad1a7a2b57828b1198",
+      "message": "Ch4: Deployment - Updating Environment variable section (#6970)"
+    },
+    {
+      "line": "< 17f99fe3069385b24bb1926e4adf04fb847220ea fix(deps): update dependency systeminformation to v5.16.0 (#7011)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< 17f99fe3069385b24bb1926e4adf04fb847220ea fix(deps): update dependency systeminformation to v5.16.0 (#7011)",
+      "hash": "17f99fe3069385b24bb1926e4adf04fb847220ea",
+      "message": "fix(deps): update dependency systeminformation to v5.16.0 (#7011)"
+    },
+    {
+      "line": "< bda83d0cd789027d5da38aa5312b40525ffc7d53 fix(deps): update graphqlcodegenerator monorepo (#7005)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< bda83d0cd789027d5da38aa5312b40525ffc7d53 fix(deps): update graphqlcodegenerator monorepo (#7005)",
+      "hash": "bda83d0cd789027d5da38aa5312b40525ffc7d53",
+      "message": "fix(deps): update graphqlcodegenerator monorepo (#7005)"
+    },
+    {
+      "line": "< 2db7192547d3b79240a24e21b70892800fceafdc fix(deps): update dependency concurrently to v7.6.0 (#7006)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< 2db7192547d3b79240a24e21b70892800fceafdc fix(deps): update dependency concurrently to v7.6.0 (#7006)",
+      "hash": "2db7192547d3b79240a24e21b70892800fceafdc",
+      "message": "fix(deps): update dependency concurrently to v7.6.0 (#7006)"
+    },
+    {
+      "line": "< 0d476156e1219dac8c45d2c074affc2325934302 fix(deps): update dependency mini-css-extract-plugin to v2.7.1 (#7007)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< 0d476156e1219dac8c45d2c074affc2325934302 fix(deps): update dependency mini-css-extract-plugin to v2.7.1 (#7007)",
+      "hash": "0d476156e1219dac8c45d2c074affc2325934302",
+      "message": "fix(deps): update dependency mini-css-extract-plugin to v2.7.1 (#7007)"
+    },
+    {
+      "line": "< 9bfd1c13637dac511a41f35ef37546d42f02cdfc fix(deps): update dependency eslint to v8.28.0 (#7008)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< 9bfd1c13637dac511a41f35ef37546d42f02cdfc fix(deps): update dependency eslint to v8.28.0 (#7008)",
+      "hash": "9bfd1c13637dac511a41f35ef37546d42f02cdfc",
+      "message": "fix(deps): update dependency eslint to v8.28.0 (#7008)"
+    },
+    {
+      "line": "< 4673689fc6a6ecb038eca433ab122e35bf6a150d fix(deps): update dependency prettier to v2.8.0 (#7009)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< 4673689fc6a6ecb038eca433ab122e35bf6a150d fix(deps): update dependency prettier to v2.8.0 (#7009)",
+      "hash": "4673689fc6a6ecb038eca433ab122e35bf6a150d",
+      "message": "fix(deps): update dependency prettier to v2.8.0 (#7009)"
+    },
+    {
+      "line": "< 83bb58cad5dde5e9450b6d78753517394cfc8d39 fix(deps): update dependency react-hook-form to v7.40.0 (#7010)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< 83bb58cad5dde5e9450b6d78753517394cfc8d39 fix(deps): update dependency react-hook-form to v7.40.0 (#7010)",
+      "hash": "83bb58cad5dde5e9450b6d78753517394cfc8d39",
+      "message": "fix(deps): update dependency react-hook-form to v7.40.0 (#7010)"
+    },
+    {
+      "line": "< 7c2373a98bdfcc4ee6541076774574b440f4df43 chore(deps): update dependency lerna to v6.1.0 (#6993)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< 7c2373a98bdfcc4ee6541076774574b440f4df43 chore(deps): update dependency lerna to v6.1.0 (#6993)",
+      "hash": "7c2373a98bdfcc4ee6541076774574b440f4df43",
+      "message": "chore(deps): update dependency lerna to v6.1.0 (#6993)"
+    },
+    {
+      "line": "< 690dbfb2c985de5e0b4ef727af6286365ed0bc32 fix(deps): update dependency @fastify/http-proxy to v8.4.0 (#6995)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< 690dbfb2c985de5e0b4ef727af6286365ed0bc32 fix(deps): update dependency @fastify/http-proxy to v8.4.0 (#6995)",
+      "hash": "690dbfb2c985de5e0b4ef727af6286365ed0bc32",
+      "message": "fix(deps): update dependency @fastify/http-proxy to v8.4.0 (#6995)"
+    },
+    {
+      "line": "< cda420d64e4f736b2192b566defb6e7270d2cc23 fix(deps): update prisma monorepo to v4.7.0 (#6999)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< cda420d64e4f736b2192b566defb6e7270d2cc23 fix(deps): update prisma monorepo to v4.7.0 (#6999)",
+      "hash": "cda420d64e4f736b2192b566defb6e7270d2cc23",
+      "message": "fix(deps): update prisma monorepo to v4.7.0 (#6999)"
+    },
+    {
+      "line": "< 0d9448f178e37f2552199c8857a4944c4ab40ce9 fix(deps): update dependency jest-watch-typeahead to v2.2.1 (#6991)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< 0d9448f178e37f2552199c8857a4944c4ab40ce9 fix(deps): update dependency jest-watch-typeahead to v2.2.1 (#6991)",
+      "hash": "0d9448f178e37f2552199c8857a4944c4ab40ce9",
+      "message": "fix(deps): update dependency jest-watch-typeahead to v2.2.1 (#6991)"
+    },
+    {
+      "line": "< f2e885c6e608bbc8e2cd90e08bf3ed0c791bfea5 fix(deps): update dependency listr2 to v5.0.6 (#6989)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< f2e885c6e608bbc8e2cd90e08bf3ed0c791bfea5 fix(deps): update dependency listr2 to v5.0.6 (#6989)",
+      "hash": "f2e885c6e608bbc8e2cd90e08bf3ed0c791bfea5",
+      "message": "fix(deps): update dependency listr2 to v5.0.6 (#6989)"
+    },
+    {
+      "line": "< 6db2adfdc578fef9eb3c0dd80346e2618cb086ad chore(deps): update dependency cypress to v11.2.0 (#6992)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< 6db2adfdc578fef9eb3c0dd80346e2618cb086ad chore(deps): update dependency cypress to v11.2.0 (#6992)",
+      "hash": "6db2adfdc578fef9eb3c0dd80346e2618cb086ad",
+      "message": "chore(deps): update dependency cypress to v11.2.0 (#6992)"
+    },
+    {
+      "line": "< f54b4f5a5d9ff7cc35acd13432d97549e5e3f640 chore(deps): update dependency nx to v15.2.4 (#6994)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< f54b4f5a5d9ff7cc35acd13432d97549e5e3f640 chore(deps): update dependency nx to v15.2.4 (#6994)",
+      "hash": "f54b4f5a5d9ff7cc35acd13432d97549e5e3f640",
+      "message": "chore(deps): update dependency nx to v15.2.4 (#6994)"
+    },
+    {
+      "line": "< e53a4305771a6e6144d58c269ecc55936b7bfb0c fix(deps): update dependency msw to v0.49.1 (#6996)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< e53a4305771a6e6144d58c269ecc55936b7bfb0c fix(deps): update dependency msw to v0.49.1 (#6996)",
+      "hash": "e53a4305771a6e6144d58c269ecc55936b7bfb0c",
+      "message": "fix(deps): update dependency msw to v0.49.1 (#6996)"
+    },
+    {
+      "line": "< 078f1ec2c7531f312c55bc2e7511124cf8e81cd4 fix(deps): update dependency eslint-plugin-react to v7.31.11 (#6990)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< 078f1ec2c7531f312c55bc2e7511124cf8e81cd4 fix(deps): update dependency eslint-plugin-react to v7.31.11 (#6990)",
+      "hash": "078f1ec2c7531f312c55bc2e7511124cf8e81cd4",
+      "message": "fix(deps): update dependency eslint-plugin-react to v7.31.11 (#6990)"
+    },
+    {
+      "line": "< 26763007b99acdad3dbabe991815aea4a3c95d21 chore(docs): Change edit link text (#6971)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< 26763007b99acdad3dbabe991815aea4a3c95d21 chore(docs): Change edit link text (#6971)",
+      "hash": "26763007b99acdad3dbabe991815aea4a3c95d21",
+      "message": "chore(docs): Change edit link text (#6971)"
+    },
+    {
+      "line": "< d27739397d75266e64c266afa35dbc3a2f4c2d10 fix(deps): update graphql-tools monorepo (#6979)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< d27739397d75266e64c266afa35dbc3a2f4c2d10 fix(deps): update graphql-tools monorepo (#6979)",
+      "hash": "d27739397d75266e64c266afa35dbc3a2f4c2d10",
+      "message": "fix(deps): update graphql-tools monorepo (#6979)"
+    },
+    {
+      "line": "< 03ffac01ada4cac793a6ce3818704e4904baaf1d fix(deps): update dependency css-loader to v6.7.2 (#6976)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< 03ffac01ada4cac793a6ce3818704e4904baaf1d fix(deps): update dependency css-loader to v6.7.2 (#6976)",
+      "hash": "03ffac01ada4cac793a6ce3818704e4904baaf1d",
+      "message": "fix(deps): update dependency css-loader to v6.7.2 (#6976)"
+    },
+    {
+      "line": "< 208da7e721b6e238ad7add3f484b162a0cc5c9a9 fix(deps): update graphqlcodegenerator monorepo (#6980)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< 208da7e721b6e238ad7add3f484b162a0cc5c9a9 fix(deps): update graphqlcodegenerator monorepo (#6980)",
+      "hash": "208da7e721b6e238ad7add3f484b162a0cc5c9a9",
+      "message": "fix(deps): update graphqlcodegenerator monorepo (#6980)"
+    },
+    {
+      "line": "< a0fdf9ef20905ba392a1983a2063ca4c876524e6 fix(deps): update dependency react-hook-form to v7.39.7 (#6978)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< a0fdf9ef20905ba392a1983a2063ca4c876524e6 fix(deps): update dependency react-hook-form to v7.39.7 (#6978)",
+      "hash": "a0fdf9ef20905ba392a1983a2063ca4c876524e6",
+      "message": "fix(deps): update dependency react-hook-form to v7.39.7 (#6978)"
+    },
+    {
+      "line": "< 41ad857562c6f2579231451f5e51ad9e10ef61cc fix(deps): update dependency fastify-raw-body to v4.1.3 (#6977)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< 41ad857562c6f2579231451f5e51ad9e10ef61cc fix(deps): update dependency fastify-raw-body to v4.1.3 (#6977)",
+      "hash": "41ad857562c6f2579231451f5e51ad9e10ef61cc",
+      "message": "fix(deps): update dependency fastify-raw-body to v4.1.3 (#6977)"
+    },
+    {
+      "line": "< 68742b026feb1aebbae75990714918c16ab7098c chore(deps): update dependency esbuild to v0.15.16 (#6975)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< 68742b026feb1aebbae75990714918c16ab7098c chore(deps): update dependency esbuild to v0.15.16 (#6975)",
+      "hash": "68742b026feb1aebbae75990714918c16ab7098c",
+      "message": "chore(deps): update dependency esbuild to v0.15.16 (#6975)"
+    },
+    {
+      "line": "< ad88bdc42b5899d8aa36553751a13e6b2bfbb12f chore(deps): update babel monorepo (#6974)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< ad88bdc42b5899d8aa36553751a13e6b2bfbb12f chore(deps): update babel monorepo (#6974)",
+      "hash": "ad88bdc42b5899d8aa36553751a13e6b2bfbb12f",
+      "message": "chore(deps): update babel monorepo (#6974)"
+    },
+    {
+      "line": "< a462cb719b0dc71142606aa58cafbdfdc5a565f9 Make it clearer that can use directiveArgs in transformer directive (#6497)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< a462cb719b0dc71142606aa58cafbdfdc5a565f9 Make it clearer that can use directiveArgs in transformer directive (#6497)",
+      "hash": "a462cb719b0dc71142606aa58cafbdfdc5a565f9",
+      "message": "Make it clearer that can use directiveArgs in transformer directive (#6497)"
+    },
+    {
+      "line": "< 6dd54b29420ef045802243945f433a6ad14c0bc7 docs: Adds Troubleshooting Section to Serverless (#6498)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< 6dd54b29420ef045802243945f433a6ad14c0bc7 docs: Adds Troubleshooting Section to Serverless (#6498)",
+      "hash": "6dd54b29420ef045802243945f433a6ad14c0bc7",
+      "message": "docs: Adds Troubleshooting Section to Serverless (#6498)"
+    },
+    {
+      "line": "< c32085b88578e2c9d33df7b107571c649979c828 fix: extractCookie from GraphiQLHeader (#6894) (#6969)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< c32085b88578e2c9d33df7b107571c649979c828 fix: extractCookie from GraphiQLHeader (#6894) (#6969)",
+      "hash": "c32085b88578e2c9d33df7b107571c649979c828",
+      "message": "fix: extractCookie from GraphiQLHeader (#6894) (#6969)"
+    },
+    {
+      "line": "< 375bcb4379a768f34fc335bf0ed60de618c9666a Render Deploy: Define plan in template (#6905)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< 375bcb4379a768f34fc335bf0ed60de618c9666a Render Deploy: Define plan in template (#6905)",
+      "hash": "375bcb4379a768f34fc335bf0ed60de618c9666a",
+      "message": "Render Deploy: Define plan in template (#6905)"
+    },
+    {
+      "line": "< ebaf2c562ade72ec9055979a802745f62b9e8655 fix launch.json (#6972)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< ebaf2c562ade72ec9055979a802745f62b9e8655 fix launch.json (#6972)",
+      "hash": "ebaf2c562ade72ec9055979a802745f62b9e8655",
+      "message": "fix launch.json (#6972)"
+    },
+    {
+      "line": "< e84a2457fea3a724dfac23cc111ce2f423df2f4c small tweak to flightcontrol deploy docs (#6973)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< e84a2457fea3a724dfac23cc111ce2f423df2f4c small tweak to flightcontrol deploy docs (#6973)",
+      "hash": "e84a2457fea3a724dfac23cc111ce2f423df2f4c",
+      "message": "small tweak to flightcontrol deploy docs (#6973)"
+    },
+    {
+      "line": "< 9a4ca221a98a5816e022cf3fc5b220e0cba80e2b fix(deps): update dependency @pmmmwh/react-refresh-webpack-plugin to v0.5.10 (#6966)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< 9a4ca221a98a5816e022cf3fc5b220e0cba80e2b fix(deps): update dependency @pmmmwh/react-refresh-webpack-plugin to v0.5.10 (#6966)",
+      "hash": "9a4ca221a98a5816e022cf3fc5b220e0cba80e2b",
+      "message": "fix(deps): update dependency @pmmmwh/react-refresh-webpack-plugin to v0.5.10 (#6966)"
+    },
+    {
+      "line": "< 53ee3d7011bfa4508ef7702b2453b2c2d11f3f04 Version docs to 3.6",
+      "ref": "release/minor/v3.7.0",
+      "type": "chore",
+      "pretty": "\u001b[2m< 53ee3d7011bfa4508ef7702b2453b2c2d11f3f04 Version docs to 3.6\u001b[22m",
+      "hash": "53ee3d7011bfa4508ef7702b2453b2c2d11f3f04"
+    },
+    {
+      "line": "< 2afd478afd6a0015ec20b5cf0ee6b4514915c25a chore: update yarn.lock",
+      "ref": "release/minor/v3.7.0",
+      "type": "chore",
+      "pretty": "\u001b[2m< 2afd478afd6a0015ec20b5cf0ee6b4514915c25a chore: update yarn.lock\u001b[22m",
+      "hash": "2afd478afd6a0015ec20b5cf0ee6b4514915c25a"
+    },
+    {
+      "line": "< 31d3d3e877b82576d9f3d853173e91ee3d99db70 Merge branch 'release/minor/v3.6.0' into next",
+      "ref": "release/minor/v3.7.0",
+      "type": "chore",
+      "pretty": "\u001b[2m< 31d3d3e877b82576d9f3d853173e91ee3d99db70 Merge branch 'release/minor/v3.6.0' into next\u001b[22m",
+      "hash": "31d3d3e877b82576d9f3d853173e91ee3d99db70"
+    },
+    {
+      "line": "< 172040f7fa784d8f8189cc48bc98f4d484b595d5 Compress v1 (1.0-1.5) docs to v1.x (#7025)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< 172040f7fa784d8f8189cc48bc98f4d484b595d5 Compress v1 (1.0-1.5) docs to v1.x (#7025)",
+      "hash": "172040f7fa784d8f8189cc48bc98f4d484b595d5",
+      "message": "Compress v1 (1.0-1.5) docs to v1.x (#7025)"
+    },
+    {
+      "line": "< cd1aa605731fcabbf1def65fde1bf78a2cddabe6 pin auth0 js sdk (#6963)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< cd1aa605731fcabbf1def65fde1bf78a2cddabe6 pin auth0 js sdk (#6963)",
+      "hash": "cd1aa605731fcabbf1def65fde1bf78a2cddabe6",
+      "message": "pin auth0 js sdk (#6963)"
+    },
+    {
+      "line": "< ff6124ff4881dc4255a4aa4ec111a37dbb28636e [Dev Server] Feature: Duplicate routes checking and warning (#6835)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< ff6124ff4881dc4255a4aa4ec111a37dbb28636e [Dev Server] Feature: Duplicate routes checking and warning (#6835)",
+      "hash": "ff6124ff4881dc4255a4aa4ec111a37dbb28636e",
+      "message": "[Dev Server] Feature: Duplicate routes checking and warning (#6835)"
+    },
+    {
+      "line": "< de0e9e37e425d83c4c9f0db630c2b3291c789a18 chore(generators): Refactor cell tests for performance (#6925)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< de0e9e37e425d83c4c9f0db630c2b3291c789a18 chore(generators): Refactor cell tests for performance (#6925)",
+      "hash": "de0e9e37e425d83c4c9f0db630c2b3291c789a18",
+      "message": "chore(generators): Refactor cell tests for performance (#6925)"
+    },
+    {
+      "line": "< 717433c526ac99ef86d6fb36db84a6c980a11f06 chore(docs): update yarn.lock",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< 717433c526ac99ef86d6fb36db84a6c980a11f06 chore(docs): update yarn.lock",
+      "hash": "717433c526ac99ef86d6fb36db84a6c980a11f06",
+      "message": "chore(docs): update yarn.lock"
+    },
+    {
+      "line": "< aac7e29c32d2d66899378406314804fe0a9320b8 chore(deps): update yarn to v3.3.0 (#6917)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< aac7e29c32d2d66899378406314804fe0a9320b8 chore(deps): update yarn to v3.3.0 (#6917)",
+      "hash": "aac7e29c32d2d66899378406314804fe0a9320b8",
+      "message": "chore(deps): update yarn to v3.3.0 (#6917)"
+    },
+    {
+      "line": "< 97a6b54d6de65786b4fef6ae749c0f1ebb975923 Better explanation of how MockRouter works (#6932)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< 97a6b54d6de65786b4fef6ae749c0f1ebb975923 Better explanation of how MockRouter works (#6932)",
+      "hash": "97a6b54d6de65786b4fef6ae749c0f1ebb975923",
+      "message": "Better explanation of how MockRouter works (#6932)"
+    },
+    {
+      "line": "< b1824f86fcc012e7de23e6e1dd7592a542abb826 chore: Correct paths test, test-project pages (#6942)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< b1824f86fcc012e7de23e6e1dd7592a542abb826 chore: Correct paths test, test-project pages (#6942)",
+      "hash": "b1824f86fcc012e7de23e6e1dd7592a542abb826",
+      "message": "chore: Correct paths test, test-project pages (#6942)"
+    },
+    {
+      "line": "< 332c4725cc6cd777fe8d3ce2bff0b93814b3e649 Replaced outdated information about prerendering cells (#6940)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< 332c4725cc6cd777fe8d3ce2bff0b93814b3e649 Replaced outdated information about prerendering cells (#6940)",
+      "hash": "332c4725cc6cd777fe8d3ce2bff0b93814b3e649",
+      "message": "Replaced outdated information about prerendering cells (#6940)"
+    }
+  ],
+  "tagsToColors": {
+    "v3.6.0": "#15b79f"
+  },
+  "releaseCommits": [
+    {
+      "line": "< c808eb08a8706725fa0626b903be68003fc8c848 fix(deps): update dependency systeminformation to v5.16.3 (#7043)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< c808eb08a8706725fa0626b903be68003fc8c848 fix(deps): update dependency systeminformation to v5.16.3 (#7043)",
+      "hash": "c808eb08a8706725fa0626b903be68003fc8c848",
+      "message": "fix(deps): update dependency systeminformation to v5.16.3 (#7043)"
+    },
+    {
+      "line": "< 9c2e353743ea6ed4e0f2a523cf03cf2cedcd1240 Revert \"Revert \"Change to use @iarna/toml instead of toml (#6839)\"\"",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< 9c2e353743ea6ed4e0f2a523cf03cf2cedcd1240 Revert \"Revert \"Change to use @iarna/toml instead of toml (#6839)\"\"",
+      "hash": "9c2e353743ea6ed4e0f2a523cf03cf2cedcd1240",
+      "message": "Revert \"Revert \"Change to use @iarna/toml instead of toml (#6839)\"\""
+    },
+    {
+      "line": "< 00307e9645ed93ad368ef26fae147290e73a23ca fix(deps): update typescript-eslint monorepo to v5.45.1 (#7047)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< 00307e9645ed93ad368ef26fae147290e73a23ca fix(deps): update typescript-eslint monorepo to v5.45.1 (#7047)",
+      "hash": "00307e9645ed93ad368ef26fae147290e73a23ca",
+      "message": "fix(deps): update typescript-eslint monorepo to v5.45.1 (#7047)"
+    },
+    {
+      "line": "< 860e4b7436ed14a301eda4471bf11516a76c0520 fix(deps): update dependency ci-info to v3.7.0 (#7046)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< 860e4b7436ed14a301eda4471bf11516a76c0520 fix(deps): update dependency ci-info to v3.7.0 (#7046)",
+      "hash": "860e4b7436ed14a301eda4471bf11516a76c0520",
+      "message": "fix(deps): update dependency ci-info to v3.7.0 (#7046)"
+    },
+    {
+      "line": "< fea1e24d5dd77232e3605d2063b7163fcaa903ad fix(deps): update dependency @types/node to v16.18.6 (#7045)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< fea1e24d5dd77232e3605d2063b7163fcaa903ad fix(deps): update dependency @types/node to v16.18.6 (#7045)",
+      "hash": "fea1e24d5dd77232e3605d2063b7163fcaa903ad",
+      "message": "fix(deps): update dependency @types/node to v16.18.6 (#7045)"
+    },
+    {
+      "line": "< 03129ab74bef387679db4b4530434eb77281d5a5 chore(deps): update dependency esbuild to v0.16.1 (#7044)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< 03129ab74bef387679db4b4530434eb77281d5a5 chore(deps): update dependency esbuild to v0.16.1 (#7044)",
+      "hash": "03129ab74bef387679db4b4530434eb77281d5a5",
+      "message": "chore(deps): update dependency esbuild to v0.16.1 (#7044)"
+    },
+    {
+      "line": "< 76b2c281adf1585ad17fa1bb0223843a754cf42e fix(deps): update dependency @apollo/client to v3.7.2 (#7042)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< 76b2c281adf1585ad17fa1bb0223843a754cf42e fix(deps): update dependency @apollo/client to v3.7.2 (#7042)",
+      "hash": "76b2c281adf1585ad17fa1bb0223843a754cf42e",
+      "message": "fix(deps): update dependency @apollo/client to v3.7.2 (#7042)"
+    },
+    {
+      "line": "< dd739f156eacb09d1d3f2949a50bb78247b3e1a1 fix(deps): update dependency @fastify/static to v6.6.0 (#7029)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< dd739f156eacb09d1d3f2949a50bb78247b3e1a1 fix(deps): update dependency @fastify/static to v6.6.0 (#7029)",
+      "hash": "dd739f156eacb09d1d3f2949a50bb78247b3e1a1",
+      "message": "fix(deps): update dependency @fastify/static to v6.6.0 (#7029)"
+    },
+    {
+      "line": "< 55045a59dd7cf07709a51984e4098f8d5d350528 chore(deps): update dependency nx to v15.3.0 (#7037)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< 55045a59dd7cf07709a51984e4098f8d5d350528 chore(deps): update dependency nx to v15.3.0 (#7037)",
+      "hash": "55045a59dd7cf07709a51984e4098f8d5d350528",
+      "message": "chore(deps): update dependency nx to v15.3.0 (#7037)"
+    },
+    {
+      "line": "< 7c7dd01e449fc5cbb988e69d104c02d3acd7ab59 fix(deps): update dependency @fastify/url-data to v5.2.0 (#7030)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< 7c7dd01e449fc5cbb988e69d104c02d3acd7ab59 fix(deps): update dependency @fastify/url-data to v5.2.0 (#7030)",
+      "hash": "7c7dd01e449fc5cbb988e69d104c02d3acd7ab59",
+      "message": "fix(deps): update dependency @fastify/url-data to v5.2.0 (#7030)"
+    },
+    {
+      "line": "< cb13518e25a03d039a1ee96f4503b594f2595267 fix(deps): update dependency eslint to v8.29.0 (#7031)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< cb13518e25a03d039a1ee96f4503b594f2595267 fix(deps): update dependency eslint to v8.29.0 (#7031)",
+      "hash": "cb13518e25a03d039a1ee96f4503b594f2595267",
+      "message": "fix(deps): update dependency eslint to v8.29.0 (#7031)"
+    },
+    {
+      "line": "< 39b794ee2cf29acf305a5d953e5332eb839741ec fix(deps): update prisma monorepo to v4.7.1 (#7027)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< 39b794ee2cf29acf305a5d953e5332eb839741ec fix(deps): update prisma monorepo to v4.7.1 (#7027)",
+      "hash": "39b794ee2cf29acf305a5d953e5332eb839741ec",
+      "message": "fix(deps): update prisma monorepo to v4.7.1 (#7027)"
+    },
+    {
+      "line": "< 8559efc8ac92e41aac098db6938e74f8c77f3e0d fix(deps): update storybook monorepo to v6.5.14 (#7028)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< 8559efc8ac92e41aac098db6938e74f8c77f3e0d fix(deps): update storybook monorepo to v6.5.14 (#7028)",
+      "hash": "8559efc8ac92e41aac098db6938e74f8c77f3e0d",
+      "message": "fix(deps): update storybook monorepo to v6.5.14 (#7028)"
+    },
+    {
+      "line": "< e3439df43f2deace037f7528e1186a47c2a50b9c chore(deps): update dependency @replayio/playwright to v0.3.10 (#7026)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< e3439df43f2deace037f7528e1186a47c2a50b9c chore(deps): update dependency @replayio/playwright to v0.3.10 (#7026)",
+      "hash": "e3439df43f2deace037f7528e1186a47c2a50b9c",
+      "message": "chore(deps): update dependency @replayio/playwright to v0.3.10 (#7026)"
+    },
+    {
+      "line": "< 8146d4b6ab3c693479c215ad1a7a2b57828b1198 Ch4: Deployment - Updating Environment variable section (#6970)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< 8146d4b6ab3c693479c215ad1a7a2b57828b1198 Ch4: Deployment - Updating Environment variable section (#6970)",
+      "hash": "8146d4b6ab3c693479c215ad1a7a2b57828b1198",
+      "message": "Ch4: Deployment - Updating Environment variable section (#6970)"
+    },
+    {
+      "line": "< 17f99fe3069385b24bb1926e4adf04fb847220ea fix(deps): update dependency systeminformation to v5.16.0 (#7011)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< 17f99fe3069385b24bb1926e4adf04fb847220ea fix(deps): update dependency systeminformation to v5.16.0 (#7011)",
+      "hash": "17f99fe3069385b24bb1926e4adf04fb847220ea",
+      "message": "fix(deps): update dependency systeminformation to v5.16.0 (#7011)"
+    },
+    {
+      "line": "< bda83d0cd789027d5da38aa5312b40525ffc7d53 fix(deps): update graphqlcodegenerator monorepo (#7005)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< bda83d0cd789027d5da38aa5312b40525ffc7d53 fix(deps): update graphqlcodegenerator monorepo (#7005)",
+      "hash": "bda83d0cd789027d5da38aa5312b40525ffc7d53",
+      "message": "fix(deps): update graphqlcodegenerator monorepo (#7005)"
+    },
+    {
+      "line": "< 2db7192547d3b79240a24e21b70892800fceafdc fix(deps): update dependency concurrently to v7.6.0 (#7006)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< 2db7192547d3b79240a24e21b70892800fceafdc fix(deps): update dependency concurrently to v7.6.0 (#7006)",
+      "hash": "2db7192547d3b79240a24e21b70892800fceafdc",
+      "message": "fix(deps): update dependency concurrently to v7.6.0 (#7006)"
+    },
+    {
+      "line": "< 0d476156e1219dac8c45d2c074affc2325934302 fix(deps): update dependency mini-css-extract-plugin to v2.7.1 (#7007)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< 0d476156e1219dac8c45d2c074affc2325934302 fix(deps): update dependency mini-css-extract-plugin to v2.7.1 (#7007)",
+      "hash": "0d476156e1219dac8c45d2c074affc2325934302",
+      "message": "fix(deps): update dependency mini-css-extract-plugin to v2.7.1 (#7007)"
+    },
+    {
+      "line": "< 9bfd1c13637dac511a41f35ef37546d42f02cdfc fix(deps): update dependency eslint to v8.28.0 (#7008)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< 9bfd1c13637dac511a41f35ef37546d42f02cdfc fix(deps): update dependency eslint to v8.28.0 (#7008)",
+      "hash": "9bfd1c13637dac511a41f35ef37546d42f02cdfc",
+      "message": "fix(deps): update dependency eslint to v8.28.0 (#7008)"
+    },
+    {
+      "line": "< 4673689fc6a6ecb038eca433ab122e35bf6a150d fix(deps): update dependency prettier to v2.8.0 (#7009)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< 4673689fc6a6ecb038eca433ab122e35bf6a150d fix(deps): update dependency prettier to v2.8.0 (#7009)",
+      "hash": "4673689fc6a6ecb038eca433ab122e35bf6a150d",
+      "message": "fix(deps): update dependency prettier to v2.8.0 (#7009)"
+    },
+    {
+      "line": "< 83bb58cad5dde5e9450b6d78753517394cfc8d39 fix(deps): update dependency react-hook-form to v7.40.0 (#7010)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< 83bb58cad5dde5e9450b6d78753517394cfc8d39 fix(deps): update dependency react-hook-form to v7.40.0 (#7010)",
+      "hash": "83bb58cad5dde5e9450b6d78753517394cfc8d39",
+      "message": "fix(deps): update dependency react-hook-form to v7.40.0 (#7010)"
+    },
+    {
+      "line": "< 7c2373a98bdfcc4ee6541076774574b440f4df43 chore(deps): update dependency lerna to v6.1.0 (#6993)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< 7c2373a98bdfcc4ee6541076774574b440f4df43 chore(deps): update dependency lerna to v6.1.0 (#6993)",
+      "hash": "7c2373a98bdfcc4ee6541076774574b440f4df43",
+      "message": "chore(deps): update dependency lerna to v6.1.0 (#6993)"
+    },
+    {
+      "line": "< 690dbfb2c985de5e0b4ef727af6286365ed0bc32 fix(deps): update dependency @fastify/http-proxy to v8.4.0 (#6995)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< 690dbfb2c985de5e0b4ef727af6286365ed0bc32 fix(deps): update dependency @fastify/http-proxy to v8.4.0 (#6995)",
+      "hash": "690dbfb2c985de5e0b4ef727af6286365ed0bc32",
+      "message": "fix(deps): update dependency @fastify/http-proxy to v8.4.0 (#6995)"
+    },
+    {
+      "line": "< cda420d64e4f736b2192b566defb6e7270d2cc23 fix(deps): update prisma monorepo to v4.7.0 (#6999)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< cda420d64e4f736b2192b566defb6e7270d2cc23 fix(deps): update prisma monorepo to v4.7.0 (#6999)",
+      "hash": "cda420d64e4f736b2192b566defb6e7270d2cc23",
+      "message": "fix(deps): update prisma monorepo to v4.7.0 (#6999)"
+    },
+    {
+      "line": "< 0d9448f178e37f2552199c8857a4944c4ab40ce9 fix(deps): update dependency jest-watch-typeahead to v2.2.1 (#6991)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< 0d9448f178e37f2552199c8857a4944c4ab40ce9 fix(deps): update dependency jest-watch-typeahead to v2.2.1 (#6991)",
+      "hash": "0d9448f178e37f2552199c8857a4944c4ab40ce9",
+      "message": "fix(deps): update dependency jest-watch-typeahead to v2.2.1 (#6991)"
+    },
+    {
+      "line": "< f2e885c6e608bbc8e2cd90e08bf3ed0c791bfea5 fix(deps): update dependency listr2 to v5.0.6 (#6989)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< f2e885c6e608bbc8e2cd90e08bf3ed0c791bfea5 fix(deps): update dependency listr2 to v5.0.6 (#6989)",
+      "hash": "f2e885c6e608bbc8e2cd90e08bf3ed0c791bfea5",
+      "message": "fix(deps): update dependency listr2 to v5.0.6 (#6989)"
+    },
+    {
+      "line": "< 6db2adfdc578fef9eb3c0dd80346e2618cb086ad chore(deps): update dependency cypress to v11.2.0 (#6992)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< 6db2adfdc578fef9eb3c0dd80346e2618cb086ad chore(deps): update dependency cypress to v11.2.0 (#6992)",
+      "hash": "6db2adfdc578fef9eb3c0dd80346e2618cb086ad",
+      "message": "chore(deps): update dependency cypress to v11.2.0 (#6992)"
+    },
+    {
+      "line": "< f54b4f5a5d9ff7cc35acd13432d97549e5e3f640 chore(deps): update dependency nx to v15.2.4 (#6994)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< f54b4f5a5d9ff7cc35acd13432d97549e5e3f640 chore(deps): update dependency nx to v15.2.4 (#6994)",
+      "hash": "f54b4f5a5d9ff7cc35acd13432d97549e5e3f640",
+      "message": "chore(deps): update dependency nx to v15.2.4 (#6994)"
+    },
+    {
+      "line": "< e53a4305771a6e6144d58c269ecc55936b7bfb0c fix(deps): update dependency msw to v0.49.1 (#6996)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< e53a4305771a6e6144d58c269ecc55936b7bfb0c fix(deps): update dependency msw to v0.49.1 (#6996)",
+      "hash": "e53a4305771a6e6144d58c269ecc55936b7bfb0c",
+      "message": "fix(deps): update dependency msw to v0.49.1 (#6996)"
+    },
+    {
+      "line": "< 078f1ec2c7531f312c55bc2e7511124cf8e81cd4 fix(deps): update dependency eslint-plugin-react to v7.31.11 (#6990)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< 078f1ec2c7531f312c55bc2e7511124cf8e81cd4 fix(deps): update dependency eslint-plugin-react to v7.31.11 (#6990)",
+      "hash": "078f1ec2c7531f312c55bc2e7511124cf8e81cd4",
+      "message": "fix(deps): update dependency eslint-plugin-react to v7.31.11 (#6990)"
+    },
+    {
+      "line": "< 26763007b99acdad3dbabe991815aea4a3c95d21 chore(docs): Change edit link text (#6971)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< 26763007b99acdad3dbabe991815aea4a3c95d21 chore(docs): Change edit link text (#6971)",
+      "hash": "26763007b99acdad3dbabe991815aea4a3c95d21",
+      "message": "chore(docs): Change edit link text (#6971)"
+    },
+    {
+      "line": "< d27739397d75266e64c266afa35dbc3a2f4c2d10 fix(deps): update graphql-tools monorepo (#6979)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< d27739397d75266e64c266afa35dbc3a2f4c2d10 fix(deps): update graphql-tools monorepo (#6979)",
+      "hash": "d27739397d75266e64c266afa35dbc3a2f4c2d10",
+      "message": "fix(deps): update graphql-tools monorepo (#6979)"
+    },
+    {
+      "line": "< 03ffac01ada4cac793a6ce3818704e4904baaf1d fix(deps): update dependency css-loader to v6.7.2 (#6976)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< 03ffac01ada4cac793a6ce3818704e4904baaf1d fix(deps): update dependency css-loader to v6.7.2 (#6976)",
+      "hash": "03ffac01ada4cac793a6ce3818704e4904baaf1d",
+      "message": "fix(deps): update dependency css-loader to v6.7.2 (#6976)"
+    },
+    {
+      "line": "< 208da7e721b6e238ad7add3f484b162a0cc5c9a9 fix(deps): update graphqlcodegenerator monorepo (#6980)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< 208da7e721b6e238ad7add3f484b162a0cc5c9a9 fix(deps): update graphqlcodegenerator monorepo (#6980)",
+      "hash": "208da7e721b6e238ad7add3f484b162a0cc5c9a9",
+      "message": "fix(deps): update graphqlcodegenerator monorepo (#6980)"
+    },
+    {
+      "line": "< a0fdf9ef20905ba392a1983a2063ca4c876524e6 fix(deps): update dependency react-hook-form to v7.39.7 (#6978)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< a0fdf9ef20905ba392a1983a2063ca4c876524e6 fix(deps): update dependency react-hook-form to v7.39.7 (#6978)",
+      "hash": "a0fdf9ef20905ba392a1983a2063ca4c876524e6",
+      "message": "fix(deps): update dependency react-hook-form to v7.39.7 (#6978)"
+    },
+    {
+      "line": "< 41ad857562c6f2579231451f5e51ad9e10ef61cc fix(deps): update dependency fastify-raw-body to v4.1.3 (#6977)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< 41ad857562c6f2579231451f5e51ad9e10ef61cc fix(deps): update dependency fastify-raw-body to v4.1.3 (#6977)",
+      "hash": "41ad857562c6f2579231451f5e51ad9e10ef61cc",
+      "message": "fix(deps): update dependency fastify-raw-body to v4.1.3 (#6977)"
+    },
+    {
+      "line": "< 68742b026feb1aebbae75990714918c16ab7098c chore(deps): update dependency esbuild to v0.15.16 (#6975)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< 68742b026feb1aebbae75990714918c16ab7098c chore(deps): update dependency esbuild to v0.15.16 (#6975)",
+      "hash": "68742b026feb1aebbae75990714918c16ab7098c",
+      "message": "chore(deps): update dependency esbuild to v0.15.16 (#6975)"
+    },
+    {
+      "line": "< ad88bdc42b5899d8aa36553751a13e6b2bfbb12f chore(deps): update babel monorepo (#6974)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< ad88bdc42b5899d8aa36553751a13e6b2bfbb12f chore(deps): update babel monorepo (#6974)",
+      "hash": "ad88bdc42b5899d8aa36553751a13e6b2bfbb12f",
+      "message": "chore(deps): update babel monorepo (#6974)"
+    },
+    {
+      "line": "< a462cb719b0dc71142606aa58cafbdfdc5a565f9 Make it clearer that can use directiveArgs in transformer directive (#6497)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< a462cb719b0dc71142606aa58cafbdfdc5a565f9 Make it clearer that can use directiveArgs in transformer directive (#6497)",
+      "hash": "a462cb719b0dc71142606aa58cafbdfdc5a565f9",
+      "message": "Make it clearer that can use directiveArgs in transformer directive (#6497)"
+    },
+    {
+      "line": "< 6dd54b29420ef045802243945f433a6ad14c0bc7 docs: Adds Troubleshooting Section to Serverless (#6498)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< 6dd54b29420ef045802243945f433a6ad14c0bc7 docs: Adds Troubleshooting Section to Serverless (#6498)",
+      "hash": "6dd54b29420ef045802243945f433a6ad14c0bc7",
+      "message": "docs: Adds Troubleshooting Section to Serverless (#6498)"
+    },
+    {
+      "line": "< c32085b88578e2c9d33df7b107571c649979c828 fix: extractCookie from GraphiQLHeader (#6894) (#6969)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< c32085b88578e2c9d33df7b107571c649979c828 fix: extractCookie from GraphiQLHeader (#6894) (#6969)",
+      "hash": "c32085b88578e2c9d33df7b107571c649979c828",
+      "message": "fix: extractCookie from GraphiQLHeader (#6894) (#6969)"
+    },
+    {
+      "line": "< 375bcb4379a768f34fc335bf0ed60de618c9666a Render Deploy: Define plan in template (#6905)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< 375bcb4379a768f34fc335bf0ed60de618c9666a Render Deploy: Define plan in template (#6905)",
+      "hash": "375bcb4379a768f34fc335bf0ed60de618c9666a",
+      "message": "Render Deploy: Define plan in template (#6905)"
+    },
+    {
+      "line": "< ebaf2c562ade72ec9055979a802745f62b9e8655 fix launch.json (#6972)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< ebaf2c562ade72ec9055979a802745f62b9e8655 fix launch.json (#6972)",
+      "hash": "ebaf2c562ade72ec9055979a802745f62b9e8655",
+      "message": "fix launch.json (#6972)"
+    },
+    {
+      "line": "< e84a2457fea3a724dfac23cc111ce2f423df2f4c small tweak to flightcontrol deploy docs (#6973)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< e84a2457fea3a724dfac23cc111ce2f423df2f4c small tweak to flightcontrol deploy docs (#6973)",
+      "hash": "e84a2457fea3a724dfac23cc111ce2f423df2f4c",
+      "message": "small tweak to flightcontrol deploy docs (#6973)"
+    },
+    {
+      "line": "< 9a4ca221a98a5816e022cf3fc5b220e0cba80e2b fix(deps): update dependency @pmmmwh/react-refresh-webpack-plugin to v0.5.10 (#6966)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< 9a4ca221a98a5816e022cf3fc5b220e0cba80e2b fix(deps): update dependency @pmmmwh/react-refresh-webpack-plugin to v0.5.10 (#6966)",
+      "hash": "9a4ca221a98a5816e022cf3fc5b220e0cba80e2b",
+      "message": "fix(deps): update dependency @pmmmwh/react-refresh-webpack-plugin to v0.5.10 (#6966)"
+    },
+    {
+      "line": "< 172040f7fa784d8f8189cc48bc98f4d484b595d5 Compress v1 (1.0-1.5) docs to v1.x (#7025)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< 172040f7fa784d8f8189cc48bc98f4d484b595d5 Compress v1 (1.0-1.5) docs to v1.x (#7025)",
+      "hash": "172040f7fa784d8f8189cc48bc98f4d484b595d5",
+      "message": "Compress v1 (1.0-1.5) docs to v1.x (#7025)"
+    },
+    {
+      "line": "< cd1aa605731fcabbf1def65fde1bf78a2cddabe6 pin auth0 js sdk (#6963)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< cd1aa605731fcabbf1def65fde1bf78a2cddabe6 pin auth0 js sdk (#6963)",
+      "hash": "cd1aa605731fcabbf1def65fde1bf78a2cddabe6",
+      "message": "pin auth0 js sdk (#6963)"
+    },
+    {
+      "line": "< ff6124ff4881dc4255a4aa4ec111a37dbb28636e [Dev Server] Feature: Duplicate routes checking and warning (#6835)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< ff6124ff4881dc4255a4aa4ec111a37dbb28636e [Dev Server] Feature: Duplicate routes checking and warning (#6835)",
+      "hash": "ff6124ff4881dc4255a4aa4ec111a37dbb28636e",
+      "message": "[Dev Server] Feature: Duplicate routes checking and warning (#6835)"
+    },
+    {
+      "line": "< de0e9e37e425d83c4c9f0db630c2b3291c789a18 chore(generators): Refactor cell tests for performance (#6925)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< de0e9e37e425d83c4c9f0db630c2b3291c789a18 chore(generators): Refactor cell tests for performance (#6925)",
+      "hash": "de0e9e37e425d83c4c9f0db630c2b3291c789a18",
+      "message": "chore(generators): Refactor cell tests for performance (#6925)"
+    },
+    {
+      "line": "< 717433c526ac99ef86d6fb36db84a6c980a11f06 chore(docs): update yarn.lock",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< 717433c526ac99ef86d6fb36db84a6c980a11f06 chore(docs): update yarn.lock",
+      "hash": "717433c526ac99ef86d6fb36db84a6c980a11f06",
+      "message": "chore(docs): update yarn.lock"
+    },
+    {
+      "line": "< aac7e29c32d2d66899378406314804fe0a9320b8 chore(deps): update yarn to v3.3.0 (#6917)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< aac7e29c32d2d66899378406314804fe0a9320b8 chore(deps): update yarn to v3.3.0 (#6917)",
+      "hash": "aac7e29c32d2d66899378406314804fe0a9320b8",
+      "message": "chore(deps): update yarn to v3.3.0 (#6917)"
+    },
+    {
+      "line": "< 97a6b54d6de65786b4fef6ae749c0f1ebb975923 Better explanation of how MockRouter works (#6932)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< 97a6b54d6de65786b4fef6ae749c0f1ebb975923 Better explanation of how MockRouter works (#6932)",
+      "hash": "97a6b54d6de65786b4fef6ae749c0f1ebb975923",
+      "message": "Better explanation of how MockRouter works (#6932)"
+    },
+    {
+      "line": "< b1824f86fcc012e7de23e6e1dd7592a542abb826 chore: Correct paths test, test-project pages (#6942)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< b1824f86fcc012e7de23e6e1dd7592a542abb826 chore: Correct paths test, test-project pages (#6942)",
+      "hash": "b1824f86fcc012e7de23e6e1dd7592a542abb826",
+      "message": "chore: Correct paths test, test-project pages (#6942)"
+    },
+    {
+      "line": "< 332c4725cc6cd777fe8d3ce2bff0b93814b3e649 Replaced outdated information about prerendering cells (#6940)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< 332c4725cc6cd777fe8d3ce2bff0b93814b3e649 Replaced outdated information about prerendering cells (#6940)",
+      "hash": "332c4725cc6cd777fe8d3ce2bff0b93814b3e649",
+      "message": "Replaced outdated information about prerendering cells (#6940)"
+    }
+  ],
+  "noReleaseCommits": 55
+}

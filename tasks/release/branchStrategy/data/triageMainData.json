@@ -1,0 +1,166 @@
+{
+  "544374612d6664d8b0ef4ff54dbc2a43c4e000a2": {
+    "message": "Fix dbauth webauthn template (redundant type import) (#6769)",
+    "needsCherryPick": false
+  },
+  "97f6f622e06e34e6a88f167cfffa1c1d78a33b92": {
+    "message": "Fix auth0 decoder import (#6764)",
+    "needsCherryPick": false
+  },
+  "e2ec41f319ce3d6ff11da80c349dc000f4982fdf": {
+    "message": "Update netlify auth docs (#6748)",
+    "needsCherryPick": false
+  },
+  "ce3426b38ebd9dfc1f8d7d022245b5105c420e79": {
+    "message": "Update auth setup warning message (#6746)",
+    "needsCherryPick": false
+  },
+  "be4c01c1ac2adba776f5a76db4b9b8959a6265e2": {
+    "message": "Okta: Add packages to setup script (#6732)",
+    "needsCherryPick": false
+  },
+  "810f1fecf815c111f0ebf095d07d7455e60fb657": {
+    "message": "Azure setup auth: Install and import all needed packages (#6736)",
+    "needsCherryPick": false
+  },
+  "c7cb9d975742ea392704a6cfccf1b42cddbc6a6d": {
+    "message": "Setup auth: Update goTrue (#6733)",
+    "needsCherryPick": false
+  },
+  "e05e08071548f30f8020012a23d7439b7b71c58c": {
+    "message": "Auth0 setup: Install correct packages (#6734)",
+    "needsCherryPick": false
+  },
+  "d0be5e823d45510852bad067f541f2605ba1e5cf": {
+    "message": "nhost auth: Add missing packages (#6742)",
+    "needsCherryPick": false
+  },
+  "50586ea0be78655a89adc88da8194129f2a9dabc": {
+    "message": "Add missing packages to magicLink setup (#6741)",
+    "needsCherryPick": false
+  },
+  "9a2609355954864802bb6075bb64e56e69918bc5": {
+    "message": "supertokens setup auth: Add missing RW packages (#6744)",
+    "needsCherryPick": false
+  },
+  "af8970fd52f22a25a9379289c70630370e616fad": {
+    "message": "Missing packages for Ethereum auth setup (#6740)",
+    "needsCherryPick": false
+  },
+  "570d7b49d1284194802d627278911fdd9881db0c": {
+    "message": "supabase auth setup: Add missing rw packages (#6743)",
+    "needsCherryPick": false
+  },
+  "968ad3a3c51ffab3cbdb7a5c99434d00b107c8b3": {
+    "message": "Update Clerk docs (#6712)",
+    "needsCherryPick": false
+  },
+  "801894efcb43454457519a68633c295de43e9ce3": {
+    "message": "Update firebase auth docs (#6717)",
+    "needsCherryPick": false
+  },
+  "443506daf8f0a375e1bd284453b4f7f69842c1de": {
+    "message": "Clerk: Simplify web implementation (#6713)",
+    "needsCherryPick": false
+  },
+  "60e075f4da0f7e87bbb6dd1c3c3904e7a1619632": {
+    "message": "Add auth decoder to clerk auth setup (#6718)",
+    "needsCherryPick": false
+  },
+  "7fbd6ba32b4ff4f9170ec51d5e7744e308094b9b": {
+    "message": "Update the Clerk setup script and templates (#6710)",
+    "needsCherryPick": false
+  },
+  "e01750d967682b8117374b0b8b96a31f56ebf426": {
+    "message": "Fix decouple auth related type errors (#6709)",
+    "needsCherryPick": false
+  },
+  "fa6546440e2b97519b030817cd89a613d0076769": {
+    "message": "fix(dbAuth): add required packages to setup command (#6698)",
+    "needsCherryPick": false
+  },
+  "79adb685eed4a01a79abb4b24ce17b312b4c79a9": {
+    "message": "chore: make misc change to trigger canary publishing (#6695)",
+    "needsCherryPick": false
+  },
+  "18eaf3007456770bc579a1bb29a0c599fbdd5f04": {
+    "message": "chore: run lint fix (#6691)",
+    "needsCherryPick": false
+  },
+  "0942fba9f717baf51ae5b404ef7c59217a9133c5": {
+    "message": "Decouple auth (#5985)",
+    "needsCherryPick": false
+  },
+  "c7ce6d6ac4c608609cf70a1777078bccd15edab5": {
+    "message": "Custom auth: Fix comment in template (#6804)",
+    "needsCherryPick": false
+  },
+  "97c36e1de6ed3579056aedaf6c0076fdff550c4a": {
+    "message": "fix: add back webAuthn export path (#6903)",
+    "needsCherryPick": false
+  },
+  "f6a6e640df9f6ae8321253fe8975c1887b1dc260": {
+    "message": "Include dbAuth setup in test project fixture check (#7036)",
+    "needsCherryPick": false
+  },
+  "b61d5c4b388ed33e9853e07b119f081dddf690ff": {
+    "message": "fix: dedupe redwoodjs packages (#7050)",
+    "needsCherryPick": false
+  },
+  "c273a476ac687d8cd1bd71d90c377893330a8f74": {
+    "message": "Setup auth: No return on missing modules (#7049)",
+    "needsCherryPick": false
+  },
+  "b7aa70a1948a57e42c83511399c64eef82a0ff62": {
+    "message": "Fix webAuthn import path in setup template (#7041)",
+    "needsCherryPick": false
+  },
+  "aa2f6786324c3cfbaff5667c5f5d1ffa03b63e9a": {
+    "message": "Fix typo in dbauth setup package name (#7040)",
+    "needsCherryPick": false
+  },
+  "e2937cdbdae969820b111d04f136e85c8fea990f": {
+    "message": "fix: auth provider names in setup auth (#7038)",
+    "needsCherryPick": false
+  },
+  "bcaef0236b840bbe90d17b03a5ef5e394c0bc538": {
+    "message": "chore(auth): move auth providers into separate packages (#7019)",
+    "needsCherryPick": false
+  },
+  "998be16f06f52a2d444a8cb905699f9c12e4c336": {
+    "message": "auth-firebase-* (#6987)",
+    "needsCherryPick": false
+  },
+  "99c86332709f1b20c5dd7b9a5e5091a4dcdfd001": {
+    "message": "fix(cli): Handle importing optional setup auth commands (#6997)",
+    "needsCherryPick": false
+  },
+  "f25125a4cb3dfca64c69bfd297d4594d33b32a77": {
+    "message": "Use auth provider specific packages (#6985)",
+    "needsCherryPick": false
+  },
+  "52fdd2b8be5ff83b6c0601856efc840cdb6dccc4": {
+    "message": "Custom auth should not have api package (#6986)",
+    "needsCherryPick": false
+  },
+  "388aaaf8965b3119d2a58cd4c50802c0f3493c9a": {
+    "message": "Remove api db auth global (#6968)",
+    "needsCherryPick": false
+  },
+  "b417e02faf023b83b11fb21dc7c459111f45e4c0": {
+    "message": "Custom auth package (#6984)",
+    "needsCherryPick": false
+  },
+  "24092ed7865e05a718ca95345b89ba9694070aeb": {
+    "message": "azure auth package (#6982)",
+    "needsCherryPick": false
+  },
+  "2fc5952e6a8613215ea4766b0fe2b080f99add0b": {
+    "message": "auth0 and netlify auth packages (#6922)",
+    "needsCherryPick": false
+  },
+  "fc84893ccc7eaa5f87b39cd12ad49819fbcf9a37": {
+    "message": "Use canary packages for auth in the test project (#7052)",
+    "needsCherryPick": false
+  }
+}

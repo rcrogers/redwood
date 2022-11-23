@@ -1,145 +1,129 @@
 /* eslint-env node, es2022 */
-import { dirname } from 'node:path'
+
 import { fileURLToPath } from 'node:url'
 
-import { $, path, chalk } from 'zx'
+import { chalk, path } from 'zx'
 
 import {
-  updateRemotes,
-  setupCache,
-  GIT_LOG_OPTIONS,
-  GIT_LOG_UI,
-  purgeCache,
-  parseCommit,
-  isCommitInBranch,
-  reportNewCommits,
-  triageCommits,
-  getReleaseBranch,
   colorKeyBox,
+  getSymmetricDifference,
+  getReleaseBranch,
+  logSection,
+  mungeCommits,
+  purgeData,
+  reportNewCommits,
+  setupData,
+  sharedGitLogOptions,
+  triageCommits,
+  updateRemotes,
 } from './branchStrategyLib.mjs'
 
 export const command = 'triage-next'
 export const description = 'Triage commits from next to the release branch'
 
-export async function handler() {
-  await updateRemotes()
+export function builder(yargs) {
+  return yargs.option('update-remotes', {
+    description: 'Update remotes',
+    type: 'boolean',
+    default: true,
+  })
+}
 
-  const branch = await getReleaseBranch()
-  console.log()
-
-  const cache = setupCache(
-    path.join(dirname(fileURLToPath(import.meta.url)), 'triageNextCache.json')
+export async function handler({ updateRemotes: shouldUpdateRemotes }) {
+  const data = setupData(
+    path.join(
+      path.dirname(fileURLToPath(import.meta.url)),
+      'data',
+      'triageNextData.json'
+    )
   )
 
-  let { stdout } = await $`git log ${GIT_LOG_OPTIONS} next...${branch}`
+  if (shouldUpdateRemotes) {
+    logSection('Updating remotes\n')
+    await updateRemotes()
+  }
 
-  if (!stdout) {
-    console.log(`The next and ${branch} branches are the same`)
-    cache.clear()
+  const releaseBranch = await getReleaseBranch()
+  console.log()
+
+  logSection(`Getting symmetric difference between next and ${releaseBranch}\n`)
+
+  const stdout = await getSymmetricDifference('next', releaseBranch, {
+    options: [
+      ...sharedGitLogOptions,
+      '--left-only',
+      '--cherry-pick',
+      '--boundary',
+    ],
+  })
+  console.log()
+
+  if (stdout.length === 1 && stdout[0] === '') {
+    console.log(`The next and ${releaseBranch} branches are the same`)
+    data.clear()
     return
   }
 
-  console.log()
-
-  stdout = stdout.trim().split('\n')
-
-  let commits = stdout
-    .filter((line) => !GIT_LOG_UI.some((mark) => line.startsWith(mark)))
-    // Remove any commits that are chores from merging a release branch back into the next branch.
-    .filter((line) => !line.includes('chore: update yarn.lock'))
-    .filter((line) => !/Merge branch (?<branch>.*) into next/.test(line))
-    .filter((line) => {
-      const { message } = parseCommit(line)
-      return !TAG_COMMIT_MESSAGE.test(message)
-    })
-
-  await purgeCache(cache, commits, branch)
-
-  // ?
-
-  // Remove commits we've already triaged
-  commits = commits.filter((line) => {
-    const { hash } = parseCommit(line)
-    return !cache.has(hash)
-  })
-
-  const commitsInRelease = await commits.reduce(async (arr, commit) => {
-    arr = await arr
-
-    const { hash, message } = parseCommit(commit)
-
-    if (await isCommitInBranch(branch, message)) {
-      arr.push(hash)
-    }
-
-    return arr
-  }, Promise.resolve([]))
-  console.log()
-
-  commits = commits.filter(
-    (commit) => !commitsInRelease.includes(parseCommit(commit).hash)
+  const commits = await mungeCommits.call(
+    { from: 'next', to: releaseBranch },
+    stdout
   )
 
-  if (!commits.length) {
+  let releaseCommits = commits.filter(
+    (commit) => !['ui', 'chore', 'tag'].includes(commit.type)
+  )
+
+  logSection('Purging commit data\n')
+  await purgeData(data, releaseCommits, releaseBranch)
+
+  // Remove commits we've already triaged or cherry picked
+  // (but had to change while cherry picking)
+  releaseCommits = releaseCommits
+    .filter(({ hash }) => !data.has(hash))
+    .filter(({ ref }) => ref !== releaseBranch)
+
+  if (!releaseCommits.length) {
+    logSection('Showing colored-coded git log\n')
+
     console.log('No new commits to triage')
 
     console.log(
       colorKeyBox(
         [
           `${chalk.green('■')} Needs to be cherry picked`,
-          `${chalk.dim(chalk.red('■'))} Doesn't need to be cherry picked)`,
-          `${chalk.dim(chalk.blue('■'))} Cherry picked into ${branch}`,
+          `${chalk.dim.red('■')} Doesn't need to be cherry picked`,
+          `${chalk.dim.blue('■')} Cherry picked into ${releaseBranch}`,
           `${chalk.dim('■')} Chore or "boundary" commit (ignore)`,
           `${chalk.yellow(
             '■'
-          )} Not in the cache (needs to be manually triaged)`,
+          )} Not in the commit data (needs to be manually triaged)`,
         ].join('\n')
       )
     )
 
-    stdout.forEach((line, i) => {
-      if (
-        GIT_LOG_UI.some((mark) => line.startsWith(mark)) ||
-        line.includes('chore: update yarn.lock') ||
-        /Merge branch (?<branch>.*) into next/.test(line)
-      ) {
-        stdout[i] = chalk.dim(line)
-        return
-      }
+    commits
+      .filter((commit) => !['ui', 'chore', 'tag'].includes(commit.type))
+      .filter((commit) => commit.ref !== releaseBranch)
+      .forEach((commit) => {
+        if (!data.has(commit.hash)) {
+          commit.pretty = chalk.yellow(commit.line)
+          return
+        }
 
-      const { hash, message } = parseCommit(line)
+        if (data.get(commit.hash).needsCherryPick) {
+          commit.pretty = chalk.green(commit.line)
+          return
+        }
 
-      if (TAG_COMMIT_MESSAGE.test(message)) {
-        stdout[i] = chalk.dim(line)
-        return
-      }
+        commit.pretty = chalk.dim.red(commit.line)
+      })
 
-      if (commitsInRelease.includes(parseCommit(line).hash)) {
-        stdout[i] = chalk.dim(chalk.blue(line))
-        return
-      }
-
-      if (!cache.has(hash)) {
-        stdout[i] = chalk.yellow(line)
-        return
-      }
-
-      if (cache.get(hash).needsCherryPick) {
-        stdout[i] = chalk.green(line)
-        return
-      }
-
-      stdout[i] = chalk.dim(chalk.red(line))
-    })
-
-    console.log(stdout.join('\n'))
+    console.log(commits.map(({ pretty }) => pretty).join('\n'))
 
     return
   }
 
-  reportNewCommits(commits)
-
-  await triageCommits.call({ cache, branch }, commits)
+  logSection('Triage\n')
+  reportNewCommits.call({ from: 'next', to: releaseBranch }, releaseCommits)
+  await triageCommits.call({ data, branch: releaseBranch }, releaseCommits)
 }
-
-const TAG_COMMIT_MESSAGE = /^v\d.\d.\d$/
