@@ -1,7 +1,7 @@
 /* eslint-env node, es2021 */
 
-import c from 'ansi-colors'
 import prompts from 'prompts'
+import { chalk } from 'zx'
 
 /**
  * Wrapper around `prompts` to exit on crtl c.
@@ -77,15 +77,15 @@ export async function confirmRuns(
 
 // ------------------------
 
-export const ASK = c.bgBlue(c.black('  ASK  '))
-export const CHECK = c.bgYellow(c.black(' CHECK '))
-export const FIX = c.bgRed(c.black('  FIX  '))
-export const OK = c.bgGreen(c.black('  O K  '))
+export const ASK = chalk.black.bgBlue('  ASK  ')
+export const CHECK = chalk.black.bgYellow(' CHECK ')
+export const FIX = chalk.black.bgRed('  FIX  ')
+export const OK = chalk.black.bgGreen('  O K  ')
 /**
  * See {@link https://stackoverflow.com/questions/38760554/how-to-print-cross-mark-or-check-mark-in-tcl}
  */
-export const HEAVY_X = c.red('\u2716')
-export const HEAVY_CHECK = c.green('\u2714')
+export const HEAVY_X = chalk.red('\u2716')
+export const HEAVY_CHECK = chalk.green('\u2714')
 
 /**
  * @param {string} prefix
@@ -94,7 +94,7 @@ function makeStringFormatter(prefix) {
   return function formatter(strings, ...values) {
     const message = strings.reduce(
       (string, nextString, i) =>
-        (string += nextString + c.green(values[i] ?? '')),
+        (string += nextString + chalk.green(values[i] ?? '')),
       ''
     )
 

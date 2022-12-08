@@ -1,1 +1,14 @@
-{}
+{
+  "4133b11fe28485ad3d839032c5b406f37503c6d9": {
+    "message": "chore(deps): update dependency esbuild to v0.16.2 (#7054)",
+    "needsCherryPick": false
+  },
+  "5309d2c8f36a4195448556a3730e2d3478f6f118": {
+    "message": "fix(deps): update dependency prettier to v2.8.1 (#7055)",
+    "needsCherryPick": false
+  },
+  "1868607665d6dc8a89271b9ee26e84bae39b99b2": {
+    "message": "fix(deps): update graphqlcodegenerator monorepo (#7056)",
+    "needsCherryPick": false
+  }
+}

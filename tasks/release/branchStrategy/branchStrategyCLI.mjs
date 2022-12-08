@@ -7,7 +7,7 @@ import { $ } from 'zx'
 
 // import * as findPRCommand from './findPRCommand.mjs'
 import { getReleaseBranch } from './branchStrategyLib.mjs'
-import * as getReleaseCommits from './getReleaseCommits.mjs'
+import * as getReleaseCommitsCommand from './getReleaseCommitsCommand.mjs'
 import * as triageMainCommand from './triageMainCommand.mjs'
 import * as triageNextCommand from './triageNextCommand.mjs'
 import * as validateMilestonesCommand from './validateMilestonesCommand.mjs'
@@ -55,7 +55,7 @@ yargs(hideBin(process.argv))
   .strict()
   // Commands
   // .command(findPRCommand)
-  .command(getReleaseCommits)
+  .command(getReleaseCommitsCommand)
   .command(triageMainCommand)
   .command(triageNextCommand)
   .command(validateMilestonesCommand)

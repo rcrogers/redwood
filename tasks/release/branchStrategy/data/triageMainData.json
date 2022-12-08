@@ -162,5 +162,13 @@
   "fc84893ccc7eaa5f87b39cd12ad49819fbcf9a37": {
     "message": "Use canary packages for auth in the test project (#7052)",
     "needsCherryPick": false
+  },
+  "27b1666f888eda8d1cb76bacde2060846d1a5e9d": {
+    "message": "fix(deps): update dependency webpack-cli to v5 (#7058)",
+    "needsCherryPick": false
+  },
+  "1e2c8b748c33baf6d289f54c8c1bc39e969ecdd6": {
+    "message": "fix(deps): update dependency fs-extra to v11 (#7057)",
+    "needsCherryPick": true
   }
 }

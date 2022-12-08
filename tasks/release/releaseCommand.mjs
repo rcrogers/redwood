@@ -1,32 +1,13 @@
-/* eslint-env node, es2021 */
+/* eslint-env node */
 
-/**
- * Use this script to release a version of RedwoodJS:
- *
- * ```
- * yarn release
- * ```
- *
- * @remarks
- *
- * You'll need...
- *
- * 1. a GitHub token in your environment (GITHUB_TOKEN)
- * 2. to be logged into NPM
- * 3. the appropriate permissions on your NPM account (contact @thedavidprice)
- *
- * @todo
- *
- * - consider writing an e2e test using verdaccio
- */
+// chalk instead of ansi-colors
 
-import c from 'ansi-colors'
 import boxen from 'boxen'
 import notifier from 'node-notifier'
 /**
  * See {@link https://github.com/google/zx}
  */
-import { $, cd } from 'zx'
+import { cd, chalk, $ } from 'zx'
 
 import generateReleaseNotes from './generateReleaseNotes.mjs'
 import octokit from './octokit.mjs'
@@ -43,10 +24,9 @@ import updatePRsMilestone, { closeMilestone } from './updatePRsMilestone.mjs'
 
 let milestone
 
-export default async function release() {
-  /**
-   * Make sure that we're on next.
-   */
+// logSection
+
+async function getCurrentBranch() {
   const gitBranchPO = await $`git branch --show-current`
 
   if (gitBranchPO.stdout.trim() !== 'next') {
@@ -54,8 +34,17 @@ export default async function release() {
     process.exitCode = 1
     return
   }
+}
 
-  console.log(ok`On next`)
+export default async function release() {
+  // ------------------------
+  // # Make sure that we're on next
+  const currentBranch = await getCurrentBranch()
+
+  if (currentBranch !== 'next') {
+    console.log(fix`Start from next`)
+    process.exit(1)
+  }
 
   /**
    * - ask for the desired semver
@@ -129,7 +118,7 @@ export default async function release() {
 
   if (gitTagPO.stdout.trim()) {
     console.log(
-      c.bold(
+      chalk.bold(
         fix`Git tag ${nextVersion} already exists locally. You must resolve this before proceeding`
       )
     )
@@ -152,7 +141,7 @@ export default async function release() {
 
   if (pullRequests.length) {
     console.log(
-      c.bold(
+      chalk.bold(
         fix`There shouldn't be any merged PRs without a milestone. You have to resolve this before proceeding`
       )
     )
@@ -162,7 +151,7 @@ export default async function release() {
     return
   }
 
-  console.log(c.bold(ok`No merged PRs without a milestone`))
+  console.log(chalk.bold(ok`No merged PRs without a milestone`))
 
   /**
    * If we're releasing a patch, we're done.
@@ -180,11 +169,11 @@ export default async function release() {
 
     if (!nextReleasePatchPullRequests.length) {
       console.log(
-        c.bold(ok`No merged PRs with the ${'next-release-patch'} milestone`)
+        chalk.bold(ok`No merged PRs with the ${'next-release-patch'} milestone`)
       )
     } else {
       console.log(
-        c.bold(
+        chalk.bold(
           fix`If you're not releasing a patch, there shouldn't be any merged PRs with the "next-release-patch" milestone. You have to resolve this before proceeding`
         )
       )
@@ -300,7 +289,7 @@ async function releaseMajorOrMinor(semver, nextVersion) {
         : () => $`git push -u origin ${releaseBranch}`,
       () => $`git push --tags`,
       () => $`yarn lerna publish from-package`,
-      () => console.log(rocketBoxen(`Released ${c.green(nextVersion)}`)),
+      () => console.log(rocketBoxen(`Released ${chalk.green(nextVersion)}`)),
     ],
     { exitIfNo: true }
   )
@@ -348,7 +337,7 @@ async function releasePatch(currentVersion, nextVersion) {
     console.log(
       [
         '',
-        `  👇 ${c.bgYellow(c.black(' HEADS UP '))}`,
+        `  👇 ${chalk.black.bgYellow(' HEADS UP ')}`,
         '  Remember to cherry pick PRs _in the same order as they were merged_',
         "  And after you're done, run... ",
         '    1. yarn (to update the lock file), and',
@@ -382,7 +371,7 @@ async function releasePatch(currentVersion, nextVersion) {
       () => $`git push`,
       () => $`git push --tags`,
       () => $`yarn lerna publish from-package`,
-      () => console.log(rocketBoxen(`Released ${c.green(nextVersion)}`)),
+      () => console.log(rocketBoxen(`Released ${chalk.green(nextVersion)}`)),
     ],
     { exitIfNo: true }
   )
