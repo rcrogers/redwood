@@ -1,4 +1,4 @@
-/* eslint-env node, es2022 */
+/* eslint-env node */
 
 import { fileURLToPath } from 'node:url'
 
@@ -16,7 +16,7 @@ import {
   sharedGitLogOptions,
   triageCommits,
   updateRemotes,
-} from './branchStrategyLib.mjs'
+} from './releaseLib.mjs'
 
 export const command = 'triage-next'
 export const description = 'Triage commits from next to the release branch'

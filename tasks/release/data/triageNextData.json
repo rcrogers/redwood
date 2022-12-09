@@ -1,0 +1,78 @@
+{
+  "4133b11fe28485ad3d839032c5b406f37503c6d9": {
+    "message": "chore(deps): update dependency esbuild to v0.16.2 (#7054)",
+    "needsCherryPick": false
+  },
+  "5309d2c8f36a4195448556a3730e2d3478f6f118": {
+    "message": "fix(deps): update dependency prettier to v2.8.1 (#7055)",
+    "needsCherryPick": false
+  },
+  "1868607665d6dc8a89271b9ee26e84bae39b99b2": {
+    "message": "fix(deps): update graphqlcodegenerator monorepo (#7056)",
+    "needsCherryPick": false
+  },
+  "356fecc42f0a8bb9fb48eff6508ac8ca14fd711b": {
+    "message": "chore(deps): update carloscastrojumo/github-cherry-pick-action action to v1.0.6 (#7085)",
+    "needsCherryPick": false
+  },
+  "4149fc346a43a3b15f0d33c049630ab39c7a463d": {
+    "message": "fix(deps): update dependency @types/node to v16.18.7 (#7087)",
+    "needsCherryPick": false
+  },
+  "cb8394fbf03145ddbb047e4789d8f708b809890c": {
+    "message": "fix(deps): update dependency @graphql-codegen/typescript-react-apollo to v3.3.7 (#7075)",
+    "needsCherryPick": false
+  },
+  "d659930e8547d21dc174323060834ab43606d8fe": {
+    "message": "fix(deps): update dependency systeminformation to v5.16.5 (#7079)",
+    "needsCherryPick": false
+  },
+  "45ebd5e64085cf263eadbbdbb7074f73a603c853": {
+    "message": "fix(deps): update dependency @graphql-tools/merge to v8.3.14 (#7076)",
+    "needsCherryPick": false
+  },
+  "0e27446b0c955262f041a85f603f2b553fbaa09b": {
+    "message": "fix(deps): update dependency @types/jest to v29.2.4 (#7078)",
+    "needsCherryPick": false
+  },
+  "00273b359c70a327c8581251b8450a78737a87d4": {
+    "message": "Fix chalk color access in test-project generation (#7070)",
+    "needsCherryPick": false
+  },
+  "d39155edf5ab442c24ad6fa0dc1af2d9af95aa85": {
+    "message": "fix(deps): update dependency fs-extra to v11 (#7057)",
+    "needsCherryPick": false
+  },
+  "c5150ae10890c43dfee9f9d28e027db4d0cc41fe": {
+    "message": "chore(deps): update dependency @simplewebauthn/server to v6.2.2 (#7086)",
+    "needsCherryPick": false
+  },
+  "fa07cd8564d026ed7c294676a837916639d2be7b": {
+    "message": "fix(deps): update dependency mini-css-extract-plugin to v2.7.2 (#7088)",
+    "needsCherryPick": false
+  },
+  "b2b5a65d408e65cf73290417ea706a1b5323d6fc": {
+    "message": "chore: udpate yarn.lock",
+    "needsCherryPick": false
+  },
+  "8813aaa344f4b839ae081b9b3c7c5e2b8fd71615": {
+    "message": "fix(deps): update dependency @types/aws-lambda to v8.10.109 (#7077)",
+    "needsCherryPick": false
+  },
+  "38cd88a3d4d7e58e734a5ec4049a925281f91fb2": {
+    "message": "chore(deps): update dependency @types/yargs to v17.0.17 (#7067)",
+    "needsCherryPick": false
+  },
+  "9c216c76d2ec967ae7e237ea61d04a0509fe07fc": {
+    "message": "chore(deps): update dependency @types/lodash to v4.14.191 (#7066)",
+    "needsCherryPick": false
+  },
+  "ecdbf5accc8c0739eb5fa2c5471536ab0dedf08e": {
+    "message": "chore(deps): update dependency esbuild to v0.16.3 (#7068)",
+    "needsCherryPick": false
+  },
+  "bdfadd5d52f961150057976f0928a9f3042b5fea": {
+    "message": "chore(deps): update dependency @types/babel__core to v7.1.20 (#7065)",
+    "needsCherryPick": false
+  }
+}

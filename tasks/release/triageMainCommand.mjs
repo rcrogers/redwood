@@ -1,4 +1,4 @@
-/* eslint-env node, es2022 */
+/* eslint-env node */
 
 import { fileURLToPath } from 'node:url'
 
@@ -9,13 +9,14 @@ import {
   getSymmetricDifference,
   logSection,
   mungeCommits,
+  openCherryPickPRs,
   purgeData,
   reportNewCommits,
   setupData,
   sharedGitLogOptions,
   triageCommits,
   updateRemotes,
-} from './branchStrategyLib.mjs'
+} from './releaseLib.mjs'
 
 export const command = 'triage-main'
 export const description = 'Triage commits from main to next'
@@ -42,6 +43,7 @@ export async function handler({ updateRemotes: shouldUpdateRemotes }) {
     await updateRemotes()
   }
 
+  // ------------------------
   logSection('Getting symmetric difference between main and next\n')
 
   const stdout = await getSymmetricDifference('main', 'next', {
@@ -60,6 +62,7 @@ export async function handler({ updateRemotes: shouldUpdateRemotes }) {
     (commit) => !['ui', 'chore', 'tag'].includes(commit.type)
   )
 
+  // ------------------------
   logSection('Purging commit data\n')
   await purgeData(data, releaseCommits, 'next')
 
@@ -109,7 +112,12 @@ export async function handler({ updateRemotes: shouldUpdateRemotes }) {
     return
   }
 
+  // ------------------------
   logSection('Triage\n')
+
+  await openCherryPickPRs()
+  console.log()
   reportNewCommits.call({ from: 'main', to: 'next' }, releaseCommits)
+  console.log()
   await triageCommits.call({ data, branch: 'next' }, releaseCommits)
 }

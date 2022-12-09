@@ -1,6 +1,61 @@
 {
   "commits": [
     {
+      "line": "> 8baa92c216c1487a329becd71b0f6b2b6d8c0d78 v3.6.1",
+      "ref": "v3.6.1",
+      "type": "tag",
+      "pretty": "\u001b[2m> 8baa92c216c1487a329becd71b0f6b2b6d8c0d78 v3.6.1\u001b[22m",
+      "hash": "8baa92c216c1487a329becd71b0f6b2b6d8c0d78",
+      "message": "v3.6.1"
+    },
+    {
+      "line": "= 676c5b350ccc7b32eb770193135bc210b6d02085 Make it clearer that can use directiveArgs in transformer directive (#6497)",
+      "ref": "v3.6.1",
+      "type": "commit",
+      "pretty": "\u001b[38;5;43m\u001b[2m= 676c5b350ccc7b32eb770193135bc210b6d02085 Make it clearer that can use directiveArgs in transformer directive (#6497)\u001b[22m\u001b[39m",
+      "hash": "676c5b350ccc7b32eb770193135bc210b6d02085",
+      "message": "Make it clearer that can use directiveArgs in transformer directive (#6497)"
+    },
+    {
+      "line": "= 322c99a4492509767385085f45968470458b1e13 fix: extractCookie from GraphiQLHeader (#6894) (#6969)",
+      "ref": "v3.6.1",
+      "type": "commit",
+      "pretty": "\u001b[38;5;43m\u001b[2m= 322c99a4492509767385085f45968470458b1e13 fix: extractCookie from GraphiQLHeader (#6894) (#6969)\u001b[22m\u001b[39m",
+      "hash": "322c99a4492509767385085f45968470458b1e13",
+      "message": "fix: extractCookie from GraphiQLHeader (#6894) (#6969)"
+    },
+    {
+      "line": "= 6551fb03bb025dc2ed508c7b241e257cfbf655f7 Render Deploy: Define plan in template (#6905)",
+      "ref": "v3.6.1",
+      "type": "commit",
+      "pretty": "\u001b[38;5;43m\u001b[2m= 6551fb03bb025dc2ed508c7b241e257cfbf655f7 Render Deploy: Define plan in template (#6905)\u001b[22m\u001b[39m",
+      "hash": "6551fb03bb025dc2ed508c7b241e257cfbf655f7",
+      "message": "Render Deploy: Define plan in template (#6905)"
+    },
+    {
+      "line": "= df5e83866ab538bb69999d6eecf741cafc0ec0ee fix launch.json (#6972)",
+      "ref": "v3.6.1",
+      "type": "commit",
+      "pretty": "\u001b[38;5;43m\u001b[2m= df5e83866ab538bb69999d6eecf741cafc0ec0ee fix launch.json (#6972)\u001b[22m\u001b[39m",
+      "hash": "df5e83866ab538bb69999d6eecf741cafc0ec0ee",
+      "message": "fix launch.json (#6972)"
+    },
+    {
+      "line": "= ff469334075c506e1fd261746d02ed3790940951 pin auth0 js sdk (#6963)",
+      "ref": "v3.6.1",
+      "type": "commit",
+      "pretty": "\u001b[38;5;43m\u001b[2m= ff469334075c506e1fd261746d02ed3790940951 pin auth0 js sdk (#6963)\u001b[22m\u001b[39m",
+      "hash": "ff469334075c506e1fd261746d02ed3790940951",
+      "message": "pin auth0 js sdk (#6963)"
+    },
+    {
+      "line": "= 73a9ad4867c4c1bf8f26108b33c23621433318b3 chore: update yarn.lock",
+      "ref": "release/minor/v3.7.0",
+      "type": "chore",
+      "pretty": "\u001b[2m= 73a9ad4867c4c1bf8f26108b33c23621433318b3 chore: update yarn.lock\u001b[22m",
+      "hash": "73a9ad4867c4c1bf8f26108b33c23621433318b3"
+    },
+    {
       "line": "< c808eb08a8706725fa0626b903be68003fc8c848 fix(deps): update dependency systeminformation to v5.16.3 (#7043)",
       "ref": "release/minor/v3.7.0",
       "type": "commit",
@@ -313,10 +368,10 @@
       "message": "chore(deps): update babel monorepo (#6974)"
     },
     {
-      "line": "< a462cb719b0dc71142606aa58cafbdfdc5a565f9 Make it clearer that can use directiveArgs in transformer directive (#6497)",
-      "ref": "release/minor/v3.7.0",
+      "line": "= a462cb719b0dc71142606aa58cafbdfdc5a565f9 Make it clearer that can use directiveArgs in transformer directive (#6497)",
+      "ref": "v3.6.1",
       "type": "commit",
-      "pretty": "< a462cb719b0dc71142606aa58cafbdfdc5a565f9 Make it clearer that can use directiveArgs in transformer directive (#6497)",
+      "pretty": "\u001b[38;5;43m\u001b[2m= a462cb719b0dc71142606aa58cafbdfdc5a565f9 Make it clearer that can use directiveArgs in transformer directive (#6497)\u001b[22m\u001b[39m",
       "hash": "a462cb719b0dc71142606aa58cafbdfdc5a565f9",
       "message": "Make it clearer that can use directiveArgs in transformer directive (#6497)"
     },
@@ -329,26 +384,26 @@
       "message": "docs: Adds Troubleshooting Section to Serverless (#6498)"
     },
     {
-      "line": "< c32085b88578e2c9d33df7b107571c649979c828 fix: extractCookie from GraphiQLHeader (#6894) (#6969)",
-      "ref": "release/minor/v3.7.0",
+      "line": "= c32085b88578e2c9d33df7b107571c649979c828 fix: extractCookie from GraphiQLHeader (#6894) (#6969)",
+      "ref": "v3.6.1",
       "type": "commit",
-      "pretty": "< c32085b88578e2c9d33df7b107571c649979c828 fix: extractCookie from GraphiQLHeader (#6894) (#6969)",
+      "pretty": "\u001b[38;5;43m\u001b[2m= c32085b88578e2c9d33df7b107571c649979c828 fix: extractCookie from GraphiQLHeader (#6894) (#6969)\u001b[22m\u001b[39m",
       "hash": "c32085b88578e2c9d33df7b107571c649979c828",
       "message": "fix: extractCookie from GraphiQLHeader (#6894) (#6969)"
     },
     {
-      "line": "< 375bcb4379a768f34fc335bf0ed60de618c9666a Render Deploy: Define plan in template (#6905)",
-      "ref": "release/minor/v3.7.0",
+      "line": "= 375bcb4379a768f34fc335bf0ed60de618c9666a Render Deploy: Define plan in template (#6905)",
+      "ref": "v3.6.1",
       "type": "commit",
-      "pretty": "< 375bcb4379a768f34fc335bf0ed60de618c9666a Render Deploy: Define plan in template (#6905)",
+      "pretty": "\u001b[38;5;43m\u001b[2m= 375bcb4379a768f34fc335bf0ed60de618c9666a Render Deploy: Define plan in template (#6905)\u001b[22m\u001b[39m",
       "hash": "375bcb4379a768f34fc335bf0ed60de618c9666a",
       "message": "Render Deploy: Define plan in template (#6905)"
     },
     {
-      "line": "< ebaf2c562ade72ec9055979a802745f62b9e8655 fix launch.json (#6972)",
-      "ref": "release/minor/v3.7.0",
+      "line": "= ebaf2c562ade72ec9055979a802745f62b9e8655 fix launch.json (#6972)",
+      "ref": "v3.6.1",
       "type": "commit",
-      "pretty": "< ebaf2c562ade72ec9055979a802745f62b9e8655 fix launch.json (#6972)",
+      "pretty": "\u001b[38;5;43m\u001b[2m= ebaf2c562ade72ec9055979a802745f62b9e8655 fix launch.json (#6972)\u001b[22m\u001b[39m",
       "hash": "ebaf2c562ade72ec9055979a802745f62b9e8655",
       "message": "fix launch.json (#6972)"
     },
@@ -376,10 +431,10 @@
       "hash": "53ee3d7011bfa4508ef7702b2453b2c2d11f3f04"
     },
     {
-      "line": "< 2afd478afd6a0015ec20b5cf0ee6b4514915c25a chore: update yarn.lock",
+      "line": "= 2afd478afd6a0015ec20b5cf0ee6b4514915c25a chore: update yarn.lock",
       "ref": "release/minor/v3.7.0",
       "type": "chore",
-      "pretty": "\u001b[2m< 2afd478afd6a0015ec20b5cf0ee6b4514915c25a chore: update yarn.lock\u001b[22m",
+      "pretty": "\u001b[2m= 2afd478afd6a0015ec20b5cf0ee6b4514915c25a chore: update yarn.lock\u001b[22m",
       "hash": "2afd478afd6a0015ec20b5cf0ee6b4514915c25a"
     },
     {
@@ -398,10 +453,10 @@
       "message": "Compress v1 (1.0-1.5) docs to v1.x (#7025)"
     },
     {
-      "line": "< cd1aa605731fcabbf1def65fde1bf78a2cddabe6 pin auth0 js sdk (#6963)",
-      "ref": "release/minor/v3.7.0",
+      "line": "= cd1aa605731fcabbf1def65fde1bf78a2cddabe6 pin auth0 js sdk (#6963)",
+      "ref": "v3.6.1",
       "type": "commit",
-      "pretty": "< cd1aa605731fcabbf1def65fde1bf78a2cddabe6 pin auth0 js sdk (#6963)",
+      "pretty": "\u001b[38;5;43m\u001b[2m= cd1aa605731fcabbf1def65fde1bf78a2cddabe6 pin auth0 js sdk (#6963)\u001b[22m\u001b[39m",
       "hash": "cd1aa605731fcabbf1def65fde1bf78a2cddabe6",
       "message": "pin auth0 js sdk (#6963)"
     },
@@ -463,7 +518,7 @@
     }
   ],
   "tagsToColors": {
-    "v3.6.0": "#15b79f"
+    "v3.6.1": "#15b79f"
   },
   "releaseCommits": [
     {
@@ -779,44 +834,12 @@
       "message": "chore(deps): update babel monorepo (#6974)"
     },
     {
-      "line": "< a462cb719b0dc71142606aa58cafbdfdc5a565f9 Make it clearer that can use directiveArgs in transformer directive (#6497)",
-      "ref": "release/minor/v3.7.0",
-      "type": "commit",
-      "pretty": "< a462cb719b0dc71142606aa58cafbdfdc5a565f9 Make it clearer that can use directiveArgs in transformer directive (#6497)",
-      "hash": "a462cb719b0dc71142606aa58cafbdfdc5a565f9",
-      "message": "Make it clearer that can use directiveArgs in transformer directive (#6497)"
-    },
-    {
       "line": "< 6dd54b29420ef045802243945f433a6ad14c0bc7 docs: Adds Troubleshooting Section to Serverless (#6498)",
       "ref": "release/minor/v3.7.0",
       "type": "commit",
       "pretty": "< 6dd54b29420ef045802243945f433a6ad14c0bc7 docs: Adds Troubleshooting Section to Serverless (#6498)",
       "hash": "6dd54b29420ef045802243945f433a6ad14c0bc7",
       "message": "docs: Adds Troubleshooting Section to Serverless (#6498)"
-    },
-    {
-      "line": "< c32085b88578e2c9d33df7b107571c649979c828 fix: extractCookie from GraphiQLHeader (#6894) (#6969)",
-      "ref": "release/minor/v3.7.0",
-      "type": "commit",
-      "pretty": "< c32085b88578e2c9d33df7b107571c649979c828 fix: extractCookie from GraphiQLHeader (#6894) (#6969)",
-      "hash": "c32085b88578e2c9d33df7b107571c649979c828",
-      "message": "fix: extractCookie from GraphiQLHeader (#6894) (#6969)"
-    },
-    {
-      "line": "< 375bcb4379a768f34fc335bf0ed60de618c9666a Render Deploy: Define plan in template (#6905)",
-      "ref": "release/minor/v3.7.0",
-      "type": "commit",
-      "pretty": "< 375bcb4379a768f34fc335bf0ed60de618c9666a Render Deploy: Define plan in template (#6905)",
-      "hash": "375bcb4379a768f34fc335bf0ed60de618c9666a",
-      "message": "Render Deploy: Define plan in template (#6905)"
-    },
-    {
-      "line": "< ebaf2c562ade72ec9055979a802745f62b9e8655 fix launch.json (#6972)",
-      "ref": "release/minor/v3.7.0",
-      "type": "commit",
-      "pretty": "< ebaf2c562ade72ec9055979a802745f62b9e8655 fix launch.json (#6972)",
-      "hash": "ebaf2c562ade72ec9055979a802745f62b9e8655",
-      "message": "fix launch.json (#6972)"
     },
     {
       "line": "< e84a2457fea3a724dfac23cc111ce2f423df2f4c small tweak to flightcontrol deploy docs (#6973)",
@@ -841,14 +864,6 @@
       "pretty": "< 172040f7fa784d8f8189cc48bc98f4d484b595d5 Compress v1 (1.0-1.5) docs to v1.x (#7025)",
       "hash": "172040f7fa784d8f8189cc48bc98f4d484b595d5",
       "message": "Compress v1 (1.0-1.5) docs to v1.x (#7025)"
-    },
-    {
-      "line": "< cd1aa605731fcabbf1def65fde1bf78a2cddabe6 pin auth0 js sdk (#6963)",
-      "ref": "release/minor/v3.7.0",
-      "type": "commit",
-      "pretty": "< cd1aa605731fcabbf1def65fde1bf78a2cddabe6 pin auth0 js sdk (#6963)",
-      "hash": "cd1aa605731fcabbf1def65fde1bf78a2cddabe6",
-      "message": "pin auth0 js sdk (#6963)"
     },
     {
       "line": "< ff6124ff4881dc4255a4aa4ec111a37dbb28636e [Dev Server] Feature: Duplicate routes checking and warning (#6835)",
@@ -907,5 +922,5 @@
       "message": "Replaced outdated information about prerendering cells (#6940)"
     }
   ],
-  "noReleaseCommits": 55
+  "noReleaseCommits": 50
 }

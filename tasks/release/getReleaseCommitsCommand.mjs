@@ -1,12 +1,8 @@
-/* eslint-env node, es2022 */
+/* eslint-env node */
 
 import { chalk } from 'zx'
 
-import {
-  getReleaseCommits,
-  logSection,
-  colorKeyBox,
-} from './branchStrategyLib.mjs'
+import { getReleaseCommits, logSection, colorKeyBox } from './releaseLib.mjs'
 
 export const command = 'get-release-commits'
 export const description = 'Get release commits'

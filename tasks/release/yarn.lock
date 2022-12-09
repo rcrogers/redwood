@@ -414,6 +414,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/prompts@npm:2.4.1":
+  version: 2.4.1
+  resolution: "@types/prompts@npm:2.4.1"
+  dependencies:
+    "@types/node": "*"
+  checksum: e00281339b716d7635ab0dc5f52f9a012daca9ed21346887fa1def85febfd16e937908d62602a34158eb613f6738ac15b85f3012f9993c0664a8f368385f6109
+  languageName: node
+  linkType: hard
+
 "@types/ps-tree@npm:^1.1.2":
   version: 1.1.2
   resolution: "@types/ps-tree@npm:1.1.2"
@@ -501,18 +510,6 @@ __metadata:
   checksum: 321b4d675791479293264019156ca322163f02dc06e3c4cab33bb15cd43d80b51efef69b0930cfde3acd63d126ebca24cd0544fa6f261e093a0fb41ab9dda381
   languageName: node
   linkType: hard
-
-"branch-strategy@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "branch-strategy@workspace:."
-  dependencies:
-    "@faker-js/faker": 7.6.0
-    boxen: 5.1.2
-    octokit: 2.0.8
-    yargs: 17.6.2
-    zx: 7.1.1
-  languageName: unknown
-  linkType: soft
 
 "btoa-lite@npm:^1.0.0":
   version: 1.0.0
@@ -889,6 +886,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"kleur@npm:^3.0.3":
+  version: 3.0.3
+  resolution: "kleur@npm:3.0.3"
+  checksum: cd3a0b8878e7d6d3799e54340efe3591ca787d9f95f109f28129bdd2915e37807bf8918bb295ab86afb8c82196beec5a1adcaf29042ce3f2bd932b038fe3aa4b
+  languageName: node
+  linkType: hard
+
 "lodash.includes@npm:^4.3.0":
   version: 4.3.0
   resolution: "lodash.includes@npm:4.3.0"
@@ -1065,6 +1069,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"prompts@npm:2.4.2":
+  version: 2.4.2
+  resolution: "prompts@npm:2.4.2"
+  dependencies:
+    kleur: ^3.0.3
+    sisteransi: ^1.0.5
+  checksum: 16f1ac2977b19fe2cf53f8411cc98db7a3c8b115c479b2ca5c82b5527cd937aa405fa04f9a5960abeb9daef53191b53b4d13e35c1f5d50e8718c76917c5f1ea4
+  languageName: node
+  linkType: hard
+
 "ps-tree@npm:^1.2.0":
   version: 1.2.0
   resolution: "ps-tree@npm:1.2.0"
@@ -1097,6 +1111,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"root-workspace-0b6124@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "root-workspace-0b6124@workspace:."
+  dependencies:
+    "@faker-js/faker": 7.6.0
+    "@types/prompts": 2.4.1
+    boxen: 5.1.2
+    octokit: 2.0.8
+    prompts: 2.4.2
+    yargs: 17.6.2
+    zx: 7.1.1
+  languageName: unknown
+  linkType: soft
+
 "run-parallel@npm:^1.1.9":
   version: 1.2.0
   resolution: "run-parallel@npm:1.2.0"
@@ -1119,6 +1147,13 @@ __metadata:
   bin:
     semver: ./bin/semver
   checksum: d4884f2aeca28bff35d0bd40ff0a9b2dfc4b36a883bf0ea5dc15d10d9a01bdc9041035b05f825d4b5ac8a56e490703dbf0d986d054de82cc5e9bad3f02ca6e00
+  languageName: node
+  linkType: hard
+
+"sisteransi@npm:^1.0.5":
+  version: 1.0.5
+  resolution: "sisteransi@npm:1.0.5"
+  checksum: 230ac975cca485b7f6fe2b96a711aa62a6a26ead3e6fb8ba17c5a00d61b8bed0d7adc21f5626b70d7c33c62ff4e63933017a6462942c719d1980bb0b1207ad46
   languageName: node
   linkType: hard
 

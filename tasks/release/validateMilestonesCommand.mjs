@@ -1,4 +1,4 @@
-/* eslint-env node, es2022 */
+/* eslint-env node */
 
 import { Octokit } from 'octokit'
 import { $ } from 'zx'
@@ -8,10 +8,12 @@ import {
   logSection,
   separator,
   isCommitInRef,
+  isYes,
   getReleaseBranch,
   getReleaseCommits,
+  openCherryPickPRs,
   sanitizeMessage,
-} from './branchStrategyLib.mjs'
+} from './releaseLib.mjs'
 
 export const command = 'validate-milestones'
 export const description =
@@ -26,7 +28,26 @@ export function builder(yargs) {
 }
 
 export async function handler({ prompt }) {
+  if (!process.env.GITHUB_TOKEN) {
+    console.log('You have to set the GITHUB_TOKEN env var')
+    process.exit(1)
+  }
+
   const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN })
+
+  const {
+    repository: {
+      pullRequests: { totalCount },
+    },
+  } = await octokit.graphql(getOpenCherryPickPRsQuery)
+
+  if (totalCount > 0) {
+    console.log(
+      'There are open cherry-pick PRs; get them merged before continuing'
+    )
+    await openCherryPickPRs()
+    process.exit(1)
+  }
 
   let {
     repository: {
@@ -108,6 +129,16 @@ export async function handler({ prompt }) {
   }
 }
 
+const getOpenCherryPickPRsQuery = `
+  query GetOpenCherryPickPRsQuery {
+    repository(owner: "redwoodjs", name: "redwood") {
+      pullRequests(states: OPEN, labels: ["cherry-pick"], baseRefName: "next") {
+        totalCount
+      }
+    }
+  }
+`
+
 const getPRs = `
   query GetPRs {
     repository(owner: "redwoodjs", name: "redwood") {
@@ -177,7 +208,7 @@ async function makeValidateMilestone(pr, milestone) {
       continue
     }
 
-    if ([null, 'Y', 'y'].includes(answer)) {
+    if (isYes(answer)) {
       console.log(
         `  ${chalk.blue('fixing')}: milestoning #${chalk.yellow(
           pr.number

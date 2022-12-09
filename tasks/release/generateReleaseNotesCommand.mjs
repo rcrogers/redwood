@@ -1,197 +1,174 @@
-/* eslint-env node, es2021 */
+/* eslint-env node */
 
-import { execSync } from 'node:child_process'
 import fs from 'node:fs'
-import url from 'node:url'
+import path from 'node:path'
+import { fileURLToPath } from 'node:url'
 
-import template from 'lodash.template'
+import { Octokit } from 'octokit'
+import { chalk } from 'zx'
 
-import octokit from './octokit.mjs'
+import { getMilestone } from './releaseLib.mjs'
 
-/**
- * Generates release notes for a milestone.
- *
- * @remarks
- *
- * If no milestone's given, just fetch the latest version milestone (e.g. `v0.42.0`).
- *
- * @param {string} [milestone]
- * @param {{ releaseCandidate: boolean }} [options]
- */
-export default async function generateReleaseNotes(
-  milestone,
-  { releaseCandidate = false } = {}
-) {
-  const { title, id } = await getMilestoneId(milestone)
+export const command = 'generate-release-notes <milestone>'
+export const description = 'Generate release notes for a milestone'
 
-  if (releaseCandidate) {
-    await generateReleaseCandidateReleaseNotes(title)
-    return
-  }
-
-  const prs = await getPRsWithMilestone({ milestoneId: id })
-
-  const filename = new URL(`${title}ReleaseNotes.md`, import.meta.url)
-  const filedata = interpolate({
-    uniqueContributors: getNoOfUniqueContributors(prs),
-    prsMerged: prs.filter((pr) => pr.author.login !== 'renovate').length,
-    ...sortPRs(prs),
-  })
-  fs.writeFileSync(filename, filedata)
-  console.log(`Written to ${url.fileURLToPath(filename)}`)
-}
-
-/**
- * @param {string} milestone
- */
-async function generateReleaseCandidateReleaseNotes(milestone) {
-  const stdout = execSync(
-    'yarn npm info @redwoodjs/core@latest --fields version --json',
-    {
-      shell: true,
-    }
-  )
-
-  const latestVersion = 'v' + JSON.parse(stdout.toString().trim()).version
-
-  const {
-    repository: {
-      refs: { nodes },
-    },
-  } = await octokit.graphql(
-    `
-        query GetReleaseBranch($milestone: String!) {
-          repository(owner: "redwoodjs", name: "redwood") {
-            refs(first: 1, refPrefix:"refs/heads/", query: $milestone) {
-              nodes {
-                name
-              }
-            }
-          }
-        }
-      `,
-    {
-      milestone,
-    }
-  )
-
-  if (nodes.length === 0) {
-    console.log(`No release branch found for ${latestVersion}`)
-    return
-  }
-
-  const [{ name: releaseBranch }] = nodes
-
-  console.log({
-    compare: `https://github.com/redwoodjs/redwood/compare/${latestVersion}...${releaseBranch}`,
-    mergedPrs: `https://github.com/redwoodjs/redwood/pulls?q=is%3Apr+is%3Amerged+milestone%3A${milestone}`,
+export function builder(yargs) {
+  yargs.positional('milestone', {
+    describe: 'The milestone to generate release notes for',
+    type: 'string',
   })
 }
 
-/**
- * @typedef {{
- *   repository: {
- *     milestones: {
- *       nodes: Array<{ title: string, id: string }>
- *     }
- *   }
- * }} GetMilestoneIdsRes
- *
- * @param {string} [title]
- */
-async function getMilestoneId(title) {
-  const {
-    repository: {
-      milestones: { nodes: milestones },
-    },
-  } = /** @type GetMilestoneIdsRes */ (
-    await octokit.graphql(GET_MILESTONE_IDS, { title })
-  )
-
-  if (!title) {
-    const [latestMilestone] = milestones
-    console.log(
-      `No milestone was provided; using the latest: ${latestMilestone.title}`
-    )
-    return latestMilestone
+export async function handler({ milestone }) {
+  if (!process.env.GITHUB_TOKEN) {
+    console.log('You have to set the GITHUB_TOKEN env var')
+    process.exit(1)
   }
 
-  let milestone = milestones.find((milestone) => milestone.title === title)
+  const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN })
 
-  return milestone
-}
+  const { title, id } = await getMilestone.call({ octokit }, milestone)
 
-export const GET_MILESTONE_IDS = `
-  query GetMilestoneIds($title: String) {
-    repository(owner: "redwoodjs", name: "redwood") {
-      milestones(
-        query: $title
-        first: 3
-        orderBy: { field: NUMBER, direction: DESC }
-      ) {
-        nodes {
-          title
-          id
+  const prs = await getPRsWithMilestone.call({ octokit }, { milestoneId: id })
+
+  const coreDependenciesRegex = new RegExp(
+    [
+      '@apollo/client',
+      ' eslint ',
+      'prettier',
+      'fastify',
+      'msw',
+      'prisma',
+      'react-hook-form',
+      'storybook ',
+      'yarn',
+    ].join('|')
+  )
+
+  const {
+    breaking,
+    features,
+    fixed,
+    docs,
+    coreDependencies,
+    chore,
+    dependencies,
+    rest,
+  } = prs.reduce(
+    (obj, pr) => {
+      if (pr.author.login === 'renovate') {
+        if (coreDependenciesRegex.test(pr.title)) {
+          obj.coreDependencies.push(`- ${formatPR(pr)}`)
         }
+
+        obj.dependencies.push(`<li>${pr.title} #${pr.number}</li>`)
+        return obj
       }
-    }
-  }
-`
 
-/**
- * @typedef {{
- *   number: number
- *   title: string
- *   author: {
- *     login: string
- *   };
- *   labels: {
- *     nodes: Array<{
- *       name: string
- *     }>
- *   }
- * }} PR
- *
- * @typedef {{
- *   node: {
- *     pullRequests: {
- *       pageInfo: {
- *         hasNextPage: boolean
- *         endCursor: string
- *       }
- *       nodes: Array<PR>
- *       totalCount: number
- *     }
- *   }
- * }} GetPRsWithMilestoneRes
- *
- * @param {{ milestoneId: string, after?: string }}
- * @returns {Promise<Array<PR>>}
- */
+      const labels = pr.labels.nodes.map((label) => label.name)
+
+      if (labels.includes('release:feature-breaking')) {
+        obj.breaking.push(`- ${formatPR(pr)}`)
+        return obj
+      }
+
+      if (labels.includes('release:feature')) {
+        obj.features.push(`- ${formatPR(pr)}`)
+        return obj
+      }
+
+      if (labels.includes('release:fix')) {
+        obj.fixed.push(`- ${formatPR(pr)}`)
+        return obj
+      }
+
+      if (labels.includes('release:chore')) {
+        obj.chore.push(`- ${formatPR(pr)}`)
+        return obj
+      }
+
+      if (labels.includes('release:docs')) {
+        obj.docs.push(`- ${formatPR(pr)}`)
+        return obj
+      }
+
+      obj.rest.push(`- ${formatPR(pr)}`)
+
+      return obj
+    },
+    {
+      breaking: [],
+      features: [],
+      fixed: [],
+      docs: [],
+      coreDependencies: [],
+      chore: [],
+      dependencies: [],
+      rest: [],
+    }
+  )
+
+  const file = path.join(
+    path.dirname(fileURLToPath(import.meta.url)),
+    `${title}-release-notes.md`
+  )
+
+  const releaseNotes = [
+    '# Changelog',
+    '',
+    ...(breaking.length ? ['## Breaking', '', ...breaking, ''] : []),
+    ...(features.length ? ['## Features', '', ...features, ''] : []),
+    ...(fixed.length ? ['## Fixed', '', ...fixed, ''] : []),
+    ...(docs.length ? ['## Docs', '', ...docs, ''] : []),
+    ...(chore.length ? ['## Chore', '', ...chore, ''] : []),
+    ...(coreDependencies.length
+      ? ['## Core dependencies', '', ...coreDependencies, '']
+      : []),
+    ...(dependencies.length
+      ? [
+          '## Dependencies',
+          '',
+          '<details>',
+          '<summary>Click to see all upgraded dependencies</summary>',
+          '<ul>',
+          ...dependencies,
+          '</ul>',
+          '</details>',
+          '',
+        ]
+      : []),
+    ...(rest.length ? ['## Rest', '', ...rest, ''] : []),
+  ].join('\n')
+
+  fs.writeFileSync(file, releaseNotes)
+
+  console.log(
+    `Wrote ${chalk.magenta(milestone)} release notes to ${chalk.magenta(file)}`
+  )
+}
+
 async function getPRsWithMilestone({ milestoneId, after }) {
   const {
     node: { pullRequests },
-  } = /** @type GetPRsWithMilestoneRes */ (
-    await octokit.graphql(GET_PRS_WITH_MILESTONE, {
-      milestoneId,
-      after,
-    })
-  )
+  } = await this.octokit.graphql(getPRsWithMilestoneQuery, {
+    milestoneId,
+    after,
+  })
 
   if (!pullRequests.pageInfo.hasNextPage) {
     return pullRequests.nodes
   }
 
-  const prs = await getPRsWithMilestone({
+  const nodes = await getPRsWithMilestone({
     milestoneId,
     after: pullRequests.pageInfo.endCursor,
   })
 
-  return [...pullRequests.nodes, ...prs]
+  return [...pullRequests.nodes, ...nodes]
 }
 
-export const GET_PRS_WITH_MILESTONE = `
-  query GetPRsWithMilestone($milestoneId: ID!, $after: String) {
+export const getPRsWithMilestoneQuery = `
+  query GetPRsWithMilestoneQuery($milestoneId: ID!, $after: String) {
     node(id: $milestoneId) {
       ... on Milestone {
         pullRequests(first: 100, after: $after) {
@@ -218,140 +195,6 @@ export const GET_PRS_WITH_MILESTONE = `
   }
 `
 
-/**
- * Get the number of unique contributors, excluding renovate bot.
- *
- * @param {Array<PR>} prs
- */
-function getNoOfUniqueContributors(prs) {
-  const logins = prs
-    .map((pr) => pr.author.login)
-    .filter((login) => login !== 'renovate')
-
-  return new Set(logins).size
-}
-
-/**
- * @todo this could be a little better.
- *
- * @param {Array<PR>} prs
- */
-function sortPRs(prs) {
-  const breaking = []
-  const features = []
-  const fixed = []
-  const chore = []
-  const docs = []
-  const packageDependencies = []
-  const manual = []
-
-  for (const pr of prs) {
-    /**
-     * Sort `packageDependencies` by author (i.e. renovate bot).
-     */
-    if (pr.author.login === 'renovate') {
-      packageDependencies.push(`<li>${formatPR(pr)}</li>`)
-      continue
-    }
-
-    /**
-     * Sort the rest by label.
-     */
-    const labels = pr.labels.nodes.map((label) => label.name)
-
-    if (labels.includes('release:feature-breaking')) {
-      breaking.push(`- ${formatPR(pr)}`)
-      continue
-    }
-
-    if (labels.includes('release:feature')) {
-      features.push(`- ${formatPR(pr)}`)
-      continue
-    }
-
-    if (labels.includes('release:fix')) {
-      fixed.push(`- ${formatPR(pr)}`)
-      continue
-    }
-
-    if (labels.includes('release:chore')) {
-      chore.push(`- ${formatPR(pr)}`)
-      continue
-    }
-
-    if (labels.includes('release:docs')) {
-      docs.push(`- ${formatPR(pr)}`)
-      continue
-    }
-
-    /**
-     * Those that can't be sorted.
-     */
-    manual.push(`- ${formatPR(pr)}`)
-  }
-
-  return {
-    breaking: breaking.join('\n'),
-    features: features.join('\n'),
-    fixed: fixed.join('\n'),
-    chore: chore.join('\n'),
-    docs: docs.join('\n'),
-    packageDependencies: packageDependencies.join('\n'),
-    manual: manual.join('\n'),
-  }
-}
-
-/**
- * @param {Array<PR>} pr
- */
 function formatPR(pr) {
   return `${pr.title} #${pr.number} by @${pr.author.login}`
 }
-
-/**
- * Interpolate the template and write to `${cwd}/${milestone}-releaseNotes.md`.
- *
- * @see {@link https://nodejs.org/docs/latest-v15.x/api/esm.html#esm_no_filename_or_dirname}
- */
-const interpolate = template(
-  [
-    '# Changelog',
-    '',
-    'Unique contributors: ${uniqueContributors}',
-    '',
-    'PRs merged: ${prsMerged}',
-    '',
-    '## Breaking',
-    '',
-    '${breaking}',
-    '',
-    '## Features',
-    '',
-    '${features}',
-    '',
-    '## Fixed',
-    '',
-    '${fixed}',
-    '',
-    '## Chore',
-    '',
-    '${chore}',
-    '',
-    '## Docs',
-    '',
-    '${docs}',
-    '',
-    '### Package Dependencies',
-    '',
-    '<details>',
-    '<summary>View all Dependency Version Upgrades</summary>',
-    '<ul>',
-    '${packageDependencies}',
-    '</ul>',
-    '</details>',
-    '',
-    '## Manual',
-    '',
-    '${manual}',
-  ].join('\n')
-)
