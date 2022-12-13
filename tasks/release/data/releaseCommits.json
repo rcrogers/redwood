@@ -1,59 +1,12 @@
 {
   "commits": [
     {
-      "line": "> 8baa92c216c1487a329becd71b0f6b2b6d8c0d78 v3.6.1",
-      "ref": "v3.6.1",
-      "type": "tag",
-      "pretty": "\u001b[2m> 8baa92c216c1487a329becd71b0f6b2b6d8c0d78 v3.6.1\u001b[22m",
-      "hash": "8baa92c216c1487a329becd71b0f6b2b6d8c0d78",
-      "message": "v3.6.1"
-    },
-    {
-      "line": "= 676c5b350ccc7b32eb770193135bc210b6d02085 Make it clearer that can use directiveArgs in transformer directive (#6497)",
-      "ref": "v3.6.1",
-      "type": "commit",
-      "pretty": "\u001b[38;5;43m\u001b[2m= 676c5b350ccc7b32eb770193135bc210b6d02085 Make it clearer that can use directiveArgs in transformer directive (#6497)\u001b[22m\u001b[39m",
-      "hash": "676c5b350ccc7b32eb770193135bc210b6d02085",
-      "message": "Make it clearer that can use directiveArgs in transformer directive (#6497)"
-    },
-    {
-      "line": "= 322c99a4492509767385085f45968470458b1e13 fix: extractCookie from GraphiQLHeader (#6894) (#6969)",
-      "ref": "v3.6.1",
-      "type": "commit",
-      "pretty": "\u001b[38;5;43m\u001b[2m= 322c99a4492509767385085f45968470458b1e13 fix: extractCookie from GraphiQLHeader (#6894) (#6969)\u001b[22m\u001b[39m",
-      "hash": "322c99a4492509767385085f45968470458b1e13",
-      "message": "fix: extractCookie from GraphiQLHeader (#6894) (#6969)"
-    },
-    {
-      "line": "= 6551fb03bb025dc2ed508c7b241e257cfbf655f7 Render Deploy: Define plan in template (#6905)",
-      "ref": "v3.6.1",
-      "type": "commit",
-      "pretty": "\u001b[38;5;43m\u001b[2m= 6551fb03bb025dc2ed508c7b241e257cfbf655f7 Render Deploy: Define plan in template (#6905)\u001b[22m\u001b[39m",
-      "hash": "6551fb03bb025dc2ed508c7b241e257cfbf655f7",
-      "message": "Render Deploy: Define plan in template (#6905)"
-    },
-    {
-      "line": "= df5e83866ab538bb69999d6eecf741cafc0ec0ee fix launch.json (#6972)",
-      "ref": "v3.6.1",
-      "type": "commit",
-      "pretty": "\u001b[38;5;43m\u001b[2m= df5e83866ab538bb69999d6eecf741cafc0ec0ee fix launch.json (#6972)\u001b[22m\u001b[39m",
-      "hash": "df5e83866ab538bb69999d6eecf741cafc0ec0ee",
-      "message": "fix launch.json (#6972)"
-    },
-    {
-      "line": "= ff469334075c506e1fd261746d02ed3790940951 pin auth0 js sdk (#6963)",
-      "ref": "v3.6.1",
-      "type": "commit",
-      "pretty": "\u001b[38;5;43m\u001b[2m= ff469334075c506e1fd261746d02ed3790940951 pin auth0 js sdk (#6963)\u001b[22m\u001b[39m",
-      "hash": "ff469334075c506e1fd261746d02ed3790940951",
-      "message": "pin auth0 js sdk (#6963)"
-    },
-    {
-      "line": "= 73a9ad4867c4c1bf8f26108b33c23621433318b3 chore: update yarn.lock",
+      "line": "< b1785d9c7f2bebbfecb969709d1caa91db4ec2c3 [docs] How to test in GitHub actions (#6921)",
       "ref": "release/minor/v3.7.0",
-      "type": "chore",
-      "pretty": "\u001b[2m= 73a9ad4867c4c1bf8f26108b33c23621433318b3 chore: update yarn.lock\u001b[22m",
-      "hash": "73a9ad4867c4c1bf8f26108b33c23621433318b3"
+      "type": "commit",
+      "pretty": "< b1785d9c7f2bebbfecb969709d1caa91db4ec2c3 [docs] How to test in GitHub actions (#6921)",
+      "hash": "b1785d9c7f2bebbfecb969709d1caa91db4ec2c3",
+      "message": "[docs] How to test in GitHub actions (#6921)"
     },
     {
       "line": "< c808eb08a8706725fa0626b903be68003fc8c848 fix(deps): update dependency systeminformation to v5.16.3 (#7043)",
@@ -515,12 +468,75 @@
       "pretty": "< 332c4725cc6cd777fe8d3ce2bff0b93814b3e649 Replaced outdated information about prerendering cells (#6940)",
       "hash": "332c4725cc6cd777fe8d3ce2bff0b93814b3e649",
       "message": "Replaced outdated information about prerendering cells (#6940)"
+    },
+    {
+      "line": "> 8baa92c216c1487a329becd71b0f6b2b6d8c0d78 v3.6.1",
+      "ref": "v3.6.1",
+      "type": "tag",
+      "pretty": "\u001b[2m> 8baa92c216c1487a329becd71b0f6b2b6d8c0d78 v3.6.1\u001b[22m",
+      "hash": "8baa92c216c1487a329becd71b0f6b2b6d8c0d78",
+      "message": "v3.6.1"
+    },
+    {
+      "line": "= 676c5b350ccc7b32eb770193135bc210b6d02085 Make it clearer that can use directiveArgs in transformer directive (#6497)",
+      "ref": "v3.6.1",
+      "type": "commit",
+      "pretty": "\u001b[38;5;43m\u001b[2m= 676c5b350ccc7b32eb770193135bc210b6d02085 Make it clearer that can use directiveArgs in transformer directive (#6497)\u001b[22m\u001b[39m",
+      "hash": "676c5b350ccc7b32eb770193135bc210b6d02085",
+      "message": "Make it clearer that can use directiveArgs in transformer directive (#6497)"
+    },
+    {
+      "line": "= 322c99a4492509767385085f45968470458b1e13 fix: extractCookie from GraphiQLHeader (#6894) (#6969)",
+      "ref": "v3.6.1",
+      "type": "commit",
+      "pretty": "\u001b[38;5;43m\u001b[2m= 322c99a4492509767385085f45968470458b1e13 fix: extractCookie from GraphiQLHeader (#6894) (#6969)\u001b[22m\u001b[39m",
+      "hash": "322c99a4492509767385085f45968470458b1e13",
+      "message": "fix: extractCookie from GraphiQLHeader (#6894) (#6969)"
+    },
+    {
+      "line": "= 6551fb03bb025dc2ed508c7b241e257cfbf655f7 Render Deploy: Define plan in template (#6905)",
+      "ref": "v3.6.1",
+      "type": "commit",
+      "pretty": "\u001b[38;5;43m\u001b[2m= 6551fb03bb025dc2ed508c7b241e257cfbf655f7 Render Deploy: Define plan in template (#6905)\u001b[22m\u001b[39m",
+      "hash": "6551fb03bb025dc2ed508c7b241e257cfbf655f7",
+      "message": "Render Deploy: Define plan in template (#6905)"
+    },
+    {
+      "line": "= df5e83866ab538bb69999d6eecf741cafc0ec0ee fix launch.json (#6972)",
+      "ref": "v3.6.1",
+      "type": "commit",
+      "pretty": "\u001b[38;5;43m\u001b[2m= df5e83866ab538bb69999d6eecf741cafc0ec0ee fix launch.json (#6972)\u001b[22m\u001b[39m",
+      "hash": "df5e83866ab538bb69999d6eecf741cafc0ec0ee",
+      "message": "fix launch.json (#6972)"
+    },
+    {
+      "line": "= ff469334075c506e1fd261746d02ed3790940951 pin auth0 js sdk (#6963)",
+      "ref": "v3.6.1",
+      "type": "commit",
+      "pretty": "\u001b[38;5;43m\u001b[2m= ff469334075c506e1fd261746d02ed3790940951 pin auth0 js sdk (#6963)\u001b[22m\u001b[39m",
+      "hash": "ff469334075c506e1fd261746d02ed3790940951",
+      "message": "pin auth0 js sdk (#6963)"
+    },
+    {
+      "line": "= 73a9ad4867c4c1bf8f26108b33c23621433318b3 chore: update yarn.lock",
+      "ref": "release/minor/v3.7.0",
+      "type": "chore",
+      "pretty": "\u001b[2m= 73a9ad4867c4c1bf8f26108b33c23621433318b3 chore: update yarn.lock\u001b[22m",
+      "hash": "73a9ad4867c4c1bf8f26108b33c23621433318b3"
     }
   ],
   "tagsToColors": {
     "v3.6.1": "#15b79f"
   },
   "releaseCommits": [
+    {
+      "line": "< b1785d9c7f2bebbfecb969709d1caa91db4ec2c3 [docs] How to test in GitHub actions (#6921)",
+      "ref": "release/minor/v3.7.0",
+      "type": "commit",
+      "pretty": "< b1785d9c7f2bebbfecb969709d1caa91db4ec2c3 [docs] How to test in GitHub actions (#6921)",
+      "hash": "b1785d9c7f2bebbfecb969709d1caa91db4ec2c3",
+      "message": "[docs] How to test in GitHub actions (#6921)"
+    },
     {
       "line": "< c808eb08a8706725fa0626b903be68003fc8c848 fix(deps): update dependency systeminformation to v5.16.3 (#7043)",
       "ref": "release/minor/v3.7.0",
@@ -922,5 +938,5 @@
       "message": "Replaced outdated information about prerendering cells (#6940)"
     }
   ],
-  "noReleaseCommits": 50
+  "noReleaseCommits": 51
 }

@@ -175,12 +175,48 @@
     "message": "dbAuth: No more process.env.RWJS_API_DBAUTH_URL (#7032)",
     "needsCherryPick": false
   },
-  "eeb4fda1ed15e9e141957eb7ff654544abd31b3b": {
-    "message": "chore(deps): update dependency @types/react-dom to v17.0.18 (#7097)",
+  "51d21a00cea4fc1bf8c5e0dcc20f4cadb0d809ae": {
+    "message": "Codemod to include full-name in test-project signup (#7124)",
+    "needsCherryPick": false
+  },
+  "ef3600d14ada83c0265f52f623e19b43793562d0": {
+    "message": "Rebuild test-project fixture (#7123)",
+    "needsCherryPick": false
+  },
+  "58a18fd08a30724d0eea8927d9408e75da623ea9": {
+    "message": "dbAuthClient (#7111)",
+    "needsCherryPick": false
+  },
+  "a9fc646485acb068cba2335d1f64bfb16842edf2": {
+    "message": "fix: add missing deps to cli helpers (#7117)",
+    "needsCherryPick": false
+  },
+  "0071302ec6b0241f47925d480c41f39ea82340b8": {
+    "message": "chore(deps): update dependency supertokens-node to v12.1.3 (#7105)",
+    "needsCherryPick": false
+  },
+  "bedee5c35a8131bcb779bb05825f85027727232b": {
+    "message": "fix(deps): update dependency @types/node to v16.18.9 (#7140)",
     "needsCherryPick": true
   },
-  "8cfcbac57d23b6a2731c75fab565c1fadcdc03cd": {
-    "message": "chore(deps): update dependency @types/jscodeshift to v0.11.6 (#7093)",
-    "needsCherryPick": true
+  "9267c04fe8326a413a0523236998b18247ad323e": {
+    "message": "fix: add cli-helpers as dep (#7141)",
+    "needsCherryPick": false
+  },
+  "7df11f53ad2289785daf10d5237f8f847d139d30": {
+    "message": "remove deprecated auth providers (#7138)",
+    "needsCherryPick": false
+  },
+  "3d057db199487ea0b17240317d66ddde3f83f332": {
+    "message": "chore: update test project fixture dbauth packages (#7139)",
+    "needsCherryPick": false
+  },
+  "2f65ef0a385c137d6a770c385e06da1ae7a63e0b": {
+    "message": "NavLink not highlighting when on sub pages (#6939)",
+    "needsCherryPick": false
+  },
+  "aa6fb1e09cd4a5876fcd775f3291190c8b9b2c6b": {
+    "message": "Rename create auth functions (#7137)",
+    "needsCherryPick": false
   }
 }

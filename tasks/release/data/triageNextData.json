@@ -74,5 +74,89 @@
   "bdfadd5d52f961150057976f0928a9f3042b5fea": {
     "message": "chore(deps): update dependency @types/babel__core to v7.1.20 (#7065)",
     "needsCherryPick": false
+  },
+  "2ac992ec327ca9eb1ad3777075302d6c2fec2131": {
+    "message": "chore(deps): update dependency nx to v15.3.2 (#7114)",
+    "needsCherryPick": false
+  },
+  "39127721295d699a50a6137c377c1774a68e6ae8": {
+    "message": "chore(deps): update dependency redis to v4.5.1 (#7115)",
+    "needsCherryPick": false
+  },
+  "99fa9eccef655c27a9a0aa49caa2cf128317a978": {
+    "message": "Label override flags for dbAuth generator (#6440)",
+    "needsCherryPick": false
+  },
+  "cf5130246c206fb22d4d4840835993b8f2725b7c": {
+    "message": "fix(deps): update dependency @types/node to v16.18.8 (#7107)",
+    "needsCherryPick": false
+  },
+  "3a136331b0f85e9842d5dd805c47cd9840d43385": {
+    "message": "chore(deps): update dependency @types/react to v17.0.52 (#7095)",
+    "needsCherryPick": false
+  },
+  "079c859c2d04de97d1c6f6f4b60891c3f4f107e3": {
+    "message": "chore(deps): update dependency @types/prompts to v2.4.2 (#7094)",
+    "needsCherryPick": false
+  },
+  "dfce706edb2cf9b58da5caf9e11a329f92681bf4": {
+    "message": "chore(deps): update dependency octokit to v2.0.10 (#7100)",
+    "needsCherryPick": false
+  },
+  "a384c85e0ff146ea7436429894b0d9f4041e2da0": {
+    "message": "feat: add CustomValidator (#7051)",
+    "needsCherryPick": false
+  },
+  "aba5af46daab2f053d649e95c2f930257de1f62d": {
+    "message": "Adds ability to delete a cache entry (#7016)",
+    "needsCherryPick": false
+  },
+  "9afec967fd74c677410dda691759bacbab02e62a": {
+    "message": "fix(deps): update dependency systeminformation to v5.16.6 (#7108)",
+    "needsCherryPick": false
+  },
+  "2bb8bbb7b48839ed9bf71961ec10fc7598add3d3": {
+    "message": "feat: Generator rollbacks  (#6947)",
+    "needsCherryPick": false
+  },
+  "a27d66f22b11dbe7341723ae51cde56d9d5caf83": {
+    "message": "Allow other repo names than just \"redwood\" (#7101)",
+    "needsCherryPick": false
+  },
+  "20e5ae3ededaf0e790d2347171f85e7493f95fce": {
+    "message": "chore(deps): update dependency @types/jscodeshift to v0.11.6 (#7093)",
+    "needsCherryPick": false
+  },
+  "6846682cfdac77dd8685f6979d394f67dcb0fe2d": {
+    "message": "chore(deps): update dependency @types/react-dom to v17.0.18 (#7097)",
+    "needsCherryPick": false
+  },
+  "8e4856475fd3fcb20d371bc5339b98eb4d7ceed6": {
+    "message": "fix(deps): update docusaurus monorepo to v2.2.0 (#7116)",
+    "needsCherryPick": false
+  },
+  "0b10013796640863a3f99f77434b40e67ea6af1c": {
+    "message": "fix(deps): update dependency vscode-languageserver-textdocument to v1.0.8 (#7132)",
+    "needsCherryPick": false
+  },
+  "fd421de235a37580df61267f19e4d48d94e031a3": {
+    "message": "Export underlying cache client with Service Cache functions (#7062)",
+    "needsCherryPick": false
+  },
+  "2a784bcb51853429c5b49cf094c2b6d01e557515": {
+    "message": "fix(deps): update dependency @simplewebauthn/browser to v6.2.2 (#7103)",
+    "needsCherryPick": false
+  },
+  "7ec3da56f9fbed955a29dea8e0d4e0dea17fddae": {
+    "message": "fix(deps): update dependency msw to v0.49.2 (#7126)",
+    "needsCherryPick": false
+  },
+  "967f5408838a59949f51b94ae8fa6a9b0df1cc49": {
+    "message": "chore(deps): update dependency nx to v15.3.3 (#7125)",
+    "needsCherryPick": false
+  },
+  "0e17ccfcb9377ac72fea5e9d6a18ca73596e2467": {
+    "message": "fix(deps): update typescript-eslint monorepo to v5.46.1 (#7109)",
+    "needsCherryPick": false
   }
 }

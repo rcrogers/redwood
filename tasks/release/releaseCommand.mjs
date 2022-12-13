@@ -6,9 +6,10 @@ import { cd, chalk, question, $ } from 'zx'
 
 import { handler as generateReleaseNotes } from './generateReleaseNotesCommand.mjs'
 import {
-  logSection,
-  getCurrentBranch,
+  // getCurrentBranch,
   getLatestRelease,
+  getMilestone,
+  logSection,
   prompts,
   isYes,
 } from './releaseLib.mjs'
@@ -25,14 +26,14 @@ export async function handler() {
   const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN })
 
   // ------------------------
-  logSection("Making sure that we're on next\n")
+  // logSection("Making sure that we're on next\n")
 
-  const currentBranch = await getCurrentBranch()
+  // const currentBranch = await getCurrentBranch()
 
-  if (currentBranch !== 'next') {
-    console.log('Start from the next branch')
-    process.exit(1)
-  }
+  // if (currentBranch !== 'next') {
+  //   console.log('Start from the next branch')
+  //   process.exit(1)
+  // }
 
   // ------------------------
   logSection('Asking for the semver\n')
@@ -49,6 +50,20 @@ export async function handler() {
   logSection('Getting the latest release\n')
 
   const currentVersion = await getLatestRelease()
+  console.log()
+
+  if (
+    !isYes(
+      await question(
+        `The latest release is ${chalk.magenta(currentVersion)}? [Y/n] > `
+      )
+    )
+  ) {
+    process.exit(1)
+  }
+
+  // ------------------------
+  logSection('Confirming the next release\n')
 
   let nextVersion
 
@@ -69,9 +84,6 @@ export async function handler() {
       break
     }
   }
-
-  // ------------------------
-  logSection('Confirming the next release\n')
 
   if (
     !isYes(
@@ -202,14 +214,15 @@ export async function handler() {
 
   switch (semver) {
     case 'major':
-      await releaseMajor(nextVersion)
-      break
     case 'minor':
-      await releaseMinor(nextVersion)
+      await releaseMajorOrMinor.call(
+        { octokit, milestone },
+        { semver, nextVersion }
+      )
       break
     case 'patch':
       await releasePatch.call(
-        { octokit, milestone: milestone },
+        { octokit, milestone },
         { currentVersion, nextVersion }
       )
       break
@@ -326,10 +339,7 @@ const updatePRMilestoneMutation = `
   }
 `
 
-const releaseMajor = (nextVersion) => releaseMajorOrMinor('major', nextVersion)
-const releaseMinor = (nextVersion) => releaseMajorOrMinor('minor', nextVersion)
-
-async function releaseMajorOrMinor(semver, nextVersion) {
+async function releaseMajorOrMinor({ semver, nextVersion }) {
   logSection('Checking if the release branch exists\n')
 
   const releaseBranch = ['release', semver, nextVersion].join('/')
@@ -362,7 +372,7 @@ async function releaseMajorOrMinor(semver, nextVersion) {
   if (
     !isYes(
       await question(
-        `Ok to continue to publish, or do you want to stop here so that you can push this branch to GitHub to create an RC?`
+        `Ok to continue to publish, or do you want to stop here so that you can push this branch to GitHub to create an RC? [Y/n] > `
       )
     )
   ) {
@@ -385,6 +395,7 @@ async function releaseMajorOrMinor(semver, nextVersion) {
   ) {
     process.exit(1)
   }
+  console.log()
 
   const nextDocsVersion = nextVersion.slice(1, -2)
 
@@ -430,14 +441,12 @@ async function releaseMajorOrMinor(semver, nextVersion) {
     [
       'Only a few more things to do:',
       '',
-      '  - Merge the release branch into next (updating yarn.lock if necessary)',
-      '  - Push',
+      '  - Merge the release branch into next (updating yarn.lock if necessary) and push',
+      '  - Once the docs are done deploying (check here https://app.netlify.com/sites/redwoodjs-docs/overview), start the algolia crawler at https://crawler.algolia.com/admin',
       '  - Delete the release branch locally and on https://github.com/redwoodjs/redwood/branches',
-      '  - Post on discord and twitter',
+      '  - Post on Discord and Twitter',
     ].join('\n')
   )
-
-  // await cleanUpTasks(semver, nextVersion)
 }
 
 /**

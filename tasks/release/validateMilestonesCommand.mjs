@@ -13,6 +13,7 @@ import {
   getReleaseCommits,
   openCherryPickPRs,
   sanitizeMessage,
+  updateRemotes,
 } from './releaseLib.mjs'
 
 export const command = 'validate-milestones'
@@ -84,6 +85,8 @@ export async function handler({ prompt }) {
     await `open https://github.com/redwoodjs/redwood/milestones`
     process.exit(1)
   }
+
+  await updateRemotes()
 
   const prs = nodes
     .flatMap((milestone) => {
