@@ -336,7 +336,6 @@ export async function getReleaseCommits({ useCache } = { useCache: true }) {
       if (await isCommitInRef(tag, commit.message)) {
         commit.ref = tag
         commit.pretty = chalk.hex(tagsToColors[tag]).dim(commit.line)
-        break
       }
     }
     console.log()

@@ -67,6 +67,13 @@ export async function handler({ prompt }) {
     process.exit(1)
   }
 
+  logSection('Confirm release commits\n')
+  if (!isYes(await question('Did you update the release commits? [Y/n] > '))) {
+    console.log('Run `get-release-commits --no-cache` first')
+    process.exit(1)
+  }
+  console.log()
+
   logSection('Confirm PRs in milestones\n')
   console.log(
     chalk.dim(

@@ -195,10 +195,6 @@
     "message": "chore(deps): update dependency supertokens-node to v12.1.3 (#7105)",
     "needsCherryPick": false
   },
-  "bedee5c35a8131bcb779bb05825f85027727232b": {
-    "message": "fix(deps): update dependency @types/node to v16.18.9 (#7140)",
-    "needsCherryPick": true
-  },
   "9267c04fe8326a413a0523236998b18247ad323e": {
     "message": "fix: add cli-helpers as dep (#7141)",
     "needsCherryPick": false
@@ -217,6 +213,18 @@
   },
   "aa6fb1e09cd4a5876fcd775f3291190c8b9b2c6b": {
     "message": "Rename create auth functions (#7137)",
+    "needsCherryPick": false
+  },
+  "0d896e85766a4561cf89f3fd73f6b9312eabb732": {
+    "message": "fix: @redwoodjs/api deps (#7153)",
+    "needsCherryPick": false
+  },
+  "e96a56b2de793f3eb703f2631431148ea1901895": {
+    "message": "chore(deps): update dependency @azure/msal-browser to v2.32.1 (#7142)",
+    "needsCherryPick": false
+  },
+  "70b4df68bcfeffa278e9097788e1027aa4eb1a62": {
+    "message": "Firebase Auth: Pin firebase-admin version in setup script (#7122)",
     "needsCherryPick": false
   }
 }

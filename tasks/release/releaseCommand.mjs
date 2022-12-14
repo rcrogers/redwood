@@ -212,6 +212,7 @@ export async function handler() {
     }
   }
 
+  // ------------------------
   switch (semver) {
     case 'major':
     case 'minor':

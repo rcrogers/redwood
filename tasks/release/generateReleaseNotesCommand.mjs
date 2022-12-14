@@ -58,7 +58,7 @@ export async function handler({ milestone }) {
     (obj, pr) => {
       if (pr.author.login === 'renovate') {
         if (coreDependenciesRegex.test(pr.title)) {
-          obj.coreDependencies.push(`- ${formatPR(pr)}`)
+          obj.coreDependencies.push(`- ${pr.title} #${pr.number}`)
         }
 
         obj.dependencies.push(`<li>${pr.title} #${pr.number}</li>`)
