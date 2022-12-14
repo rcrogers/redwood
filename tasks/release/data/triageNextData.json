@@ -1,1 +1,10 @@
-{}
+{
+  "bbca807a498519492aea0e512d882a53dbf23be6": {
+    "message": "[CLI]: Feature: An update middleware to detect and notify users of available updates (#6461)",
+    "needsCherryPick": false
+  },
+  "8fb5d6be046cb8b1f5c337c52856658a265e79cb": {
+    "message": "Check that most generator <name> positional arguments don't start with / (#7143)",
+    "needsCherryPick": true
+  }
+}

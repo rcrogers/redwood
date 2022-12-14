@@ -1,11 +1,21 @@
 {
   "commits": [
     {
+      "line": "< e825f95611c41bb7b990638c9be5eca573a9a3e4 chore(deps): update dependency @tsd/typescript to v4.9.4 (#7148)",
+      "ref": "release/minor/v3.8.0",
+      "type": "commit",
+      "pretty": "< e825f95611c41bb7b990638c9be5eca573a9a3e4 chore(deps): update dependency @tsd/typescript to v4.9.4 (#7148)",
+      "hash": "e825f95611c41bb7b990638c9be5eca573a9a3e4",
+      "message": "chore(deps): update dependency @tsd/typescript to v4.9.4 (#7148)",
+      "pr": "7148"
+    },
+    {
       "line": "< 6f08a10d9b5ba38f3488cb72e668825fc985aee2 Merge branch 'release/minor/v3.7.0' into next",
       "ref": "release/minor/v3.8.0",
       "type": "chore",
       "pretty": "\u001b[2m< 6f08a10d9b5ba38f3488cb72e668825fc985aee2 Merge branch 'release/minor/v3.7.0' into next\u001b[22m",
-      "hash": "6f08a10d9b5ba38f3488cb72e668825fc985aee2"
+      "hash": "6f08a10d9b5ba38f3488cb72e668825fc985aee2",
+      "message": "Merge branch 'release/minor/v3.7.0' into next"
     },
     {
       "line": "< 4cd987e578c030b90e93210e95f194986f5a7aea chore(deps): update dependency @replayio/playwright to v0.3.11 (#7150)",
@@ -13,7 +23,8 @@
       "type": "commit",
       "pretty": "< 4cd987e578c030b90e93210e95f194986f5a7aea chore(deps): update dependency @replayio/playwright to v0.3.11 (#7150)",
       "hash": "4cd987e578c030b90e93210e95f194986f5a7aea",
-      "message": "chore(deps): update dependency @replayio/playwright to v0.3.11 (#7150)"
+      "message": "chore(deps): update dependency @replayio/playwright to v0.3.11 (#7150)",
+      "pr": "7150"
     },
     {
       "line": "< 645c1b50b25c4d8f068bebf4c9750c8b5040907e fix(deps): update dependency @types/node to v16.18.9 (#7140)",
@@ -21,7 +32,8 @@
       "type": "commit",
       "pretty": "< 645c1b50b25c4d8f068bebf4c9750c8b5040907e fix(deps): update dependency @types/node to v16.18.9 (#7140)",
       "hash": "645c1b50b25c4d8f068bebf4c9750c8b5040907e",
-      "message": "fix(deps): update dependency @types/node to v16.18.9 (#7140)"
+      "message": "fix(deps): update dependency @types/node to v16.18.9 (#7140)",
+      "pr": "7140"
     },
     {
       "line": "< 0b10013796640863a3f99f77434b40e67ea6af1c fix(deps): update dependency vscode-languageserver-textdocument to v1.0.8 (#7132)",
@@ -29,7 +41,8 @@
       "type": "commit",
       "pretty": "< 0b10013796640863a3f99f77434b40e67ea6af1c fix(deps): update dependency vscode-languageserver-textdocument to v1.0.8 (#7132)",
       "hash": "0b10013796640863a3f99f77434b40e67ea6af1c",
-      "message": "fix(deps): update dependency vscode-languageserver-textdocument to v1.0.8 (#7132)"
+      "message": "fix(deps): update dependency vscode-languageserver-textdocument to v1.0.8 (#7132)",
+      "pr": "7132"
     },
     {
       "line": "< fd421de235a37580df61267f19e4d48d94e031a3 Export underlying cache client with Service Cache functions (#7062)",
@@ -37,7 +50,8 @@
       "type": "commit",
       "pretty": "< fd421de235a37580df61267f19e4d48d94e031a3 Export underlying cache client with Service Cache functions (#7062)",
       "hash": "fd421de235a37580df61267f19e4d48d94e031a3",
-      "message": "Export underlying cache client with Service Cache functions (#7062)"
+      "message": "Export underlying cache client with Service Cache functions (#7062)",
+      "pr": "7062"
     },
     {
       "line": "< 2a784bcb51853429c5b49cf094c2b6d01e557515 fix(deps): update dependency @simplewebauthn/browser to v6.2.2 (#7103)",
@@ -45,7 +59,8 @@
       "type": "commit",
       "pretty": "< 2a784bcb51853429c5b49cf094c2b6d01e557515 fix(deps): update dependency @simplewebauthn/browser to v6.2.2 (#7103)",
       "hash": "2a784bcb51853429c5b49cf094c2b6d01e557515",
-      "message": "fix(deps): update dependency @simplewebauthn/browser to v6.2.2 (#7103)"
+      "message": "fix(deps): update dependency @simplewebauthn/browser to v6.2.2 (#7103)",
+      "pr": "7103"
     },
     {
       "line": "< 7ec3da56f9fbed955a29dea8e0d4e0dea17fddae fix(deps): update dependency msw to v0.49.2 (#7126)",
@@ -53,7 +68,8 @@
       "type": "commit",
       "pretty": "< 7ec3da56f9fbed955a29dea8e0d4e0dea17fddae fix(deps): update dependency msw to v0.49.2 (#7126)",
       "hash": "7ec3da56f9fbed955a29dea8e0d4e0dea17fddae",
-      "message": "fix(deps): update dependency msw to v0.49.2 (#7126)"
+      "message": "fix(deps): update dependency msw to v0.49.2 (#7126)",
+      "pr": "7126"
     },
     {
       "line": "< 967f5408838a59949f51b94ae8fa6a9b0df1cc49 chore(deps): update dependency nx to v15.3.3 (#7125)",
@@ -61,7 +77,8 @@
       "type": "commit",
       "pretty": "< 967f5408838a59949f51b94ae8fa6a9b0df1cc49 chore(deps): update dependency nx to v15.3.3 (#7125)",
       "hash": "967f5408838a59949f51b94ae8fa6a9b0df1cc49",
-      "message": "chore(deps): update dependency nx to v15.3.3 (#7125)"
+      "message": "chore(deps): update dependency nx to v15.3.3 (#7125)",
+      "pr": "7125"
     },
     {
       "line": "< 0e17ccfcb9377ac72fea5e9d6a18ca73596e2467 fix(deps): update typescript-eslint monorepo to v5.46.1 (#7109)",
@@ -69,7 +86,8 @@
       "type": "commit",
       "pretty": "< 0e17ccfcb9377ac72fea5e9d6a18ca73596e2467 fix(deps): update typescript-eslint monorepo to v5.46.1 (#7109)",
       "hash": "0e17ccfcb9377ac72fea5e9d6a18ca73596e2467",
-      "message": "fix(deps): update typescript-eslint monorepo to v5.46.1 (#7109)"
+      "message": "fix(deps): update typescript-eslint monorepo to v5.46.1 (#7109)",
+      "pr": "7109"
     },
     {
       "line": "< 8e4856475fd3fcb20d371bc5339b98eb4d7ceed6 fix(deps): update docusaurus monorepo to v2.2.0 (#7116)",
@@ -77,15 +95,17 @@
       "type": "commit",
       "pretty": "< 8e4856475fd3fcb20d371bc5339b98eb4d7ceed6 fix(deps): update docusaurus monorepo to v2.2.0 (#7116)",
       "hash": "8e4856475fd3fcb20d371bc5339b98eb4d7ceed6",
-      "message": "fix(deps): update docusaurus monorepo to v2.2.0 (#7116)"
+      "message": "fix(deps): update docusaurus monorepo to v2.2.0 (#7116)",
+      "pr": "7116"
     },
     {
       "line": "< b259b0cd9666eb6a46b3a46df35536867c8467eb [docs] How to test in GitHub actions (#6921)",
-      "ref": "release/minor/v3.8.0",
+      "ref": "v3.7.0",
       "type": "commit",
-      "pretty": "< b259b0cd9666eb6a46b3a46df35536867c8467eb [docs] How to test in GitHub actions (#6921)",
+      "pretty": "\u001b[2m\u001b[38;5;172m< b259b0cd9666eb6a46b3a46df35536867c8467eb [docs] How to test in GitHub actions (#6921)\u001b[39m\u001b[22m",
       "hash": "b259b0cd9666eb6a46b3a46df35536867c8467eb",
-      "message": "[docs] How to test in GitHub actions (#6921)"
+      "message": "[docs] How to test in GitHub actions (#6921)",
+      "pr": "6921"
     },
     {
       "line": "< 2ac992ec327ca9eb1ad3777075302d6c2fec2131 chore(deps): update dependency nx to v15.3.2 (#7114)",
@@ -93,7 +113,8 @@
       "type": "commit",
       "pretty": "< 2ac992ec327ca9eb1ad3777075302d6c2fec2131 chore(deps): update dependency nx to v15.3.2 (#7114)",
       "hash": "2ac992ec327ca9eb1ad3777075302d6c2fec2131",
-      "message": "chore(deps): update dependency nx to v15.3.2 (#7114)"
+      "message": "chore(deps): update dependency nx to v15.3.2 (#7114)",
+      "pr": "7114"
     },
     {
       "line": "< 39127721295d699a50a6137c377c1774a68e6ae8 chore(deps): update dependency redis to v4.5.1 (#7115)",
@@ -101,7 +122,8 @@
       "type": "commit",
       "pretty": "< 39127721295d699a50a6137c377c1774a68e6ae8 chore(deps): update dependency redis to v4.5.1 (#7115)",
       "hash": "39127721295d699a50a6137c377c1774a68e6ae8",
-      "message": "chore(deps): update dependency redis to v4.5.1 (#7115)"
+      "message": "chore(deps): update dependency redis to v4.5.1 (#7115)",
+      "pr": "7115"
     },
     {
       "line": "< 99fa9eccef655c27a9a0aa49caa2cf128317a978 Label override flags for dbAuth generator (#6440)",
@@ -109,7 +131,8 @@
       "type": "commit",
       "pretty": "< 99fa9eccef655c27a9a0aa49caa2cf128317a978 Label override flags for dbAuth generator (#6440)",
       "hash": "99fa9eccef655c27a9a0aa49caa2cf128317a978",
-      "message": "Label override flags for dbAuth generator (#6440)"
+      "message": "Label override flags for dbAuth generator (#6440)",
+      "pr": "6440"
     },
     {
       "line": "< cf5130246c206fb22d4d4840835993b8f2725b7c fix(deps): update dependency @types/node to v16.18.8 (#7107)",
@@ -117,7 +140,8 @@
       "type": "commit",
       "pretty": "< cf5130246c206fb22d4d4840835993b8f2725b7c fix(deps): update dependency @types/node to v16.18.8 (#7107)",
       "hash": "cf5130246c206fb22d4d4840835993b8f2725b7c",
-      "message": "fix(deps): update dependency @types/node to v16.18.8 (#7107)"
+      "message": "fix(deps): update dependency @types/node to v16.18.8 (#7107)",
+      "pr": "7107"
     },
     {
       "line": "< 3a136331b0f85e9842d5dd805c47cd9840d43385 chore(deps): update dependency @types/react to v17.0.52 (#7095)",
@@ -125,7 +149,8 @@
       "type": "commit",
       "pretty": "< 3a136331b0f85e9842d5dd805c47cd9840d43385 chore(deps): update dependency @types/react to v17.0.52 (#7095)",
       "hash": "3a136331b0f85e9842d5dd805c47cd9840d43385",
-      "message": "chore(deps): update dependency @types/react to v17.0.52 (#7095)"
+      "message": "chore(deps): update dependency @types/react to v17.0.52 (#7095)",
+      "pr": "7095"
     },
     {
       "line": "< 079c859c2d04de97d1c6f6f4b60891c3f4f107e3 chore(deps): update dependency @types/prompts to v2.4.2 (#7094)",
@@ -133,7 +158,8 @@
       "type": "commit",
       "pretty": "< 079c859c2d04de97d1c6f6f4b60891c3f4f107e3 chore(deps): update dependency @types/prompts to v2.4.2 (#7094)",
       "hash": "079c859c2d04de97d1c6f6f4b60891c3f4f107e3",
-      "message": "chore(deps): update dependency @types/prompts to v2.4.2 (#7094)"
+      "message": "chore(deps): update dependency @types/prompts to v2.4.2 (#7094)",
+      "pr": "7094"
     },
     {
       "line": "< dfce706edb2cf9b58da5caf9e11a329f92681bf4 chore(deps): update dependency octokit to v2.0.10 (#7100)",
@@ -141,7 +167,8 @@
       "type": "commit",
       "pretty": "< dfce706edb2cf9b58da5caf9e11a329f92681bf4 chore(deps): update dependency octokit to v2.0.10 (#7100)",
       "hash": "dfce706edb2cf9b58da5caf9e11a329f92681bf4",
-      "message": "chore(deps): update dependency octokit to v2.0.10 (#7100)"
+      "message": "chore(deps): update dependency octokit to v2.0.10 (#7100)",
+      "pr": "7100"
     },
     {
       "line": "< a384c85e0ff146ea7436429894b0d9f4041e2da0 feat: add CustomValidator (#7051)",
@@ -149,7 +176,8 @@
       "type": "commit",
       "pretty": "< a384c85e0ff146ea7436429894b0d9f4041e2da0 feat: add CustomValidator (#7051)",
       "hash": "a384c85e0ff146ea7436429894b0d9f4041e2da0",
-      "message": "feat: add CustomValidator (#7051)"
+      "message": "feat: add CustomValidator (#7051)",
+      "pr": "7051"
     },
     {
       "line": "< aba5af46daab2f053d649e95c2f930257de1f62d Adds ability to delete a cache entry (#7016)",
@@ -157,7 +185,8 @@
       "type": "commit",
       "pretty": "< aba5af46daab2f053d649e95c2f930257de1f62d Adds ability to delete a cache entry (#7016)",
       "hash": "aba5af46daab2f053d649e95c2f930257de1f62d",
-      "message": "Adds ability to delete a cache entry (#7016)"
+      "message": "Adds ability to delete a cache entry (#7016)",
+      "pr": "7016"
     },
     {
       "line": "< 9afec967fd74c677410dda691759bacbab02e62a fix(deps): update dependency systeminformation to v5.16.6 (#7108)",
@@ -165,7 +194,8 @@
       "type": "commit",
       "pretty": "< 9afec967fd74c677410dda691759bacbab02e62a fix(deps): update dependency systeminformation to v5.16.6 (#7108)",
       "hash": "9afec967fd74c677410dda691759bacbab02e62a",
-      "message": "fix(deps): update dependency systeminformation to v5.16.6 (#7108)"
+      "message": "fix(deps): update dependency systeminformation to v5.16.6 (#7108)",
+      "pr": "7108"
     },
     {
       "line": "< 2bb8bbb7b48839ed9bf71961ec10fc7598add3d3 feat: Generator rollbacks  (#6947)",
@@ -173,7 +203,8 @@
       "type": "commit",
       "pretty": "< 2bb8bbb7b48839ed9bf71961ec10fc7598add3d3 feat: Generator rollbacks  (#6947)",
       "hash": "2bb8bbb7b48839ed9bf71961ec10fc7598add3d3",
-      "message": "feat: Generator rollbacks  (#6947)"
+      "message": "feat: Generator rollbacks  (#6947)",
+      "pr": "6947"
     },
     {
       "line": "< a27d66f22b11dbe7341723ae51cde56d9d5caf83 Allow other repo names than just \"redwood\" (#7101)",
@@ -181,7 +212,8 @@
       "type": "commit",
       "pretty": "< a27d66f22b11dbe7341723ae51cde56d9d5caf83 Allow other repo names than just \"redwood\" (#7101)",
       "hash": "a27d66f22b11dbe7341723ae51cde56d9d5caf83",
-      "message": "Allow other repo names than just \"redwood\" (#7101)"
+      "message": "Allow other repo names than just \"redwood\" (#7101)",
+      "pr": "7101"
     },
     {
       "line": "< 20e5ae3ededaf0e790d2347171f85e7493f95fce chore(deps): update dependency @types/jscodeshift to v0.11.6 (#7093)",
@@ -189,7 +221,8 @@
       "type": "commit",
       "pretty": "< 20e5ae3ededaf0e790d2347171f85e7493f95fce chore(deps): update dependency @types/jscodeshift to v0.11.6 (#7093)",
       "hash": "20e5ae3ededaf0e790d2347171f85e7493f95fce",
-      "message": "chore(deps): update dependency @types/jscodeshift to v0.11.6 (#7093)"
+      "message": "chore(deps): update dependency @types/jscodeshift to v0.11.6 (#7093)",
+      "pr": "7093"
     },
     {
       "line": "< 6846682cfdac77dd8685f6979d394f67dcb0fe2d chore(deps): update dependency @types/react-dom to v17.0.18 (#7097)",
@@ -197,14 +230,16 @@
       "type": "commit",
       "pretty": "< 6846682cfdac77dd8685f6979d394f67dcb0fe2d chore(deps): update dependency @types/react-dom to v17.0.18 (#7097)",
       "hash": "6846682cfdac77dd8685f6979d394f67dcb0fe2d",
-      "message": "chore(deps): update dependency @types/react-dom to v17.0.18 (#7097)"
+      "message": "chore(deps): update dependency @types/react-dom to v17.0.18 (#7097)",
+      "pr": "7097"
     },
     {
       "line": "<   e1b7a28cf4118172e827594ffe90951b20da4da3 Merge branch 'release/patch/v3.6.1' into next",
       "ref": "release/minor/v3.8.0",
       "type": "chore",
       "pretty": "\u001b[2m<   e1b7a28cf4118172e827594ffe90951b20da4da3 Merge branch 'release/patch/v3.6.1' into next\u001b[22m",
-      "hash": "e1b7a28cf4118172e827594ffe90951b20da4da3"
+      "hash": "e1b7a28cf4118172e827594ffe90951b20da4da3",
+      "message": "Merge branch 'release/patch/v3.6.1' into next"
     },
     {
       "line": "|\\  ",
@@ -224,48 +259,54 @@
       "line": "| < 676c5b350ccc7b32eb770193135bc210b6d02085 Make it clearer that can use directiveArgs in transformer directive (#6497)",
       "ref": "v3.7.0",
       "type": "commit",
-      "pretty": "\u001b[38;5;172m\u001b[2m| < 676c5b350ccc7b32eb770193135bc210b6d02085 Make it clearer that can use directiveArgs in transformer directive (#6497)\u001b[22m\u001b[39m",
+      "pretty": "\u001b[2m\u001b[38;5;172m| < 676c5b350ccc7b32eb770193135bc210b6d02085 Make it clearer that can use directiveArgs in transformer directive (#6497)\u001b[39m\u001b[22m",
       "hash": "676c5b350ccc7b32eb770193135bc210b6d02085",
-      "message": "Make it clearer that can use directiveArgs in transformer directive (#6497)"
+      "message": "Make it clearer that can use directiveArgs in transformer directive (#6497)",
+      "pr": "6497"
     },
     {
       "line": "| < 322c99a4492509767385085f45968470458b1e13 fix: extractCookie from GraphiQLHeader (#6894) (#6969)",
       "ref": "v3.7.0",
       "type": "commit",
-      "pretty": "\u001b[38;5;172m\u001b[2m| < 322c99a4492509767385085f45968470458b1e13 fix: extractCookie from GraphiQLHeader (#6894) (#6969)\u001b[22m\u001b[39m",
+      "pretty": "\u001b[2m\u001b[38;5;172m| < 322c99a4492509767385085f45968470458b1e13 fix: extractCookie from GraphiQLHeader (#6894) (#6969)\u001b[39m\u001b[22m",
       "hash": "322c99a4492509767385085f45968470458b1e13",
-      "message": "fix: extractCookie from GraphiQLHeader (#6894) (#6969)"
+      "message": "fix: extractCookie from GraphiQLHeader (#6894) (#6969)",
+      "pr": "6894"
     },
     {
       "line": "| < 6551fb03bb025dc2ed508c7b241e257cfbf655f7 Render Deploy: Define plan in template (#6905)",
       "ref": "v3.7.0",
       "type": "commit",
-      "pretty": "\u001b[38;5;172m\u001b[2m| < 6551fb03bb025dc2ed508c7b241e257cfbf655f7 Render Deploy: Define plan in template (#6905)\u001b[22m\u001b[39m",
+      "pretty": "\u001b[2m\u001b[38;5;172m| < 6551fb03bb025dc2ed508c7b241e257cfbf655f7 Render Deploy: Define plan in template (#6905)\u001b[39m\u001b[22m",
       "hash": "6551fb03bb025dc2ed508c7b241e257cfbf655f7",
-      "message": "Render Deploy: Define plan in template (#6905)"
+      "message": "Render Deploy: Define plan in template (#6905)",
+      "pr": "6905"
     },
     {
       "line": "| < df5e83866ab538bb69999d6eecf741cafc0ec0ee fix launch.json (#6972)",
       "ref": "v3.7.0",
       "type": "commit",
-      "pretty": "\u001b[38;5;172m\u001b[2m| < df5e83866ab538bb69999d6eecf741cafc0ec0ee fix launch.json (#6972)\u001b[22m\u001b[39m",
+      "pretty": "\u001b[2m\u001b[38;5;172m| < df5e83866ab538bb69999d6eecf741cafc0ec0ee fix launch.json (#6972)\u001b[39m\u001b[22m",
       "hash": "df5e83866ab538bb69999d6eecf741cafc0ec0ee",
-      "message": "fix launch.json (#6972)"
+      "message": "fix launch.json (#6972)",
+      "pr": "6972"
     },
     {
       "line": "| < ff469334075c506e1fd261746d02ed3790940951 pin auth0 js sdk (#6963)",
       "ref": "v3.7.0",
       "type": "commit",
-      "pretty": "\u001b[38;5;172m\u001b[2m| < ff469334075c506e1fd261746d02ed3790940951 pin auth0 js sdk (#6963)\u001b[22m\u001b[39m",
+      "pretty": "\u001b[2m\u001b[38;5;172m| < ff469334075c506e1fd261746d02ed3790940951 pin auth0 js sdk (#6963)\u001b[39m\u001b[22m",
       "hash": "ff469334075c506e1fd261746d02ed3790940951",
-      "message": "pin auth0 js sdk (#6963)"
+      "message": "pin auth0 js sdk (#6963)",
+      "pr": "6963"
     },
     {
       "line": "| < 73a9ad4867c4c1bf8f26108b33c23621433318b3 chore: update yarn.lock",
       "ref": "release/minor/v3.8.0",
       "type": "chore",
       "pretty": "\u001b[2m| < 73a9ad4867c4c1bf8f26108b33c23621433318b3 chore: update yarn.lock\u001b[22m",
-      "hash": "73a9ad4867c4c1bf8f26108b33c23621433318b3"
+      "hash": "73a9ad4867c4c1bf8f26108b33c23621433318b3",
+      "message": "chore: update yarn.lock"
     },
     {
       "line": "< c5150ae10890c43dfee9f9d28e027db4d0cc41fe chore(deps): update dependency @simplewebauthn/server to v6.2.2 (#7086)",
@@ -273,7 +314,8 @@
       "type": "commit",
       "pretty": "< c5150ae10890c43dfee9f9d28e027db4d0cc41fe chore(deps): update dependency @simplewebauthn/server to v6.2.2 (#7086)",
       "hash": "c5150ae10890c43dfee9f9d28e027db4d0cc41fe",
-      "message": "chore(deps): update dependency @simplewebauthn/server to v6.2.2 (#7086)"
+      "message": "chore(deps): update dependency @simplewebauthn/server to v6.2.2 (#7086)",
+      "pr": "7086"
     },
     {
       "line": "< fa07cd8564d026ed7c294676a837916639d2be7b fix(deps): update dependency mini-css-extract-plugin to v2.7.2 (#7088)",
@@ -281,7 +323,8 @@
       "type": "commit",
       "pretty": "< fa07cd8564d026ed7c294676a837916639d2be7b fix(deps): update dependency mini-css-extract-plugin to v2.7.2 (#7088)",
       "hash": "fa07cd8564d026ed7c294676a837916639d2be7b",
-      "message": "fix(deps): update dependency mini-css-extract-plugin to v2.7.2 (#7088)"
+      "message": "fix(deps): update dependency mini-css-extract-plugin to v2.7.2 (#7088)",
+      "pr": "7088"
     },
     {
       "line": "< b2b5a65d408e65cf73290417ea706a1b5323d6fc chore: udpate yarn.lock",
@@ -297,7 +340,8 @@
       "type": "commit",
       "pretty": "< 8813aaa344f4b839ae081b9b3c7c5e2b8fd71615 fix(deps): update dependency @types/aws-lambda to v8.10.109 (#7077)",
       "hash": "8813aaa344f4b839ae081b9b3c7c5e2b8fd71615",
-      "message": "fix(deps): update dependency @types/aws-lambda to v8.10.109 (#7077)"
+      "message": "fix(deps): update dependency @types/aws-lambda to v8.10.109 (#7077)",
+      "pr": "7077"
     },
     {
       "line": "< 38cd88a3d4d7e58e734a5ec4049a925281f91fb2 chore(deps): update dependency @types/yargs to v17.0.17 (#7067)",
@@ -305,7 +349,8 @@
       "type": "commit",
       "pretty": "< 38cd88a3d4d7e58e734a5ec4049a925281f91fb2 chore(deps): update dependency @types/yargs to v17.0.17 (#7067)",
       "hash": "38cd88a3d4d7e58e734a5ec4049a925281f91fb2",
-      "message": "chore(deps): update dependency @types/yargs to v17.0.17 (#7067)"
+      "message": "chore(deps): update dependency @types/yargs to v17.0.17 (#7067)",
+      "pr": "7067"
     },
     {
       "line": "< 9c216c76d2ec967ae7e237ea61d04a0509fe07fc chore(deps): update dependency @types/lodash to v4.14.191 (#7066)",
@@ -313,7 +358,8 @@
       "type": "commit",
       "pretty": "< 9c216c76d2ec967ae7e237ea61d04a0509fe07fc chore(deps): update dependency @types/lodash to v4.14.191 (#7066)",
       "hash": "9c216c76d2ec967ae7e237ea61d04a0509fe07fc",
-      "message": "chore(deps): update dependency @types/lodash to v4.14.191 (#7066)"
+      "message": "chore(deps): update dependency @types/lodash to v4.14.191 (#7066)",
+      "pr": "7066"
     },
     {
       "line": "< ecdbf5accc8c0739eb5fa2c5471536ab0dedf08e chore(deps): update dependency esbuild to v0.16.3 (#7068)",
@@ -321,7 +367,8 @@
       "type": "commit",
       "pretty": "< ecdbf5accc8c0739eb5fa2c5471536ab0dedf08e chore(deps): update dependency esbuild to v0.16.3 (#7068)",
       "hash": "ecdbf5accc8c0739eb5fa2c5471536ab0dedf08e",
-      "message": "chore(deps): update dependency esbuild to v0.16.3 (#7068)"
+      "message": "chore(deps): update dependency esbuild to v0.16.3 (#7068)",
+      "pr": "7068"
     },
     {
       "line": "< bdfadd5d52f961150057976f0928a9f3042b5fea chore(deps): update dependency @types/babel__core to v7.1.20 (#7065)",
@@ -329,7 +376,8 @@
       "type": "commit",
       "pretty": "< bdfadd5d52f961150057976f0928a9f3042b5fea chore(deps): update dependency @types/babel__core to v7.1.20 (#7065)",
       "hash": "bdfadd5d52f961150057976f0928a9f3042b5fea",
-      "message": "chore(deps): update dependency @types/babel__core to v7.1.20 (#7065)"
+      "message": "chore(deps): update dependency @types/babel__core to v7.1.20 (#7065)",
+      "pr": "7065"
     },
     {
       "line": "< 356fecc42f0a8bb9fb48eff6508ac8ca14fd711b chore(deps): update carloscastrojumo/github-cherry-pick-action action to v1.0.6 (#7085)",
@@ -337,7 +385,8 @@
       "type": "commit",
       "pretty": "< 356fecc42f0a8bb9fb48eff6508ac8ca14fd711b chore(deps): update carloscastrojumo/github-cherry-pick-action action to v1.0.6 (#7085)",
       "hash": "356fecc42f0a8bb9fb48eff6508ac8ca14fd711b",
-      "message": "chore(deps): update carloscastrojumo/github-cherry-pick-action action to v1.0.6 (#7085)"
+      "message": "chore(deps): update carloscastrojumo/github-cherry-pick-action action to v1.0.6 (#7085)",
+      "pr": "7085"
     },
     {
       "line": "< 4149fc346a43a3b15f0d33c049630ab39c7a463d fix(deps): update dependency @types/node to v16.18.7 (#7087)",
@@ -345,7 +394,8 @@
       "type": "commit",
       "pretty": "< 4149fc346a43a3b15f0d33c049630ab39c7a463d fix(deps): update dependency @types/node to v16.18.7 (#7087)",
       "hash": "4149fc346a43a3b15f0d33c049630ab39c7a463d",
-      "message": "fix(deps): update dependency @types/node to v16.18.7 (#7087)"
+      "message": "fix(deps): update dependency @types/node to v16.18.7 (#7087)",
+      "pr": "7087"
     },
     {
       "line": "< cb8394fbf03145ddbb047e4789d8f708b809890c fix(deps): update dependency @graphql-codegen/typescript-react-apollo to v3.3.7 (#7075)",
@@ -353,7 +403,8 @@
       "type": "commit",
       "pretty": "< cb8394fbf03145ddbb047e4789d8f708b809890c fix(deps): update dependency @graphql-codegen/typescript-react-apollo to v3.3.7 (#7075)",
       "hash": "cb8394fbf03145ddbb047e4789d8f708b809890c",
-      "message": "fix(deps): update dependency @graphql-codegen/typescript-react-apollo to v3.3.7 (#7075)"
+      "message": "fix(deps): update dependency @graphql-codegen/typescript-react-apollo to v3.3.7 (#7075)",
+      "pr": "7075"
     },
     {
       "line": "< d659930e8547d21dc174323060834ab43606d8fe fix(deps): update dependency systeminformation to v5.16.5 (#7079)",
@@ -361,7 +412,8 @@
       "type": "commit",
       "pretty": "< d659930e8547d21dc174323060834ab43606d8fe fix(deps): update dependency systeminformation to v5.16.5 (#7079)",
       "hash": "d659930e8547d21dc174323060834ab43606d8fe",
-      "message": "fix(deps): update dependency systeminformation to v5.16.5 (#7079)"
+      "message": "fix(deps): update dependency systeminformation to v5.16.5 (#7079)",
+      "pr": "7079"
     },
     {
       "line": "< 45ebd5e64085cf263eadbbdbb7074f73a603c853 fix(deps): update dependency @graphql-tools/merge to v8.3.14 (#7076)",
@@ -369,7 +421,8 @@
       "type": "commit",
       "pretty": "< 45ebd5e64085cf263eadbbdbb7074f73a603c853 fix(deps): update dependency @graphql-tools/merge to v8.3.14 (#7076)",
       "hash": "45ebd5e64085cf263eadbbdbb7074f73a603c853",
-      "message": "fix(deps): update dependency @graphql-tools/merge to v8.3.14 (#7076)"
+      "message": "fix(deps): update dependency @graphql-tools/merge to v8.3.14 (#7076)",
+      "pr": "7076"
     },
     {
       "line": "< 0e27446b0c955262f041a85f603f2b553fbaa09b fix(deps): update dependency @types/jest to v29.2.4 (#7078)",
@@ -377,7 +430,8 @@
       "type": "commit",
       "pretty": "< 0e27446b0c955262f041a85f603f2b553fbaa09b fix(deps): update dependency @types/jest to v29.2.4 (#7078)",
       "hash": "0e27446b0c955262f041a85f603f2b553fbaa09b",
-      "message": "fix(deps): update dependency @types/jest to v29.2.4 (#7078)"
+      "message": "fix(deps): update dependency @types/jest to v29.2.4 (#7078)",
+      "pr": "7078"
     },
     {
       "line": "< 00273b359c70a327c8581251b8450a78737a87d4 Fix chalk color access in test-project generation (#7070)",
@@ -385,7 +439,8 @@
       "type": "commit",
       "pretty": "< 00273b359c70a327c8581251b8450a78737a87d4 Fix chalk color access in test-project generation (#7070)",
       "hash": "00273b359c70a327c8581251b8450a78737a87d4",
-      "message": "Fix chalk color access in test-project generation (#7070)"
+      "message": "Fix chalk color access in test-project generation (#7070)",
+      "pr": "7070"
     },
     {
       "line": "< d39155edf5ab442c24ad6fa0dc1af2d9af95aa85 fix(deps): update dependency fs-extra to v11 (#7057)",
@@ -393,7 +448,8 @@
       "type": "commit",
       "pretty": "< d39155edf5ab442c24ad6fa0dc1af2d9af95aa85 fix(deps): update dependency fs-extra to v11 (#7057)",
       "hash": "d39155edf5ab442c24ad6fa0dc1af2d9af95aa85",
-      "message": "fix(deps): update dependency fs-extra to v11 (#7057)"
+      "message": "fix(deps): update dependency fs-extra to v11 (#7057)",
+      "pr": "7057"
     },
     {
       "line": "< 4133b11fe28485ad3d839032c5b406f37503c6d9 chore(deps): update dependency esbuild to v0.16.2 (#7054)",
@@ -401,7 +457,8 @@
       "type": "commit",
       "pretty": "< 4133b11fe28485ad3d839032c5b406f37503c6d9 chore(deps): update dependency esbuild to v0.16.2 (#7054)",
       "hash": "4133b11fe28485ad3d839032c5b406f37503c6d9",
-      "message": "chore(deps): update dependency esbuild to v0.16.2 (#7054)"
+      "message": "chore(deps): update dependency esbuild to v0.16.2 (#7054)",
+      "pr": "7054"
     },
     {
       "line": "< 5309d2c8f36a4195448556a3730e2d3478f6f118 fix(deps): update dependency prettier to v2.8.1 (#7055)",
@@ -409,7 +466,8 @@
       "type": "commit",
       "pretty": "< 5309d2c8f36a4195448556a3730e2d3478f6f118 fix(deps): update dependency prettier to v2.8.1 (#7055)",
       "hash": "5309d2c8f36a4195448556a3730e2d3478f6f118",
-      "message": "fix(deps): update dependency prettier to v2.8.1 (#7055)"
+      "message": "fix(deps): update dependency prettier to v2.8.1 (#7055)",
+      "pr": "7055"
     },
     {
       "line": "< 1868607665d6dc8a89271b9ee26e84bae39b99b2 fix(deps): update graphqlcodegenerator monorepo (#7056)",
@@ -417,7 +475,8 @@
       "type": "commit",
       "pretty": "< 1868607665d6dc8a89271b9ee26e84bae39b99b2 fix(deps): update graphqlcodegenerator monorepo (#7056)",
       "hash": "1868607665d6dc8a89271b9ee26e84bae39b99b2",
-      "message": "fix(deps): update graphqlcodegenerator monorepo (#7056)"
+      "message": "fix(deps): update graphqlcodegenerator monorepo (#7056)",
+      "pr": "7056"
     }
   ],
   "tagsToColors": {
@@ -426,12 +485,22 @@
   },
   "releaseCommits": [
     {
+      "line": "< e825f95611c41bb7b990638c9be5eca573a9a3e4 chore(deps): update dependency @tsd/typescript to v4.9.4 (#7148)",
+      "ref": "release/minor/v3.8.0",
+      "type": "commit",
+      "pretty": "< e825f95611c41bb7b990638c9be5eca573a9a3e4 chore(deps): update dependency @tsd/typescript to v4.9.4 (#7148)",
+      "hash": "e825f95611c41bb7b990638c9be5eca573a9a3e4",
+      "message": "chore(deps): update dependency @tsd/typescript to v4.9.4 (#7148)",
+      "pr": "7148"
+    },
+    {
       "line": "< 4cd987e578c030b90e93210e95f194986f5a7aea chore(deps): update dependency @replayio/playwright to v0.3.11 (#7150)",
       "ref": "release/minor/v3.8.0",
       "type": "commit",
       "pretty": "< 4cd987e578c030b90e93210e95f194986f5a7aea chore(deps): update dependency @replayio/playwright to v0.3.11 (#7150)",
       "hash": "4cd987e578c030b90e93210e95f194986f5a7aea",
-      "message": "chore(deps): update dependency @replayio/playwright to v0.3.11 (#7150)"
+      "message": "chore(deps): update dependency @replayio/playwright to v0.3.11 (#7150)",
+      "pr": "7150"
     },
     {
       "line": "< 645c1b50b25c4d8f068bebf4c9750c8b5040907e fix(deps): update dependency @types/node to v16.18.9 (#7140)",
@@ -439,7 +508,8 @@
       "type": "commit",
       "pretty": "< 645c1b50b25c4d8f068bebf4c9750c8b5040907e fix(deps): update dependency @types/node to v16.18.9 (#7140)",
       "hash": "645c1b50b25c4d8f068bebf4c9750c8b5040907e",
-      "message": "fix(deps): update dependency @types/node to v16.18.9 (#7140)"
+      "message": "fix(deps): update dependency @types/node to v16.18.9 (#7140)",
+      "pr": "7140"
     },
     {
       "line": "< 0b10013796640863a3f99f77434b40e67ea6af1c fix(deps): update dependency vscode-languageserver-textdocument to v1.0.8 (#7132)",
@@ -447,7 +517,8 @@
       "type": "commit",
       "pretty": "< 0b10013796640863a3f99f77434b40e67ea6af1c fix(deps): update dependency vscode-languageserver-textdocument to v1.0.8 (#7132)",
       "hash": "0b10013796640863a3f99f77434b40e67ea6af1c",
-      "message": "fix(deps): update dependency vscode-languageserver-textdocument to v1.0.8 (#7132)"
+      "message": "fix(deps): update dependency vscode-languageserver-textdocument to v1.0.8 (#7132)",
+      "pr": "7132"
     },
     {
       "line": "< fd421de235a37580df61267f19e4d48d94e031a3 Export underlying cache client with Service Cache functions (#7062)",
@@ -455,7 +526,8 @@
       "type": "commit",
       "pretty": "< fd421de235a37580df61267f19e4d48d94e031a3 Export underlying cache client with Service Cache functions (#7062)",
       "hash": "fd421de235a37580df61267f19e4d48d94e031a3",
-      "message": "Export underlying cache client with Service Cache functions (#7062)"
+      "message": "Export underlying cache client with Service Cache functions (#7062)",
+      "pr": "7062"
     },
     {
       "line": "< 2a784bcb51853429c5b49cf094c2b6d01e557515 fix(deps): update dependency @simplewebauthn/browser to v6.2.2 (#7103)",
@@ -463,7 +535,8 @@
       "type": "commit",
       "pretty": "< 2a784bcb51853429c5b49cf094c2b6d01e557515 fix(deps): update dependency @simplewebauthn/browser to v6.2.2 (#7103)",
       "hash": "2a784bcb51853429c5b49cf094c2b6d01e557515",
-      "message": "fix(deps): update dependency @simplewebauthn/browser to v6.2.2 (#7103)"
+      "message": "fix(deps): update dependency @simplewebauthn/browser to v6.2.2 (#7103)",
+      "pr": "7103"
     },
     {
       "line": "< 7ec3da56f9fbed955a29dea8e0d4e0dea17fddae fix(deps): update dependency msw to v0.49.2 (#7126)",
@@ -471,7 +544,8 @@
       "type": "commit",
       "pretty": "< 7ec3da56f9fbed955a29dea8e0d4e0dea17fddae fix(deps): update dependency msw to v0.49.2 (#7126)",
       "hash": "7ec3da56f9fbed955a29dea8e0d4e0dea17fddae",
-      "message": "fix(deps): update dependency msw to v0.49.2 (#7126)"
+      "message": "fix(deps): update dependency msw to v0.49.2 (#7126)",
+      "pr": "7126"
     },
     {
       "line": "< 967f5408838a59949f51b94ae8fa6a9b0df1cc49 chore(deps): update dependency nx to v15.3.3 (#7125)",
@@ -479,7 +553,8 @@
       "type": "commit",
       "pretty": "< 967f5408838a59949f51b94ae8fa6a9b0df1cc49 chore(deps): update dependency nx to v15.3.3 (#7125)",
       "hash": "967f5408838a59949f51b94ae8fa6a9b0df1cc49",
-      "message": "chore(deps): update dependency nx to v15.3.3 (#7125)"
+      "message": "chore(deps): update dependency nx to v15.3.3 (#7125)",
+      "pr": "7125"
     },
     {
       "line": "< 0e17ccfcb9377ac72fea5e9d6a18ca73596e2467 fix(deps): update typescript-eslint monorepo to v5.46.1 (#7109)",
@@ -487,7 +562,8 @@
       "type": "commit",
       "pretty": "< 0e17ccfcb9377ac72fea5e9d6a18ca73596e2467 fix(deps): update typescript-eslint monorepo to v5.46.1 (#7109)",
       "hash": "0e17ccfcb9377ac72fea5e9d6a18ca73596e2467",
-      "message": "fix(deps): update typescript-eslint monorepo to v5.46.1 (#7109)"
+      "message": "fix(deps): update typescript-eslint monorepo to v5.46.1 (#7109)",
+      "pr": "7109"
     },
     {
       "line": "< 8e4856475fd3fcb20d371bc5339b98eb4d7ceed6 fix(deps): update docusaurus monorepo to v2.2.0 (#7116)",
@@ -495,15 +571,8 @@
       "type": "commit",
       "pretty": "< 8e4856475fd3fcb20d371bc5339b98eb4d7ceed6 fix(deps): update docusaurus monorepo to v2.2.0 (#7116)",
       "hash": "8e4856475fd3fcb20d371bc5339b98eb4d7ceed6",
-      "message": "fix(deps): update docusaurus monorepo to v2.2.0 (#7116)"
-    },
-    {
-      "line": "< b259b0cd9666eb6a46b3a46df35536867c8467eb [docs] How to test in GitHub actions (#6921)",
-      "ref": "release/minor/v3.8.0",
-      "type": "commit",
-      "pretty": "< b259b0cd9666eb6a46b3a46df35536867c8467eb [docs] How to test in GitHub actions (#6921)",
-      "hash": "b259b0cd9666eb6a46b3a46df35536867c8467eb",
-      "message": "[docs] How to test in GitHub actions (#6921)"
+      "message": "fix(deps): update docusaurus monorepo to v2.2.0 (#7116)",
+      "pr": "7116"
     },
     {
       "line": "< 2ac992ec327ca9eb1ad3777075302d6c2fec2131 chore(deps): update dependency nx to v15.3.2 (#7114)",
@@ -511,7 +580,8 @@
       "type": "commit",
       "pretty": "< 2ac992ec327ca9eb1ad3777075302d6c2fec2131 chore(deps): update dependency nx to v15.3.2 (#7114)",
       "hash": "2ac992ec327ca9eb1ad3777075302d6c2fec2131",
-      "message": "chore(deps): update dependency nx to v15.3.2 (#7114)"
+      "message": "chore(deps): update dependency nx to v15.3.2 (#7114)",
+      "pr": "7114"
     },
     {
       "line": "< 39127721295d699a50a6137c377c1774a68e6ae8 chore(deps): update dependency redis to v4.5.1 (#7115)",
@@ -519,7 +589,8 @@
       "type": "commit",
       "pretty": "< 39127721295d699a50a6137c377c1774a68e6ae8 chore(deps): update dependency redis to v4.5.1 (#7115)",
       "hash": "39127721295d699a50a6137c377c1774a68e6ae8",
-      "message": "chore(deps): update dependency redis to v4.5.1 (#7115)"
+      "message": "chore(deps): update dependency redis to v4.5.1 (#7115)",
+      "pr": "7115"
     },
     {
       "line": "< 99fa9eccef655c27a9a0aa49caa2cf128317a978 Label override flags for dbAuth generator (#6440)",
@@ -527,7 +598,8 @@
       "type": "commit",
       "pretty": "< 99fa9eccef655c27a9a0aa49caa2cf128317a978 Label override flags for dbAuth generator (#6440)",
       "hash": "99fa9eccef655c27a9a0aa49caa2cf128317a978",
-      "message": "Label override flags for dbAuth generator (#6440)"
+      "message": "Label override flags for dbAuth generator (#6440)",
+      "pr": "6440"
     },
     {
       "line": "< cf5130246c206fb22d4d4840835993b8f2725b7c fix(deps): update dependency @types/node to v16.18.8 (#7107)",
@@ -535,7 +607,8 @@
       "type": "commit",
       "pretty": "< cf5130246c206fb22d4d4840835993b8f2725b7c fix(deps): update dependency @types/node to v16.18.8 (#7107)",
       "hash": "cf5130246c206fb22d4d4840835993b8f2725b7c",
-      "message": "fix(deps): update dependency @types/node to v16.18.8 (#7107)"
+      "message": "fix(deps): update dependency @types/node to v16.18.8 (#7107)",
+      "pr": "7107"
     },
     {
       "line": "< 3a136331b0f85e9842d5dd805c47cd9840d43385 chore(deps): update dependency @types/react to v17.0.52 (#7095)",
@@ -543,7 +616,8 @@
       "type": "commit",
       "pretty": "< 3a136331b0f85e9842d5dd805c47cd9840d43385 chore(deps): update dependency @types/react to v17.0.52 (#7095)",
       "hash": "3a136331b0f85e9842d5dd805c47cd9840d43385",
-      "message": "chore(deps): update dependency @types/react to v17.0.52 (#7095)"
+      "message": "chore(deps): update dependency @types/react to v17.0.52 (#7095)",
+      "pr": "7095"
     },
     {
       "line": "< 079c859c2d04de97d1c6f6f4b60891c3f4f107e3 chore(deps): update dependency @types/prompts to v2.4.2 (#7094)",
@@ -551,7 +625,8 @@
       "type": "commit",
       "pretty": "< 079c859c2d04de97d1c6f6f4b60891c3f4f107e3 chore(deps): update dependency @types/prompts to v2.4.2 (#7094)",
       "hash": "079c859c2d04de97d1c6f6f4b60891c3f4f107e3",
-      "message": "chore(deps): update dependency @types/prompts to v2.4.2 (#7094)"
+      "message": "chore(deps): update dependency @types/prompts to v2.4.2 (#7094)",
+      "pr": "7094"
     },
     {
       "line": "< dfce706edb2cf9b58da5caf9e11a329f92681bf4 chore(deps): update dependency octokit to v2.0.10 (#7100)",
@@ -559,7 +634,8 @@
       "type": "commit",
       "pretty": "< dfce706edb2cf9b58da5caf9e11a329f92681bf4 chore(deps): update dependency octokit to v2.0.10 (#7100)",
       "hash": "dfce706edb2cf9b58da5caf9e11a329f92681bf4",
-      "message": "chore(deps): update dependency octokit to v2.0.10 (#7100)"
+      "message": "chore(deps): update dependency octokit to v2.0.10 (#7100)",
+      "pr": "7100"
     },
     {
       "line": "< a384c85e0ff146ea7436429894b0d9f4041e2da0 feat: add CustomValidator (#7051)",
@@ -567,7 +643,8 @@
       "type": "commit",
       "pretty": "< a384c85e0ff146ea7436429894b0d9f4041e2da0 feat: add CustomValidator (#7051)",
       "hash": "a384c85e0ff146ea7436429894b0d9f4041e2da0",
-      "message": "feat: add CustomValidator (#7051)"
+      "message": "feat: add CustomValidator (#7051)",
+      "pr": "7051"
     },
     {
       "line": "< aba5af46daab2f053d649e95c2f930257de1f62d Adds ability to delete a cache entry (#7016)",
@@ -575,7 +652,8 @@
       "type": "commit",
       "pretty": "< aba5af46daab2f053d649e95c2f930257de1f62d Adds ability to delete a cache entry (#7016)",
       "hash": "aba5af46daab2f053d649e95c2f930257de1f62d",
-      "message": "Adds ability to delete a cache entry (#7016)"
+      "message": "Adds ability to delete a cache entry (#7016)",
+      "pr": "7016"
     },
     {
       "line": "< 9afec967fd74c677410dda691759bacbab02e62a fix(deps): update dependency systeminformation to v5.16.6 (#7108)",
@@ -583,7 +661,8 @@
       "type": "commit",
       "pretty": "< 9afec967fd74c677410dda691759bacbab02e62a fix(deps): update dependency systeminformation to v5.16.6 (#7108)",
       "hash": "9afec967fd74c677410dda691759bacbab02e62a",
-      "message": "fix(deps): update dependency systeminformation to v5.16.6 (#7108)"
+      "message": "fix(deps): update dependency systeminformation to v5.16.6 (#7108)",
+      "pr": "7108"
     },
     {
       "line": "< 2bb8bbb7b48839ed9bf71961ec10fc7598add3d3 feat: Generator rollbacks  (#6947)",
@@ -591,7 +670,8 @@
       "type": "commit",
       "pretty": "< 2bb8bbb7b48839ed9bf71961ec10fc7598add3d3 feat: Generator rollbacks  (#6947)",
       "hash": "2bb8bbb7b48839ed9bf71961ec10fc7598add3d3",
-      "message": "feat: Generator rollbacks  (#6947)"
+      "message": "feat: Generator rollbacks  (#6947)",
+      "pr": "6947"
     },
     {
       "line": "< a27d66f22b11dbe7341723ae51cde56d9d5caf83 Allow other repo names than just \"redwood\" (#7101)",
@@ -599,7 +679,8 @@
       "type": "commit",
       "pretty": "< a27d66f22b11dbe7341723ae51cde56d9d5caf83 Allow other repo names than just \"redwood\" (#7101)",
       "hash": "a27d66f22b11dbe7341723ae51cde56d9d5caf83",
-      "message": "Allow other repo names than just \"redwood\" (#7101)"
+      "message": "Allow other repo names than just \"redwood\" (#7101)",
+      "pr": "7101"
     },
     {
       "line": "< 20e5ae3ededaf0e790d2347171f85e7493f95fce chore(deps): update dependency @types/jscodeshift to v0.11.6 (#7093)",
@@ -607,7 +688,8 @@
       "type": "commit",
       "pretty": "< 20e5ae3ededaf0e790d2347171f85e7493f95fce chore(deps): update dependency @types/jscodeshift to v0.11.6 (#7093)",
       "hash": "20e5ae3ededaf0e790d2347171f85e7493f95fce",
-      "message": "chore(deps): update dependency @types/jscodeshift to v0.11.6 (#7093)"
+      "message": "chore(deps): update dependency @types/jscodeshift to v0.11.6 (#7093)",
+      "pr": "7093"
     },
     {
       "line": "< 6846682cfdac77dd8685f6979d394f67dcb0fe2d chore(deps): update dependency @types/react-dom to v17.0.18 (#7097)",
@@ -615,7 +697,8 @@
       "type": "commit",
       "pretty": "< 6846682cfdac77dd8685f6979d394f67dcb0fe2d chore(deps): update dependency @types/react-dom to v17.0.18 (#7097)",
       "hash": "6846682cfdac77dd8685f6979d394f67dcb0fe2d",
-      "message": "chore(deps): update dependency @types/react-dom to v17.0.18 (#7097)"
+      "message": "chore(deps): update dependency @types/react-dom to v17.0.18 (#7097)",
+      "pr": "7097"
     },
     {
       "line": "< c5150ae10890c43dfee9f9d28e027db4d0cc41fe chore(deps): update dependency @simplewebauthn/server to v6.2.2 (#7086)",
@@ -623,7 +706,8 @@
       "type": "commit",
       "pretty": "< c5150ae10890c43dfee9f9d28e027db4d0cc41fe chore(deps): update dependency @simplewebauthn/server to v6.2.2 (#7086)",
       "hash": "c5150ae10890c43dfee9f9d28e027db4d0cc41fe",
-      "message": "chore(deps): update dependency @simplewebauthn/server to v6.2.2 (#7086)"
+      "message": "chore(deps): update dependency @simplewebauthn/server to v6.2.2 (#7086)",
+      "pr": "7086"
     },
     {
       "line": "< fa07cd8564d026ed7c294676a837916639d2be7b fix(deps): update dependency mini-css-extract-plugin to v2.7.2 (#7088)",
@@ -631,7 +715,8 @@
       "type": "commit",
       "pretty": "< fa07cd8564d026ed7c294676a837916639d2be7b fix(deps): update dependency mini-css-extract-plugin to v2.7.2 (#7088)",
       "hash": "fa07cd8564d026ed7c294676a837916639d2be7b",
-      "message": "fix(deps): update dependency mini-css-extract-plugin to v2.7.2 (#7088)"
+      "message": "fix(deps): update dependency mini-css-extract-plugin to v2.7.2 (#7088)",
+      "pr": "7088"
     },
     {
       "line": "< b2b5a65d408e65cf73290417ea706a1b5323d6fc chore: udpate yarn.lock",
@@ -647,7 +732,8 @@
       "type": "commit",
       "pretty": "< 8813aaa344f4b839ae081b9b3c7c5e2b8fd71615 fix(deps): update dependency @types/aws-lambda to v8.10.109 (#7077)",
       "hash": "8813aaa344f4b839ae081b9b3c7c5e2b8fd71615",
-      "message": "fix(deps): update dependency @types/aws-lambda to v8.10.109 (#7077)"
+      "message": "fix(deps): update dependency @types/aws-lambda to v8.10.109 (#7077)",
+      "pr": "7077"
     },
     {
       "line": "< 38cd88a3d4d7e58e734a5ec4049a925281f91fb2 chore(deps): update dependency @types/yargs to v17.0.17 (#7067)",
@@ -655,7 +741,8 @@
       "type": "commit",
       "pretty": "< 38cd88a3d4d7e58e734a5ec4049a925281f91fb2 chore(deps): update dependency @types/yargs to v17.0.17 (#7067)",
       "hash": "38cd88a3d4d7e58e734a5ec4049a925281f91fb2",
-      "message": "chore(deps): update dependency @types/yargs to v17.0.17 (#7067)"
+      "message": "chore(deps): update dependency @types/yargs to v17.0.17 (#7067)",
+      "pr": "7067"
     },
     {
       "line": "< 9c216c76d2ec967ae7e237ea61d04a0509fe07fc chore(deps): update dependency @types/lodash to v4.14.191 (#7066)",
@@ -663,7 +750,8 @@
       "type": "commit",
       "pretty": "< 9c216c76d2ec967ae7e237ea61d04a0509fe07fc chore(deps): update dependency @types/lodash to v4.14.191 (#7066)",
       "hash": "9c216c76d2ec967ae7e237ea61d04a0509fe07fc",
-      "message": "chore(deps): update dependency @types/lodash to v4.14.191 (#7066)"
+      "message": "chore(deps): update dependency @types/lodash to v4.14.191 (#7066)",
+      "pr": "7066"
     },
     {
       "line": "< ecdbf5accc8c0739eb5fa2c5471536ab0dedf08e chore(deps): update dependency esbuild to v0.16.3 (#7068)",
@@ -671,7 +759,8 @@
       "type": "commit",
       "pretty": "< ecdbf5accc8c0739eb5fa2c5471536ab0dedf08e chore(deps): update dependency esbuild to v0.16.3 (#7068)",
       "hash": "ecdbf5accc8c0739eb5fa2c5471536ab0dedf08e",
-      "message": "chore(deps): update dependency esbuild to v0.16.3 (#7068)"
+      "message": "chore(deps): update dependency esbuild to v0.16.3 (#7068)",
+      "pr": "7068"
     },
     {
       "line": "< bdfadd5d52f961150057976f0928a9f3042b5fea chore(deps): update dependency @types/babel__core to v7.1.20 (#7065)",
@@ -679,7 +768,8 @@
       "type": "commit",
       "pretty": "< bdfadd5d52f961150057976f0928a9f3042b5fea chore(deps): update dependency @types/babel__core to v7.1.20 (#7065)",
       "hash": "bdfadd5d52f961150057976f0928a9f3042b5fea",
-      "message": "chore(deps): update dependency @types/babel__core to v7.1.20 (#7065)"
+      "message": "chore(deps): update dependency @types/babel__core to v7.1.20 (#7065)",
+      "pr": "7065"
     },
     {
       "line": "< 356fecc42f0a8bb9fb48eff6508ac8ca14fd711b chore(deps): update carloscastrojumo/github-cherry-pick-action action to v1.0.6 (#7085)",
@@ -687,7 +777,8 @@
       "type": "commit",
       "pretty": "< 356fecc42f0a8bb9fb48eff6508ac8ca14fd711b chore(deps): update carloscastrojumo/github-cherry-pick-action action to v1.0.6 (#7085)",
       "hash": "356fecc42f0a8bb9fb48eff6508ac8ca14fd711b",
-      "message": "chore(deps): update carloscastrojumo/github-cherry-pick-action action to v1.0.6 (#7085)"
+      "message": "chore(deps): update carloscastrojumo/github-cherry-pick-action action to v1.0.6 (#7085)",
+      "pr": "7085"
     },
     {
       "line": "< 4149fc346a43a3b15f0d33c049630ab39c7a463d fix(deps): update dependency @types/node to v16.18.7 (#7087)",
@@ -695,7 +786,8 @@
       "type": "commit",
       "pretty": "< 4149fc346a43a3b15f0d33c049630ab39c7a463d fix(deps): update dependency @types/node to v16.18.7 (#7087)",
       "hash": "4149fc346a43a3b15f0d33c049630ab39c7a463d",
-      "message": "fix(deps): update dependency @types/node to v16.18.7 (#7087)"
+      "message": "fix(deps): update dependency @types/node to v16.18.7 (#7087)",
+      "pr": "7087"
     },
     {
       "line": "< cb8394fbf03145ddbb047e4789d8f708b809890c fix(deps): update dependency @graphql-codegen/typescript-react-apollo to v3.3.7 (#7075)",
@@ -703,7 +795,8 @@
       "type": "commit",
       "pretty": "< cb8394fbf03145ddbb047e4789d8f708b809890c fix(deps): update dependency @graphql-codegen/typescript-react-apollo to v3.3.7 (#7075)",
       "hash": "cb8394fbf03145ddbb047e4789d8f708b809890c",
-      "message": "fix(deps): update dependency @graphql-codegen/typescript-react-apollo to v3.3.7 (#7075)"
+      "message": "fix(deps): update dependency @graphql-codegen/typescript-react-apollo to v3.3.7 (#7075)",
+      "pr": "7075"
     },
     {
       "line": "< d659930e8547d21dc174323060834ab43606d8fe fix(deps): update dependency systeminformation to v5.16.5 (#7079)",
@@ -711,7 +804,8 @@
       "type": "commit",
       "pretty": "< d659930e8547d21dc174323060834ab43606d8fe fix(deps): update dependency systeminformation to v5.16.5 (#7079)",
       "hash": "d659930e8547d21dc174323060834ab43606d8fe",
-      "message": "fix(deps): update dependency systeminformation to v5.16.5 (#7079)"
+      "message": "fix(deps): update dependency systeminformation to v5.16.5 (#7079)",
+      "pr": "7079"
     },
     {
       "line": "< 45ebd5e64085cf263eadbbdbb7074f73a603c853 fix(deps): update dependency @graphql-tools/merge to v8.3.14 (#7076)",
@@ -719,7 +813,8 @@
       "type": "commit",
       "pretty": "< 45ebd5e64085cf263eadbbdbb7074f73a603c853 fix(deps): update dependency @graphql-tools/merge to v8.3.14 (#7076)",
       "hash": "45ebd5e64085cf263eadbbdbb7074f73a603c853",
-      "message": "fix(deps): update dependency @graphql-tools/merge to v8.3.14 (#7076)"
+      "message": "fix(deps): update dependency @graphql-tools/merge to v8.3.14 (#7076)",
+      "pr": "7076"
     },
     {
       "line": "< 0e27446b0c955262f041a85f603f2b553fbaa09b fix(deps): update dependency @types/jest to v29.2.4 (#7078)",
@@ -727,7 +822,8 @@
       "type": "commit",
       "pretty": "< 0e27446b0c955262f041a85f603f2b553fbaa09b fix(deps): update dependency @types/jest to v29.2.4 (#7078)",
       "hash": "0e27446b0c955262f041a85f603f2b553fbaa09b",
-      "message": "fix(deps): update dependency @types/jest to v29.2.4 (#7078)"
+      "message": "fix(deps): update dependency @types/jest to v29.2.4 (#7078)",
+      "pr": "7078"
     },
     {
       "line": "< 00273b359c70a327c8581251b8450a78737a87d4 Fix chalk color access in test-project generation (#7070)",
@@ -735,7 +831,8 @@
       "type": "commit",
       "pretty": "< 00273b359c70a327c8581251b8450a78737a87d4 Fix chalk color access in test-project generation (#7070)",
       "hash": "00273b359c70a327c8581251b8450a78737a87d4",
-      "message": "Fix chalk color access in test-project generation (#7070)"
+      "message": "Fix chalk color access in test-project generation (#7070)",
+      "pr": "7070"
     },
     {
       "line": "< d39155edf5ab442c24ad6fa0dc1af2d9af95aa85 fix(deps): update dependency fs-extra to v11 (#7057)",
@@ -743,7 +840,8 @@
       "type": "commit",
       "pretty": "< d39155edf5ab442c24ad6fa0dc1af2d9af95aa85 fix(deps): update dependency fs-extra to v11 (#7057)",
       "hash": "d39155edf5ab442c24ad6fa0dc1af2d9af95aa85",
-      "message": "fix(deps): update dependency fs-extra to v11 (#7057)"
+      "message": "fix(deps): update dependency fs-extra to v11 (#7057)",
+      "pr": "7057"
     },
     {
       "line": "< 4133b11fe28485ad3d839032c5b406f37503c6d9 chore(deps): update dependency esbuild to v0.16.2 (#7054)",
@@ -751,7 +849,8 @@
       "type": "commit",
       "pretty": "< 4133b11fe28485ad3d839032c5b406f37503c6d9 chore(deps): update dependency esbuild to v0.16.2 (#7054)",
       "hash": "4133b11fe28485ad3d839032c5b406f37503c6d9",
-      "message": "chore(deps): update dependency esbuild to v0.16.2 (#7054)"
+      "message": "chore(deps): update dependency esbuild to v0.16.2 (#7054)",
+      "pr": "7054"
     },
     {
       "line": "< 5309d2c8f36a4195448556a3730e2d3478f6f118 fix(deps): update dependency prettier to v2.8.1 (#7055)",
@@ -759,7 +858,8 @@
       "type": "commit",
       "pretty": "< 5309d2c8f36a4195448556a3730e2d3478f6f118 fix(deps): update dependency prettier to v2.8.1 (#7055)",
       "hash": "5309d2c8f36a4195448556a3730e2d3478f6f118",
-      "message": "fix(deps): update dependency prettier to v2.8.1 (#7055)"
+      "message": "fix(deps): update dependency prettier to v2.8.1 (#7055)",
+      "pr": "7055"
     },
     {
       "line": "< 1868607665d6dc8a89271b9ee26e84bae39b99b2 fix(deps): update graphqlcodegenerator monorepo (#7056)",
@@ -767,7 +867,8 @@
       "type": "commit",
       "pretty": "< 1868607665d6dc8a89271b9ee26e84bae39b99b2 fix(deps): update graphqlcodegenerator monorepo (#7056)",
       "hash": "1868607665d6dc8a89271b9ee26e84bae39b99b2",
-      "message": "fix(deps): update graphqlcodegenerator monorepo (#7056)"
+      "message": "fix(deps): update graphqlcodegenerator monorepo (#7056)",
+      "pr": "7056"
     }
   ],
   "noReleaseCommits": 43

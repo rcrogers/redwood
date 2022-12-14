@@ -22,10 +22,16 @@ export async function handler({ cache }) {
 
   !cache && logSection(`Print\n`)
 
-  const tagsToColorsKey = Object.entries(tagsToColors).map(([tag, color]) => {
-    color = chalk.hex(color).dim
-    return `${color('■')} Cherry picked into ${color(tag)}`
-  })
+  const tagsToColorsKey = Object.entries(tagsToColors)
+    .filter(([tag]) =>
+      commits
+        .filter(({ type }) => type === 'commit')
+        .some(({ ref }) => ref === tag)
+    )
+    .map(([tag, color]) => {
+      color = chalk.hex(color).dim
+      return `${color('■')} Cherry picked into ${color(tag)}`
+    })
 
   console.log(
     [

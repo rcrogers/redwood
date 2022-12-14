@@ -123,7 +123,10 @@ export async function handler({ updateRemotes: shouldUpdateRemotes }) {
     return
   }
 
+  // ------------------------
   logSection('Triage\n')
+
   reportNewCommits.call({ from: 'next', to: releaseBranch }, releaseCommits)
+  console.log()
   await triageCommits.call({ data, branch: releaseBranch }, releaseCommits)
 }

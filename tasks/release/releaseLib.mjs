@@ -255,12 +255,12 @@ export async function getReleaseCommits({ useCache } = { useCache: true }) {
     return fs.readJSONSync(cachePath)
   }
 
-  logSection('Get the release branch and the last release\n')
+  logSection('Getting the release branch and the last release\n')
   const releaseBranch = await getReleaseBranch()
   const latestRelease = await getLatestRelease()
 
   logSection(
-    `Get the symmetric difference between ${releaseBranch} and ${latestRelease}\n`
+    `Getting the symmetric difference between ${releaseBranch} and ${latestRelease}\n`
   )
 
   const stdout = await getSymmetricDifference(releaseBranch, latestRelease, {
@@ -272,36 +272,8 @@ export async function getReleaseCommits({ useCache } = { useCache: true }) {
   })
 
   logSection(
-    `Check if any of the commits in ${releaseBranch} were in a patch release\n`
+    `Checking if any of the commits in ${releaseBranch} were in a minor or patch release\n`
   )
-  const commits = stdout.map((line) => {
-    const commit = {
-      line,
-      ref: releaseBranch,
-      type: 'commit',
-      pretty: line,
-    }
-
-    if (isLineUI(line)) {
-      return {
-        ...commit,
-        type: 'ui',
-        pretty: chalk.dim(line),
-      }
-    }
-
-    commit.hash = line.match(HASH).groups.hash
-
-    if (isCommitChore(line)) {
-      return {
-        ...commit,
-        type: 'chore',
-        pretty: chalk.dim(line),
-      }
-    }
-
-    return commit
-  })
 
   const [vMajor, minor] = releaseBranch.split('/').pop().split('.')
 
@@ -319,29 +291,12 @@ export async function getReleaseCommits({ useCache } = { useCache: true }) {
     return colors
   }, {})
 
-  let releaseCommits = commits.filter((commit) => commit.type === 'commit')
+  const commits = await mungeCommits.call(
+    { from: releaseBranch, to: tags, refsToColors: tagsToColors },
+    stdout
+  )
 
-  for (const commit of releaseCommits) {
-    commit.message = await getCommitMessage(commit.hash)
-    console.log()
-
-    if (ANNOTATED_TAG_MESSAGE.test(commit.message)) {
-      commit.type = 'tag'
-      commit.ref = commit.message
-      commit.pretty = chalk.dim(commit.line)
-      continue
-    }
-
-    for (const tag of tags) {
-      if (await isCommitInRef(tag, commit.message)) {
-        commit.ref = tag
-        commit.pretty = chalk.hex(tagsToColors[tag]).dim(commit.line)
-      }
-    }
-    console.log()
-  }
-
-  releaseCommits = commits.filter((commit) => {
+  const releaseCommits = commits.filter((commit) => {
     return commit.ref === releaseBranch && commit.type === 'commit'
   })
 
@@ -373,7 +328,7 @@ export const sharedGitLogOptions = [
  * If you want to add a new line, add it at the end of the string (\n):
  *
  * ```js
- * logSection('Get the release branch and the last release\n')
+ * logSection('Getting the release branch and the last release\n')
  * ```
  *
  * @param {string} title
@@ -524,9 +479,17 @@ export async function mungeCommits(stdout) {
       continue
     }
 
-    if (await isCommitInRef(this.to, sanitizeMessage(commit.message))) {
-      commit.ref = this.to
-      commit.pretty = chalk.dim.blue(commit.line)
+    this.to = Array.isArray(this.to) ? this.to : [this.to]
+
+    for (const ref of this.to) {
+      const prettyFn = this.refsToColors?.[ref]
+        ? chalk.dim.hex(this.refsToColors[ref])
+        : chalk.dim.blue
+
+      if (await isCommitInRef(ref, sanitizeMessage(commit.message))) {
+        commit.ref = ref
+        commit.pretty = prettyFn(commit.line)
+      }
     }
 
     console.log()

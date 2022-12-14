@@ -67,14 +67,14 @@ export async function handler({ prompt }) {
     process.exit(1)
   }
 
-  logSection('Confirm release commits\n')
+  logSection('Confirming release commits\n')
   if (!isYes(await question('Did you update the release commits? [Y/n] > '))) {
     console.log('Run `get-release-commits --no-cache` first')
     process.exit(1)
   }
   console.log()
 
-  logSection('Confirm PRs in milestones\n')
+  logSection('Confirming PRs in milestones\n')
   console.log(
     chalk.dim(
       'If you see more than one version here (e.g. v3.6.0 and v3.5.0), you need to close the older one(s)\n'
