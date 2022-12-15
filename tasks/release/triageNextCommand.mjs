@@ -30,6 +30,14 @@ export function builder(yargs) {
 }
 
 export async function handler({ updateRemotes: shouldUpdateRemotes }) {
+  const releaseBranch = await getReleaseBranch()
+  console.log()
+
+  if (releaseBranch.split('\n').length > 1) {
+    console.log("There's more than one release branch")
+    process.exit(1)
+  }
+
   const data = setupData(
     path.join(
       path.dirname(fileURLToPath(import.meta.url)),
@@ -42,9 +50,6 @@ export async function handler({ updateRemotes: shouldUpdateRemotes }) {
     logSection('Updating remotes\n')
     await updateRemotes()
   }
-
-  const releaseBranch = await getReleaseBranch()
-  console.log()
 
   logSection(`Getting symmetric difference between next and ${releaseBranch}\n`)
 

@@ -227,24 +227,36 @@
     "message": "Firebase Auth: Pin firebase-admin version in setup script (#7122)",
     "needsCherryPick": false
   },
-  "b38566088d2779dc72d1f87b47c3919b5ba4d1fd": {
-    "message": "chore(deps): update dependency typescript-transform-paths to v3.4.4 (#7159)",
+  "3994aca7c9348b2a13c3186a2d66e2f977f34529": {
+    "message": "cli: Add missing dep crypto-js (#7190)",
+    "needsCherryPick": false
+  },
+  "98082e955705a49f6b22cb0e44070c05c93621e8": {
+    "message": "chore(deps): update dependency supertokens-auth-react to v0.28.1 (#7158)",
+    "needsCherryPick": false
+  },
+  "e3a0d55f3ea466feee4ae9368764583de4d6d89e": {
+    "message": "chore(deps): update dependency jsonwebtoken to v9 [security] (#7247)",
+    "needsCherryPick": false
+  },
+  "e044a2daeb22b4368265411ca8b2e1dc21cfd58b": {
+    "message": "fix(deps): update prisma monorepo to v4.8.0 (#7242)",
     "needsCherryPick": true
   },
-  "b2cff0cf0ee1a3ee4ad0964a383abb4405ee8054": {
-    "message": "fix(deps): update dependency css-loader to v6.7.3 (#7154)",
+  "ad48bab0d16f86c22919efd7af4366e5bd2b6940": {
+    "message": "fix(deps): update storybook monorepo to v6.5.15 (#7237)",
     "needsCherryPick": true
   },
-  "2e58f8c1e82c31ed907e1583e9bbb8d4e4194691": {
-    "message": "Asynchronously import the handler in more setup commands  (#7156)",
+  "8ce4760815c9b24ee05b87f99549fb6eaf45357a": {
+    "message": "fix(deps): update typescript-eslint monorepo to v5.47.0 (#7223)",
     "needsCherryPick": true
   },
-  "dfe18e6992f272e2ae14fa71336e37b3c469e840": {
-    "message": "chore(deps): update dependency firebase to v9.15.0 (#7152)",
-    "needsCherryPick": true
+  "a4bf3da70307795e021a2f6e69a4ab0e372e6d6e": {
+    "message": "fix: update packages in supabase setup (#7220)",
+    "needsCherryPick": false
   },
-  "0563c83715c26cc855411b126f596c48ba5f8734": {
-    "message": "chore(deps): update dependency @types/vscode to v1.74.0 (#7149)",
-    "needsCherryPick": true
+  "9a9c7c475a55056ada8a807bbe790d800c42147c": {
+    "message": "fix: typo in clerk auth decoder import (#7219)",
+    "needsCherryPick": false
   }
 }

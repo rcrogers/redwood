@@ -284,7 +284,7 @@ export async function getReleaseCommits({ useCache } = { useCache: true }) {
 
   patches &&= patches.split('\n')
 
-  const tags = [...patches, latestRelease]
+  const tags = [...patches, latestRelease].reverse()
 
   const tagsToColors = tags.reduce((colors, tag) => {
     colors[tag] = faker.color.rgb()

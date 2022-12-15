@@ -3,8 +3,112 @@
     "message": "[CLI]: Feature: An update middleware to detect and notify users of available updates (#6461)",
     "needsCherryPick": false
   },
-  "8fb5d6be046cb8b1f5c337c52856658a265e79cb": {
-    "message": "Check that most generator <name> positional arguments don't start with / (#7143)",
+  "b3a6359caf836f7070e7905f0c281103333acfbe": {
+    "message": "fix(deps): update dependency css-loader to v6.7.3 (#7154)",
+    "needsCherryPick": false
+  },
+  "e139f6ffc9aa6d6cb03614ae695b4d675154b98e": {
+    "message": "Asynchronously import the handler in more setup commands  (#7156)",
+    "needsCherryPick": false
+  },
+  "5b41361865c13de54a694d2176f52a6f14c724a4": {
+    "message": "chore(deps): update dependency firebase to v9.15.0 (#7152)",
+    "needsCherryPick": false
+  },
+  "f5ae8437afd33dc8d3c5323d6e268511d73cc368": {
+    "message": "chore(deps): update dependency @types/vscode to v1.74.0 (#7149)",
+    "needsCherryPick": false
+  },
+  "1587d4542a0f4e70dc41b2eafffd45968a4a0c05": {
+    "message": "chore(deps): update dependency typescript-transform-paths to v3.4.4 (#7159)",
+    "needsCherryPick": false
+  },
+  "179b55aae85c13ade7390ff8987669858f3ea0f1": {
+    "message": "chore(CI): try passing action's github token (#7165)",
+    "needsCherryPick": false
+  },
+  "e6d3d759ac8fbbd6eec70edd6b1fe400b5448124": {
+    "message": "chore(deps): update dependency esbuild to v0.16.7 (#7169)",
+    "needsCherryPick": false
+  },
+  "c34d66e450b4efa6179f75371af8872bfbae12c6": {
+    "message": "chore(deps): update dependency esbuild to v0.16.4 (#7099)",
+    "needsCherryPick": false
+  },
+  "9edfbeca93982225986a1e4d7373ff5f1ff0bd96": {
+    "message": "fix(deps): update dependency pino to v8.8.0 (#7173)",
+    "needsCherryPick": false
+  },
+  "dd1bfa6c76953be97ab90fe3a5147d1e2631eeec": {
+    "message": "fix(deps): update dependency @reach/skip-nav to v0.18.0 (#7164)",
+    "needsCherryPick": false
+  },
+  "b019408d261b3abb5c15d4ebaacb0e63d476f228": {
+    "message": "Update dependency react-hook-form to v7.41.0 (#7199)",
+    "needsCherryPick": false
+  },
+  "ae7ae34416326901146eb65159276cd23b03bf6d": {
+    "message": "Update dependency lazy-get-decorator to v2.2.1 (#7208)",
+    "needsCherryPick": false
+  },
+  "32d8a0de12c08dbf4fc50a894d9204060935e97d": {
+    "message": "Update dependency eslint to v8.30.0 (#7206)",
+    "needsCherryPick": false
+  },
+  "e8853f407ba20887f193b9cbdeaf6c4697d66280": {
+    "message": "chore(deps): update dependency @playwright/test to v1.29.0 (#7204)",
+    "needsCherryPick": false
+  },
+  "bfa8d144531741728e460865bcdfaba3f5595367": {
+    "message": "chore(deps): update dependency esbuild to v0.16.8 (#7202)",
+    "needsCherryPick": false
+  },
+  "be04793a213edb619071ad38c6433c1b3d69406e": {
+    "message": "fix(deps): update dependency @types/node to v16.18.10 (#7198)",
+    "needsCherryPick": false
+  },
+  "00758d616fb3ca5b413e38bef0d7e887ffb8108b": {
+    "message": "fix: forego semver caret (#7193)",
+    "needsCherryPick": false
+  },
+  "99c5b4b57416f520119ccebce8a77883796271f5": {
+    "message": "fix(deps): update dependency fastify-raw-body to v4.2.0 (#7188)",
+    "needsCherryPick": false
+  },
+  "89260707ad9e0f10ea23171809383f7607c228aa": {
+    "message": "chore(deps): update dependency @playwright/test to v1.29.1 (#7243)",
+    "needsCherryPick": false
+  },
+  "881d557ee9eae33b063dcac8dc6cf00678727a7a": {
+    "message": "chore(deps): update yarn to v3.3.1 (#7235)",
+    "needsCherryPick": false
+  },
+  "770d737af3b77b19e98df6285c7e87c9358672f9": {
+    "message": "cli generate helpers.js: Fix formatting warnings (#7238)",
+    "needsCherryPick": false
+  },
+  "ac6a6eb8e265768a8d034297477befc36bbd2c24": {
+    "message": "fix(deps): update dependency @apollo/client to v3.7.3 (#7179)",
+    "needsCherryPick": false
+  },
+  "c4d3335faad7c3ce69c6de002dffa7682b438d1f": {
+    "message": "chore(deps): update dependency esbuild to v0.16.10 (#7230)",
+    "needsCherryPick": false
+  },
+  "95b7bd01a0d2991a6dab8d055ffa4b10141e77e3": {
+    "message": "chore(deps): update dependency @types/prettier to v2.7.2 (#7232)",
+    "needsCherryPick": false
+  },
+  "0dd6cb06d3570b63639bb1993e983a4fbb513be9": {
+    "message": "explicitly reference dbAuth (#7226)",
+    "needsCherryPick": false
+  },
+  "d6b912f2e26ea22bf86561e766aeaf39f8051a18": {
+    "message": "Fix Typescript Parameter Properties not working (#7084)",
     "needsCherryPick": true
+  },
+  "4d1cc81d479845b920a8363378a08abe9241855e": {
+    "message": "chore(deps): update dependency esbuild to v0.16.9 (#7214)",
+    "needsCherryPick": false
   }
 }

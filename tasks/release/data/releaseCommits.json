@@ -1,6 +1,69 @@
 {
   "commits": [
     {
+      "line": "< 263ba22228405fdcc41139d38d1952c19c5b31d5 Fix Typescript Parameter Properties not working (#7084)",
+      "ref": "release/minor/v3.8.0",
+      "type": "commit",
+      "pretty": "< 263ba22228405fdcc41139d38d1952c19c5b31d5 Fix Typescript Parameter Properties not working (#7084)",
+      "hash": "263ba22228405fdcc41139d38d1952c19c5b31d5",
+      "message": "Fix Typescript Parameter Properties not working (#7084)",
+      "pr": "7084"
+    },
+    {
+      "line": "< 54bf5aff1ae3f176a54348a0c195de745cb93356 Correct link to netlify deploy docs (#7200)",
+      "ref": "release/minor/v3.8.0",
+      "type": "commit",
+      "pretty": "< 54bf5aff1ae3f176a54348a0c195de745cb93356 Correct link to netlify deploy docs (#7200)",
+      "hash": "54bf5aff1ae3f176a54348a0c195de745cb93356",
+      "message": "Correct link to netlify deploy docs (#7200)",
+      "pr": "7200"
+    },
+    {
+      "line": "< 456336b08fedea1d109c26a85b9738e7e6aa7006 Render deploy: Static sites are always free (#7196)",
+      "ref": "release/minor/v3.8.0",
+      "type": "commit",
+      "pretty": "< 456336b08fedea1d109c26a85b9738e7e6aa7006 Render deploy: Static sites are always free (#7196)",
+      "hash": "456336b08fedea1d109c26a85b9738e7e6aa7006",
+      "message": "Render deploy: Static sites are always free (#7196)",
+      "pr": "7196"
+    },
+    {
+      "line": "< 57cebc1f6b2c5f456e18036e68fa3bbddcb99dd6 Remove Comment Inconsistency in toast-notification.md (#7017)",
+      "ref": "release/minor/v3.8.0",
+      "type": "commit",
+      "pretty": "< 57cebc1f6b2c5f456e18036e68fa3bbddcb99dd6 Remove Comment Inconsistency in toast-notification.md (#7017)",
+      "hash": "57cebc1f6b2c5f456e18036e68fa3bbddcb99dd6",
+      "message": "Remove Comment Inconsistency in toast-notification.md (#7017)",
+      "pr": "7017"
+    },
+    {
+      "line": "< 85ac2b21f011c9834cf077c785d3405d2b27d6db (docs): fix file path in code snippet title (#7002)",
+      "ref": "release/minor/v3.8.0",
+      "type": "commit",
+      "pretty": "< 85ac2b21f011c9834cf077c785d3405d2b27d6db (docs): fix file path in code snippet title (#7002)",
+      "hash": "85ac2b21f011c9834cf077c785d3405d2b27d6db",
+      "message": "(docs): fix file path in code snippet title (#7002)",
+      "pr": "7002"
+    },
+    {
+      "line": "= 8cf70c01c81ef1f205e5fc97b473c3b3a4ecd8e2 fix(router): check if we're rendering in an iframe before scrolling (#7175)",
+      "ref": "v3.7.1",
+      "type": "commit",
+      "pretty": "\u001b[2m\u001b[38;5;194m= 8cf70c01c81ef1f205e5fc97b473c3b3a4ecd8e2 fix(router): check if we're rendering in an iframe before scrolling (#7175)\u001b[39m\u001b[22m",
+      "hash": "8cf70c01c81ef1f205e5fc97b473c3b3a4ecd8e2",
+      "message": "fix(router): check if we're rendering in an iframe before scrolling (#7175)",
+      "pr": "7175"
+    },
+    {
+      "line": "< 8fb5d6be046cb8b1f5c337c52856658a265e79cb Check that most generator <name> positional arguments don't start with / (#7143)",
+      "ref": "release/minor/v3.8.0",
+      "type": "commit",
+      "pretty": "< 8fb5d6be046cb8b1f5c337c52856658a265e79cb Check that most generator <name> positional arguments don't start with / (#7143)",
+      "hash": "8fb5d6be046cb8b1f5c337c52856658a265e79cb",
+      "message": "Check that most generator <name> positional arguments don't start with / (#7143)",
+      "pr": "7143"
+    },
+    {
       "line": "< e825f95611c41bb7b990638c9be5eca573a9a3e4 chore(deps): update dependency @tsd/typescript to v4.9.4 (#7148)",
       "ref": "release/minor/v3.8.0",
       "type": "commit",
@@ -100,9 +163,9 @@
     },
     {
       "line": "< b259b0cd9666eb6a46b3a46df35536867c8467eb [docs] How to test in GitHub actions (#6921)",
-      "ref": "v3.7.0",
+      "ref": "v3.7.1",
       "type": "commit",
-      "pretty": "\u001b[2m\u001b[38;5;172m< b259b0cd9666eb6a46b3a46df35536867c8467eb [docs] How to test in GitHub actions (#6921)\u001b[39m\u001b[22m",
+      "pretty": "\u001b[2m\u001b[38;5;194m< b259b0cd9666eb6a46b3a46df35536867c8467eb [docs] How to test in GitHub actions (#6921)\u001b[39m\u001b[22m",
       "hash": "b259b0cd9666eb6a46b3a46df35536867c8467eb",
       "message": "[docs] How to test in GitHub actions (#6921)",
       "pr": "6921"
@@ -257,7 +320,7 @@
     },
     {
       "line": "| < 676c5b350ccc7b32eb770193135bc210b6d02085 Make it clearer that can use directiveArgs in transformer directive (#6497)",
-      "ref": "v3.7.0",
+      "ref": "v3.6.1",
       "type": "commit",
       "pretty": "\u001b[2m\u001b[38;5;172m| < 676c5b350ccc7b32eb770193135bc210b6d02085 Make it clearer that can use directiveArgs in transformer directive (#6497)\u001b[39m\u001b[22m",
       "hash": "676c5b350ccc7b32eb770193135bc210b6d02085",
@@ -266,7 +329,7 @@
     },
     {
       "line": "| < 322c99a4492509767385085f45968470458b1e13 fix: extractCookie from GraphiQLHeader (#6894) (#6969)",
-      "ref": "v3.7.0",
+      "ref": "v3.6.1",
       "type": "commit",
       "pretty": "\u001b[2m\u001b[38;5;172m| < 322c99a4492509767385085f45968470458b1e13 fix: extractCookie from GraphiQLHeader (#6894) (#6969)\u001b[39m\u001b[22m",
       "hash": "322c99a4492509767385085f45968470458b1e13",
@@ -275,7 +338,7 @@
     },
     {
       "line": "| < 6551fb03bb025dc2ed508c7b241e257cfbf655f7 Render Deploy: Define plan in template (#6905)",
-      "ref": "v3.7.0",
+      "ref": "v3.6.1",
       "type": "commit",
       "pretty": "\u001b[2m\u001b[38;5;172m| < 6551fb03bb025dc2ed508c7b241e257cfbf655f7 Render Deploy: Define plan in template (#6905)\u001b[39m\u001b[22m",
       "hash": "6551fb03bb025dc2ed508c7b241e257cfbf655f7",
@@ -284,7 +347,7 @@
     },
     {
       "line": "| < df5e83866ab538bb69999d6eecf741cafc0ec0ee fix launch.json (#6972)",
-      "ref": "v3.7.0",
+      "ref": "v3.6.1",
       "type": "commit",
       "pretty": "\u001b[2m\u001b[38;5;172m| < df5e83866ab538bb69999d6eecf741cafc0ec0ee fix launch.json (#6972)\u001b[39m\u001b[22m",
       "hash": "df5e83866ab538bb69999d6eecf741cafc0ec0ee",
@@ -293,7 +356,7 @@
     },
     {
       "line": "| < ff469334075c506e1fd261746d02ed3790940951 pin auth0 js sdk (#6963)",
-      "ref": "v3.7.0",
+      "ref": "v3.6.1",
       "type": "commit",
       "pretty": "\u001b[2m\u001b[38;5;172m| < ff469334075c506e1fd261746d02ed3790940951 pin auth0 js sdk (#6963)\u001b[39m\u001b[22m",
       "hash": "ff469334075c506e1fd261746d02ed3790940951",
@@ -477,13 +540,84 @@
       "hash": "1868607665d6dc8a89271b9ee26e84bae39b99b2",
       "message": "fix(deps): update graphqlcodegenerator monorepo (#7056)",
       "pr": "7056"
+    },
+    {
+      "line": "> f4f928f8aa9fd5976ad69b971f532fdab6eb136a v3.7.1",
+      "ref": "v3.7.1",
+      "type": "tag",
+      "pretty": "\u001b[2m> f4f928f8aa9fd5976ad69b971f532fdab6eb136a v3.7.1\u001b[22m",
+      "hash": "f4f928f8aa9fd5976ad69b971f532fdab6eb136a",
+      "message": "v3.7.1"
+    },
+    {
+      "line": "= 3023453bd69693b008076391d3cbcd6f42b96d9f fix(router): check if we're rendering in an iframe before scrolling (#7175)",
+      "ref": "v3.7.1",
+      "type": "commit",
+      "pretty": "\u001b[2m\u001b[38;5;194m= 3023453bd69693b008076391d3cbcd6f42b96d9f fix(router): check if we're rendering in an iframe before scrolling (#7175)\u001b[39m\u001b[22m",
+      "hash": "3023453bd69693b008076391d3cbcd6f42b96d9f",
+      "message": "fix(router): check if we're rendering in an iframe before scrolling (#7175)",
+      "pr": "7175"
     }
   ],
   "tagsToColors": {
-    "v3.6.1": "#d0f5d8",
-    "v3.7.0": "#bb590d"
+    "v3.7.1": "#d0f5d8",
+    "v3.6.1": "#bb590d"
   },
   "releaseCommits": [
+    {
+      "line": "< 263ba22228405fdcc41139d38d1952c19c5b31d5 Fix Typescript Parameter Properties not working (#7084)",
+      "ref": "release/minor/v3.8.0",
+      "type": "commit",
+      "pretty": "< 263ba22228405fdcc41139d38d1952c19c5b31d5 Fix Typescript Parameter Properties not working (#7084)",
+      "hash": "263ba22228405fdcc41139d38d1952c19c5b31d5",
+      "message": "Fix Typescript Parameter Properties not working (#7084)",
+      "pr": "7084"
+    },
+    {
+      "line": "< 54bf5aff1ae3f176a54348a0c195de745cb93356 Correct link to netlify deploy docs (#7200)",
+      "ref": "release/minor/v3.8.0",
+      "type": "commit",
+      "pretty": "< 54bf5aff1ae3f176a54348a0c195de745cb93356 Correct link to netlify deploy docs (#7200)",
+      "hash": "54bf5aff1ae3f176a54348a0c195de745cb93356",
+      "message": "Correct link to netlify deploy docs (#7200)",
+      "pr": "7200"
+    },
+    {
+      "line": "< 456336b08fedea1d109c26a85b9738e7e6aa7006 Render deploy: Static sites are always free (#7196)",
+      "ref": "release/minor/v3.8.0",
+      "type": "commit",
+      "pretty": "< 456336b08fedea1d109c26a85b9738e7e6aa7006 Render deploy: Static sites are always free (#7196)",
+      "hash": "456336b08fedea1d109c26a85b9738e7e6aa7006",
+      "message": "Render deploy: Static sites are always free (#7196)",
+      "pr": "7196"
+    },
+    {
+      "line": "< 57cebc1f6b2c5f456e18036e68fa3bbddcb99dd6 Remove Comment Inconsistency in toast-notification.md (#7017)",
+      "ref": "release/minor/v3.8.0",
+      "type": "commit",
+      "pretty": "< 57cebc1f6b2c5f456e18036e68fa3bbddcb99dd6 Remove Comment Inconsistency in toast-notification.md (#7017)",
+      "hash": "57cebc1f6b2c5f456e18036e68fa3bbddcb99dd6",
+      "message": "Remove Comment Inconsistency in toast-notification.md (#7017)",
+      "pr": "7017"
+    },
+    {
+      "line": "< 85ac2b21f011c9834cf077c785d3405d2b27d6db (docs): fix file path in code snippet title (#7002)",
+      "ref": "release/minor/v3.8.0",
+      "type": "commit",
+      "pretty": "< 85ac2b21f011c9834cf077c785d3405d2b27d6db (docs): fix file path in code snippet title (#7002)",
+      "hash": "85ac2b21f011c9834cf077c785d3405d2b27d6db",
+      "message": "(docs): fix file path in code snippet title (#7002)",
+      "pr": "7002"
+    },
+    {
+      "line": "< 8fb5d6be046cb8b1f5c337c52856658a265e79cb Check that most generator <name> positional arguments don't start with / (#7143)",
+      "ref": "release/minor/v3.8.0",
+      "type": "commit",
+      "pretty": "< 8fb5d6be046cb8b1f5c337c52856658a265e79cb Check that most generator <name> positional arguments don't start with / (#7143)",
+      "hash": "8fb5d6be046cb8b1f5c337c52856658a265e79cb",
+      "message": "Check that most generator <name> positional arguments don't start with / (#7143)",
+      "pr": "7143"
+    },
     {
       "line": "< e825f95611c41bb7b990638c9be5eca573a9a3e4 chore(deps): update dependency @tsd/typescript to v4.9.4 (#7148)",
       "ref": "release/minor/v3.8.0",
@@ -871,5 +1005,5 @@
       "pr": "7056"
     }
   ],
-  "noReleaseCommits": 43
+  "noReleaseCommits": 49
 }
