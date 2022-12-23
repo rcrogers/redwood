@@ -347,6 +347,8 @@ async function releaseMajorOrMinor({ semver, nextVersion }) {
   const releaseBranchExists = await branchExists(releaseBranch)
   console.log()
 
+  const checkoutFromBranch = semver === 'major' ? 'main' : 'next'
+
   if (releaseBranchExists) {
     console.log(
       `Checking out existing release branch ${chalk.magenta(releaseBranch)}\n`
@@ -358,7 +360,9 @@ async function releaseMajorOrMinor({ semver, nextVersion }) {
     if (
       !isYes(
         await question(
-          `Ok to checkout new branch ${chalk.magenta(releaseBranch)}? [Y/n] > `
+          `Ok to checkout new branch ${chalk.magenta(
+            releaseBranch
+          )} from ${chalk.magenta(checkoutFromBranch)}? [Y/n] > `
         )
       )
     ) {
@@ -366,7 +370,7 @@ async function releaseMajorOrMinor({ semver, nextVersion }) {
     }
     console.log()
 
-    await $`git checkout -b ${releaseBranch}`
+    await $`git checkout -b ${releaseBranch} ${checkoutFromBranch}`
     console.log()
   }
 

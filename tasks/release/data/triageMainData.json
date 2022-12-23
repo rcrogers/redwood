@@ -239,24 +239,44 @@
     "message": "chore(deps): update dependency jsonwebtoken to v9 [security] (#7247)",
     "needsCherryPick": false
   },
-  "e044a2daeb22b4368265411ca8b2e1dc21cfd58b": {
-    "message": "fix(deps): update prisma monorepo to v4.8.0 (#7242)",
-    "needsCherryPick": true
-  },
-  "ad48bab0d16f86c22919efd7af4366e5bd2b6940": {
-    "message": "fix(deps): update storybook monorepo to v6.5.15 (#7237)",
-    "needsCherryPick": true
-  },
-  "8ce4760815c9b24ee05b87f99549fb6eaf45357a": {
-    "message": "fix(deps): update typescript-eslint monorepo to v5.47.0 (#7223)",
-    "needsCherryPick": true
-  },
   "a4bf3da70307795e021a2f6e69a4ab0e372e6d6e": {
     "message": "fix: update packages in supabase setup (#7220)",
     "needsCherryPick": false
   },
   "9a9c7c475a55056ada8a807bbe790d800c42147c": {
     "message": "fix: typo in clerk auth decoder import (#7219)",
+    "needsCherryPick": false
+  },
+  "c291d1d1eea20841fb640d8af41f8a938b0a5487": {
+    "message": "Decoupling auth polishes (#7258)",
+    "needsCherryPick": false
+  },
+  "a7c64fa6a5defa44103f3af919004f9fd5b33e0e": {
+    "message": "chore: try reverting babel resolution (#7257)",
+    "needsCherryPick": false
+  },
+  "6f39fd7a1995bac014839ecdfe2a0eb0ed66e165": {
+    "message": "Fix how the setup auth command checks for published versions (#7256)",
+    "needsCherryPick": false
+  },
+  "ac645b15023a4f26e793d3b13212460fb424d011": {
+    "message": "feat: bump node.js to 16, 18 (#7183)",
+    "needsCherryPick": false
+  },
+  "eb88fc4eacf541ac4a696644659d9f9ae6952382": {
+    "message": "Decoupled auth setup: install handlers automatically (#7146)",
+    "needsCherryPick": false
+  },
+  "fbfb7c2822ad513055d8f1552b4b7e0268ddd4b6": {
+    "message": "fix: add babel resolution (#7250)",
+    "needsCherryPick": false
+  },
+  "92c99756d6e222baeda43e945cd731f0b0f4afb6": {
+    "message": "chore: rm experimental warning (#7262)",
+    "needsCherryPick": false
+  },
+  "dec82b879c7cde5a64db3e33926938c2f880846c": {
+    "message": "fix: remove version from netlify decoder specifier",
     "needsCherryPick": false
   }
 }
