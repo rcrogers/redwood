@@ -34,10 +34,7 @@ export async function handler({ milestone }) {
   const coreDependenciesRegex = new RegExp(
     [
       '@apollo/client',
-      ' eslint ',
-      'prettier',
       'fastify',
-      'msw',
       'prisma',
       'react-hook-form',
       'storybook ',

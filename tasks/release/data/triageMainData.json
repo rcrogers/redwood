@@ -278,5 +278,13 @@
   "dec82b879c7cde5a64db3e33926938c2f880846c": {
     "message": "fix: remove version from netlify decoder specifier",
     "needsCherryPick": false
+  },
+  "783d0491ebaaae0f3903afb8b38d9068fae59af3": {
+    "message": "chore(deps): update dependency @types/jsonwebtoken to v9 (#7245)",
+    "needsCherryPick": false
+  },
+  "fb7f34d0fce9fe63622d23a30c6ea3b860c661b0": {
+    "message": "authTasks.ts: Extract addAuthDecoderToCreateGraphQLHandler (#7268)",
+    "needsCherryPick": false
   }
 }
