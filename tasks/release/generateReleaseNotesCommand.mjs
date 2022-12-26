@@ -31,6 +31,10 @@ export async function handler({ milestone }) {
 
   const prs = await getPRsWithMilestone.call({ octokit }, { milestoneId: id })
 
+  prs.sort(
+    (a, b) => new Date(a.mergedAt).getTime() - new Date(b.mergedAt).getTime()
+  )
+
   const coreDependenciesRegex = new RegExp(
     [
       '@apollo/client',
@@ -64,25 +68,25 @@ export async function handler({ milestone }) {
 
       const labels = pr.labels.nodes.map((label) => label.name)
 
-      if (labels.includes('release:feature-breaking')) {
-        obj.breaking.push(`- ${formatPR(pr)}`)
-        return obj
-      }
+      // if (labels.includes('release:feature-breaking')) {
+      //   obj.breaking.push(`- ${formatPR(pr)}`)
+      //   return obj
+      // }
 
-      if (labels.includes('release:feature')) {
-        obj.features.push(`- ${formatPR(pr)}`)
-        return obj
-      }
+      // if (labels.includes('release:feature')) {
+      //   obj.features.push(`- ${formatPR(pr)}`)
+      //   return obj
+      // }
 
-      if (labels.includes('release:fix')) {
-        obj.fixed.push(`- ${formatPR(pr)}`)
-        return obj
-      }
+      // if (labels.includes('release:fix')) {
+      //   obj.fixed.push(`- ${formatPR(pr)}`)
+      //   return obj
+      // }
 
-      if (labels.includes('release:chore')) {
-        obj.chore.push(`- ${formatPR(pr)}`)
-        return obj
-      }
+      // if (labels.includes('release:chore')) {
+      //   obj.chore.push(`- ${formatPR(pr)}`)
+      //   return obj
+      // }
 
       if (labels.includes('release:docs')) {
         obj.docs.push(`- ${formatPR(pr)}`)
@@ -179,6 +183,7 @@ export const getPRsWithMilestoneQuery = `
             author {
               login
             }
+            mergedAt
             labels(first: 10) {
               nodes {
                 name
