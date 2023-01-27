@@ -160,10 +160,13 @@ async function getPRsWithMilestone({ milestoneId, after }) {
     return pullRequests.nodes
   }
 
-  const nodes = await getPRsWithMilestone({
-    milestoneId,
-    after: pullRequests.pageInfo.endCursor,
-  })
+  const nodes = await getPRsWithMilestone.call(
+    { octokit: this.octokit },
+    {
+      milestoneId,
+      after: pullRequests.pageInfo.endCursor,
+    }
+  )
 
   return [...pullRequests.nodes, ...nodes]
 }
