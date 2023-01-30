@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "@faker-js/faker": "7.6.0",
+    "boxen": "5.1.2",
+    "octokit": "2.0.8",
+    "prompts": "2.4.2",
+    "yargs": "17.6.2",
+    "zx": "7.1.1"
+  },
+  "devDependencies": {
+    "@types/prompts": "2.4.1"
+  }
+}

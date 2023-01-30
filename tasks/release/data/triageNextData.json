@@ -1,0 +1,38 @@
+{
+  "778f5ad15e758414240e85edb12f8ba10752020b": {
+    "message": "fix(deps): update graphqlcodegenerator monorepo (#7555)",
+    "needsCherryPick": true
+  },
+  "de4ce58d44a376c998c1f598d2bfb6739250a257": {
+    "message": "fix(deps): update dependency @whatwg-node/fetch to v0.6.6 (#7559)",
+    "needsCherryPick": true
+  },
+  "1e4bcb7f5c4e5c296876e15ab88e6a1cb9a46d22": {
+    "message": "fix(deps): update dependency @clerk/clerk-sdk-node to v4.6.6 (#7552)",
+    "needsCherryPick": true
+  },
+  "4b2664e079dde795e0cbf392688fdbfcb5fec613": {
+    "message": "fix(deps): update dependency @vitejs/plugin-react to v3.1.0 (#7542)",
+    "needsCherryPick": true
+  },
+  "51b3509f68ea7e6b9c93c52e72e2700b9d9aaeb9": {
+    "message": "chore(deps): update dependency @clerk/types to v3.25.1 (#7532)",
+    "needsCherryPick": true
+  },
+  "27857fa46749f413c50164f56b28313f6c5184db": {
+    "message": "fix(deps): update graphql-tools monorepo (#7534)",
+    "needsCherryPick": true
+  },
+  "c614629b29ade1550747a9b85bc88a2796cd13ae": {
+    "message": "chore(deps): update dependency @clerk/clerk-react to v4.10.0 (#7533)",
+    "needsCherryPick": true
+  },
+  "74ebed42adf19381039b0a344dbac72a49eabe8b": {
+    "message": "fix(deps): update dependency @whatwg-node/fetch to v0.7.0 (#7567)",
+    "needsCherryPick": true
+  },
+  "b90e88fd0df7d911cbfccf98f95a1fdcd8d8aa3e": {
+    "message": "fix(deps): update graphql-tools monorepo (#7571)",
+    "needsCherryPick": true
+  }
+}
